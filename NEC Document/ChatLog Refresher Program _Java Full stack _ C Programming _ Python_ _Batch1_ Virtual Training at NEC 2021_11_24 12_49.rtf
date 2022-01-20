@@ -1,0 +1,1515 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_11_24 12_49.rtf\b0\par
+\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 09:03: present ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:05: import re\par
+print(re.search(r'Co.k.e', 'Cookie').group())\par
+#'Cookie'\par
+print(re.search(r'^Eat', "Eat cake!").group())\par
+#'Eat'\par
+print(re.search(r'cake$', "Cake! Let's eat cake").group())\par
+#'cake'\par
+print(re.search(r'[0-6]', 'Number: 5').group())\par
+#'5'\par
+print(re.search(r'Number: [^5]', 'Number: 0').group())\par
+#'Number: 0'\par
+print("Lowercase w:", re.search(r'Co\\wk\\we', 'Cookie').group())\par
+#Lowercase w: Cookie\par
+\par
+## Matches any character except single letter, digit or underscore\par
+print("Uppercase W:", re.search(r'C\\Wke', 'C@ke').group())\par
+#Uppercase W: C@ke\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:06: print("Lowercase s:", re.search(r'Eat\\scake', 'Eat cake').group())\par
+#Lowercase s: Eat cake\par
+print("Uppercase S:", re.search(r'cook\\Se', "Let's eat cookie").group())\par
+#Uppercase S: cookie\par
+\par
+# Example for \\d\par
+print("How many cookies do you want? ", re.search(r'\\d+', '100 cookies').group())\par
+#How many cookies do you want?  100\par
+\par
+\par
+print("\\\\t (TAB) example: ", re.search(r'Eat\\tcake', 'Eat\tab cake').group())\par
+#\\t (TAB) example:  Eat    cake\par
+\par
+# Example for \\b\par
+print("\\\\b match gives: ",re.search(r'\\b[A-E]ookie', 'Cookie').group())\par
+# match gives:  Cookie\par
+#\\b - Lowercase b. Matches only the beginning or end of the word.\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:08:  ===\par
+Cookie\par
+Eat\par
+cake\par
+5\par
+Number: 0\par
+Lowercase w: Cookie\par
+Uppercase W: C@ke\par
+Lowercase s: Eat cake\par
+Uppercase S: cookie\par
+How many cookies do you want?  100\par
+Traceback (most recent call last):\par
+  File "C:/Users/Shivaksh/AppData/Local/Programs/Python/Python39/RE1.py", line 28, in <module>\par
+    print("\\\\t (TAB) example: ", re.search(r'Eat\\tcake', 'Eat cake').group())\par
+AttributeError: 'NoneType' object has no attribute 'group'\par
+>>> \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:10: re.search(r'Co+kie', 'Cooookie').group()\par
+'Cooookie'\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:11: re.search(r'Co+kie', 'Cooookie').group()\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:11: re.search(r'Ca*o*kie', 'Cookie').group()\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:12: re.search(r'Colou?r', 'Color').group()\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:13: Cooookie\par
+Cookie\par
+Color\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:13: re.search(r'\\d\{9,10\}', '0987654321').group()\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:13: Cooookie\par
+Cookie\par
+Color\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:14: Cooookie\par
+Cookie\par
+Color\par
+0987654321\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:14: '0987654321'\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:15: Cooookie\par
+Cookie\par
+Color\par
+0987654321\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:15: 0987654321\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:19: statement = 'Please contact us at: gupta.monicag@gmail.com'\par
+match = re.search(r'([\\w\\.-]+)@([\\w-]+)', statement)\par
+if match:\par
+\tab print("Email address:", match.group()) # The whole matched text\par
+\tab print("Username:", match.group(1)) # The username (group 1)\par
+\tab print("Host:", match.group(2)) # The host (group 2)\par
+\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:19: Cookie\par
+Eat\par
+cake\par
+5\par
+Number: 0\par
+Lowercase w: Cookie\par
+Uppercase W: C@ke\par
+Lowercase s: Eat cake\par
+Uppercase S: cookie\par
+How many cookies do you want?  100\par
+Email address: gupta.monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:20: Email address: gupta.monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:20: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:20: Email address: gupta.monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:20: Email address: gupta.monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:20: Email address: gupta.monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:20: Email address: gupta.\par
+monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:21: Email address: gupta.\par
+monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:22: Email address: gupta.monicag@gmail\par
+Username: gupta.monicag\par
+Host: gmail\par
+>>> \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:27: statement = 'Please contact us at: gupta.monicag@gmail.com'\par
+match = re.search(r'(?P<email>(?P<username>[\\w\\.-]+)@(?P<host>[\\w\\.-]+))', statement)\par
+if match:\par
+\tab print("Email address:", match.group('email'))\par
+\tab print("Username:", match.group('username'))\par
+\tab print("Host:", match.group('host'))\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:27: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:28: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:28: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:28: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:28: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\par
+>>> \cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:28: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:28: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:29: Email address: gupta.monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:29: Email address: gupta.\par
+monicag@gmail.com\par
+Username: gupta.monicag\par
+Host: gmail.com\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:30: mam please repeat it\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:35: yes mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:41: pattern = re.compile(r"cookie")\par
+sequence = "Cake and cookie"\par
+pattern.search(sequence).group()\par
+#'cookie'\par
+# This is equivalent to:\par
+re.search(pattern, sequence).group()\par
+#'cookie'\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:42: cookie\par
+cookie\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:43: cookie\par
+cookie\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:43: import re\par
+pattern = re.compile(r"cookie")\par
+sequence = "Cake and cookie"\par
+print(pattern.search(sequence).group())\par
+#'cookie'\par
+# This is equivalent to:\par
+print(re.search(pattern, sequence).group())\par
+#'cookie'\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:43: cookie]\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:43: cookie\par
+cookie\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:43: cookie\par
+cookie\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:43: cookie\par
+cookie\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:43: cookie\par
+cookie\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:44: cookie\par
+cookie\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:44: cookie\par
+cookie\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:44: cookie\par
+cookie\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:44: cookie\par
+cookie\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:48: statement = "Please contact us at: gupta.monicag@gmail.com, xyz@gmail.com"\par
+#'addresses' is a list that stores all the possible match\par
+addresses = re.finditer(r'[\\w\\.-]+@[\\w\\.-]+', statement)\par
+for address in addresses:\par
+\tab print(address)\par
+<re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:49: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:49: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:49: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:49: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:49: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:49: gupta.monicag@gmail.com\par
+xyz@gmail.com\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:50: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:50: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:50: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 09:50: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:50: gupta.monicag@gmail.com\par
+xyz@gmail.com\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:50: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:50: import re\par
+statement = "Please contact us at: gupta.monicag@gmail.com, xyz@gmail.com"\par
+#'addresses' is a list that stores all the possible match\par
+addresses = re.finditer(r'[\\w\\.-]+@[\\w\\.-]+', statement)\par
+for address in addresses:\par
+\tab print(address)\par
+#<re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+#<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+\par
+\par
+statement = "Please contact us at: gupta.monicag@gmail.com, xyz@gmail.com"\par
+#'addresses' is a list that stores all the possible match\par
+addresses = re.findall(r'[\\w\\.-]+@[\\w\\.-]+', statement)\par
+for address in addresses:\par
+\tab print(address)\par
+\par
+\par
+\par
+\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:51: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+gupta.monicag@gmail.com\par
+xyz@gmail.com\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:51: gupta.monicag@gmail.com\par
+xyz@gmail.com\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:51: gupta.monicag@gmail.com\par
+xyz@gmail.com\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:51: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+gupta.monicag@gmail.com\par
+xyz@gmail.com\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:52: <re.Match object; span=(22, 45), match='gupta.monicag@gmail.com'>\par
+<re.Match object; span=(47, 60), match='xyz@gmail.com'>\par
+gupta.monicag@gmail.com\par
+xyz@gmail.com\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:54: statement = "Please contact us at: gupta.monicag@gmail.com, xyz@gmail.com"\par
+pattern = re.compile(r'[:,]')\par
+address = pattern.split(statement)\par
+print(address)\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:54: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:54: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:54: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:54: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:54: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:55: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\par
+>>> \cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:55: ['Please contact us at', ' gupta.monicag@gmail.com', '\par
+ xyz@gmail.com']\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:55: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:55: ['Please contact us at', ' gupta.monicag@gmail.com', ' xyz@gmail.com']\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:56: pattern = re.compile('COOKIE', re.IGNORECASE)\par
+match = pattern.search("I am not a cookie monster")\par
+print("Start index:", match.start())\par
+#Start index: 11\par
+print("End index:", match.end())\par
+#End index: 17\par
+print("Tuple:", match.span())\par
+#Tuple: (11, 17)\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:56: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\par
+>>> \cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:57: Start index: 11\par
+End index: 17\par
+Tuple: (11, 17)\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:57: Write a Python program that matches a sentence containing 'z' in the middle of any of it\rquote s word, the char should not be at the start or end of any word.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:09: Write a Python program to find the substrings within a string. Go to the editor\par
+Sample text :\par
+'Python exercises, PHP exercises, C# exercises'\par
+Pattern :\par
+'exercises'\par
+Note: There are three instances of exercises in the input string.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:10: Replace first occurrence of\~5\~with\~five\~for the given string.\par
+'They ate 5 apples and 5 oranges'\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:11: tea break : 20 min\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:46: import re\par
+input = 'They ate 5 apples and 5 oranges'\par
+print(re.sub(r'5', 'five', input))\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:46: import re\par
+text = 'Python exercises, PHP exercises, C# exercises'\par
+pattern = 'exercises'\par
+for match in re.findall(pattern, text):\par
+    print('Found "%s"' % match)\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:47: a=input("enter the text")\par
+b=input("enter the pattern")\par
+print(re.sub(b,'five',a,count=1))\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:56: okk mam\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:57: no mam\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:59: okk mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:59: import re\par
+text="tata zest lazy tata"\par
+patterns = '\\Bz\\B'\par
+if re.search(patterns,  text):\par
+          print( 'Found a match!')\par
+else:\par
+          print('Not matched!')\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:01: import re\par
+input = 'They ate 5 apples and 5 oranges'\par
+print(re.sub(r'5', 'five', input,1))\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:02: file object = open(file_name [, access_mode][, buffering])\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:07: textfile.txt\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:08: Python is a fantastic programming language\par
+It is fun to work with Python\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:12: # Open a file\par
+fo = open("textfile.txt", "wb")\par
+print ("Name of the file: ", fo.name)\par
+\par
+# Close opened file\par
+fo.close()\par
+\par
+#This produces the following result \u8722?\par
+#Name of the file:  filetext.txt\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:12: Name of the file:  textfile.txt\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:12: Name of the file:  textfile.txt\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:12: Name of the file:  textfile.txt\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:13: Name of the file:  textfile.txt\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:13: Name of the file:  textfile.txt\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:13: Name of the file:  textfile.txt\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:13: yes mam\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:13: Name of the file:  textfile.txt\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:14: Name of the file:  textfile.txt\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:14: Local file: Python is a fantastic programming language\par
+Local file: It is fun to work with Python\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:15: # Open a file\par
+fo = open("C:nica\\\\textfile.txt", "wb")\par
+print ("Name of the file: ", fo.name)\par
+print ("Closed or not : ", fo.closed)\par
+print ("Opening mode : ", fo.mode)\par
+fo.close()\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:16: Name of the file:  C:Monica\\textfile.txt\par
+Closed or not :  False\par
+Opening mode :  wb\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:16: Name of the file:  Desktop\par
+Closed or not :  False\par
+Opening mode :  wb\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:17: Name of the file:  C:Monica\\textfile.txt\par
+Closed or not :  False\par
+Opening mode :  wb\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:17: Name of the file:  C:Monica\\textfile.txt\par
+Closed or not :  False\par
+Opening mode :  wb\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:17: Name of the file:  C:\\Monica\\textfile.txt\par
+Closed or not :  False\par
+Opening mode :  wb\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:19: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\textfile.txt","r")  \par
+     \par
+#stores one line of data of the file into variable content\par
+#second line in content1  \par
+content=fileptr.readline() \par
+content1=fileptr.readline() \par
+#prints the content of the file    \par
+print(content)  \par
+# 'Python is the modern day language. It makes things so simple.\\n'\par
+print(content1) \par
+#'It is the fastest-growing programing language Python has an easy syntax and user-friendly interaction.'\par
+\par
+#Open the file again. Then, store all the data of the file into the variable content    \par
+content = fileptr.readlines()     \par
+#prints the content of the file    \par
+print(content) \par
+#['Python is the modern day language. It makes things so simple.\\n', 'It is the fastest-growing programing language Python has an easy syntax and user-friendly interaction.']\par
+\par
+#closes the opened file    \par
+fileptr.close() \cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:20: []\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:20: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+[]\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:21: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+[]\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:22: Local text: Python is a fantastic programming language\par
+\par
+Local text: It is fun to work with Python\par
+\par
+[]\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:22: ['Local text: Python is a fantastic programming language\\n', 'Local text: It is fun to work with Python\\n']\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:24: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\textfile.txt","r")       \par
+#stores one line of data of the file into variable content\par
+###second line in content1  \par
+##content=fileptr.readline() \par
+##content1=fileptr.readline() \par
+###prints the content of the file    \par
+##print(content)  \par
+### 'Python is the modern day language. It makes things so simple.\\n'\par
+##print(content1) \par
+#'It is the fastest-growing programing language Python has an easy syntax and user-friendly interaction.'\par
+\par
+#Open the file again. Then, store all the data of the file into the variable content    \par
+content = fileptr.readlines()     \par
+#prints the content of the file    \par
+print(content) \par
+#['Python is the modern day language. It makes things so simple.\\n', 'It is the fastest-growing programing language Python has an easy syntax and user-friendly interaction.']\par
+\par
+#closes the opened file    \par
+fileptr.close() \par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:25: ['Local file: Python is a fantastic programming language\\n', 'Local file: It is fun to work with Python\\n']\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:26: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+[]\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:26: ['Local file: Python is a fantastic programming language\\n', 'Local file: It is fun to work with Python\\n']\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:27: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\textfile.txt","r")       \par
+#stores one line of data of the file into variable content\par
+###second line in content1  \par
+content=fileptr.readline() \par
+content1=fileptr.readline() \par
+###prints the content of the file    \par
+print(content)  \par
+### 'Python is the modern day language. It makes things so simple.\\n'\par
+print(content1) \par
+#'It is the fastest-growing programing language Python has an easy syntax and user-friendly interaction.'\par
+fileptr.close()\par
+fileptr=open("C:\\\\Monica\\\\textfile.txt","r") \par
+#Open the file again. Then, store all the data of the file into the variable content    \par
+content3 = fileptr.readlines()     \par
+#prints the content of the file    \par
+print(content3) \par
+#['Python is the modern day language. It makes things so simple.\\n', 'It is the fastest-growing programing language Python has an easy syntax and user-friendly interaction.']\par
+\par
+#closes the opened file    \par
+fileptr.close() \par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:28: Local text: Python is a fantastic programming language\par
+\par
+Local text: It is fun to work with Python\par
+\par
+['Local text: Python is a fantastic programming language\\n', 'Local text: It is fun to work with Python\\n']\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:28: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+['Local file: Python is a fantastic programming language\\n', 'Local file: It is fun to work with Python\\n']\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:28: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+['Local file: Python is a fantastic programming language\\n', 'Local file: It is fun to work with Python\\n']\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:28: mam not getting output\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:29: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+['Local file: Python is a fantastic programming language\\n', 'Local file: It is fun to work with Python\\n']\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:29: Local file: Python is a fantastic programming language\par
+\par
+Local file: It is fun to work with Python\par
+\par
+['Local file: Python is a fantastic programming language\\n', 'Local file: It is fun to work with Python\\n']\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:29: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\textfile.txt","r")       \par
+\par
+#stores one line of data of the file into variable content\par
+#second line in content1  \par
+content=fileptr.readline() \par
+content1=fileptr.readline() \par
+#prints the content of the file    \par
+print(content)  \par
+#Local file: Python is a fantastic programming language\par
+print(content1) \par
+#Local file: It is fun to work with Python\par
+\par
+fileptr.close()\par
+fileptr=open("C:\\\\Monica\\\\textfile.txt","r") \par
+\par
+#Open the file again. Then, store all the data of the file into the variable content    \par
+content3 = fileptr.readlines()     \par
+#prints the content of the file    \par
+print(content3) \par
+#['Local file: Python is a fantastic programming language\\n',\par
+#'Local file: It is fun to work with Python\\n']\par
+\par
+#closes the opened file    \par
+fileptr.close() \par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:30: Local file: Python is a fantastic programming language\par
+Local file: It is fun to work with Python\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:31: hello\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:33: ma'am i am not getting output\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:35: Python is a fantastic programming language\par
+\par
+It is fun to work with Python\par
+\par
+[]\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:41: The new file can be created by using one of the following access modes with the function open().\par
+x: it creates a new file with the specified name. It causes an error a file exists with the same name.\par
+a: It creates a new file with the specified name if no such file exists. It appends the content to the file if the file already exists with the specified name.\par
+w: It creates a new file with the specified name if no such file exists. It overwrites the existing file.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:42: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monicale4.txt","x")   \par
+\par
+print(fileptr)    \par
+if fileptr:    \par
+    print("File created successfully")  \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:42: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monicale4.txt","x")   \par
+\par
+print(fileptr)    \par
+if fileptr:    \par
+    print("File created successfully")  \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:43: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\file4.txt","x")   \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:43: print(fileptr)    \par
+if fileptr:    \par
+    print("File created successfully")  \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:43: <_io.TextIOWrapper name='C:\\\\Monica\\\\Monicale4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:43: <_io.TextIOWrapper name='C:\\\\Monica\\\\file4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:44: <_io.TextIOWrapper name='S:\\\\Monicale4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:44: <_io.TextIOWrapper name='C:\\\\Monica\\\\file4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:44: <_io.TextIOWrapper name='C:\\\\Monica\\\\file4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:45: \par
+<_io.TextIOWrapper name='C:\\\\Monica\\\\file4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:45: #open the file.txt in write mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monicafile3.txt","w")   \par
+\par
+print(fileptr)    \par
+if fileptr:    \par
+    print("File opened successfully")\par
+\par
+#writing to the file\par
+for i in range(10):\par
+     fileptr.write("This is line %d\\r\\n" % (i+1))\par
+     print("Writing: This is line %d\\n" % (i+1))\par
+fileptr.close()\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:45: <_io.TextIOWrapper name='C:\\\\Monica\\\\file4.txt' mode='x' encoding='cp1252'>\par
+File created successfully\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:45: #open the file.txt in write mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\file3.txt","w") \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:45: print(fileptr)    \par
+if fileptr:    \par
+    print("File opened successfully")\par
+\par
+#writing to the file\par
+for i in range(10):\par
+     fileptr.write("This is line %d\\r\\n" % (i+1))\par
+     print("Writing: This is line %d\\n" % (i+1))\par
+fileptr.close()\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:46: Traceback (most recent call last):\par
+  File "C:/Users/mk/AppData/Local/Programs/Python/Python310/example nec/check_file.py", line 30, in <module>\par
+    fileptr=open("C:\\\\Monica\\\\file4.txt","x")\par
+FileExistsError: [Errno 17] File exists: 'C:\\\\Monica\\\\file4.txt'\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:46: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='w' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 1\par
+\par
+Writing: This is line 2\par
+\par
+Writing: This is line 3\par
+\par
+Writing: This is line 4\par
+\par
+Writing: This is line 5\par
+\par
+Writing: This is line 6\par
+\par
+Writing: This is line 7\par
+\par
+Writing: This is line 8\par
+\par
+Writing: This is line 9\par
+\par
+Writing: This is line 10\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:46: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10 \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:46: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='w' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 1\par
+\par
+Writing: This is line 2\par
+\par
+Writing: This is line 3\par
+\par
+Writing: This is line 4\par
+\par
+Writing: This is line 5\par
+\par
+Writing: This is line 6\par
+\par
+Writing: This is line 7\par
+\par
+Writing: This is line 8\par
+\par
+Writing: This is line 9\par
+\par
+Writing: This is line 10\par
+\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:47: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:47: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10 \cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:47: File opened successfully\par
+Writing: This is line 1\par
+\par
+Writing: This is line 2\par
+\par
+Writing: This is line 3\par
+\par
+Writing: This is line 4\par
+\par
+Writing: This is line 5\par
+\par
+Writing: This is line 6\par
+\par
+Writing: This is line 7\par
+\par
+Writing: This is line 8\par
+\par
+Writing: This is line 9\par
+\par
+Writing: This is line 10\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:47: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:48: #open the file.txt in append mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monicafile3.txt","a+")   \par
+\par
+print(fileptr)    \par
+if fileptr:    \par
+    print("File opened successfully")\par
+\par
+#writing to the file\par
+for i in range(10,15):\par
+     fileptr.write("This is line %d\\r\\n" % (i+1))\par
+     print("Writing: This is line %d\\n" % (i+1))\par
+fileptr.close()\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:48: <_io.TextIOWrapper name='C:\\\\Saumya\\\\file3.txt' mode='w' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 1\par
+\par
+Writing: This is line 2\par
+\par
+Writing: This is line 3\par
+\par
+Writing: This is line 4\par
+\par
+Writing: This is line 5\par
+\par
+Writing: This is line 6\par
+\par
+Writing: This is line 7\par
+\par
+Writing: This is line 8\par
+\par
+Writing: This is line 9\par
+\par
+Writing: This is line 10\par
+\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:48: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10 \par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:48: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='w' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 1\par
+\par
+Writing: This is line 2\par
+\par
+Writing: This is line 3\par
+\par
+Writing: This is line 4\par
+\par
+Writing: This is line 5\par
+\par
+Writing: This is line 6\par
+\par
+Writing: This is line 7\par
+\par
+Writing: This is line 8\par
+\par
+Writing: This is line 9\par
+\par
+Writing: This is line 10\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:48: fileptr=open("C:\\\\Monica\\\\file3.txt","a+")   \par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:48: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10 \cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:49: <_io.TextIOWrapper name='C:\\\\Saumya\\\\file3.txt' mode='a+' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 11\par
+\par
+Writing: This is line 12\par
+\par
+Writing: This is line 13\par
+\par
+Writing: This is line 14\par
+\par
+Writing: This is line 15\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:49: #open the file.txt in append mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\file3.txt","a+")   \par
+\par
+print(fileptr)    \par
+if fileptr:    \par
+    print("File opened successfully")\par
+\par
+#writing to the file\par
+for i in range(10,15):\par
+     fileptr.write("This is line %d\\r\par
+" % (i+1))\par
+     print("Writing: This is line %d\\n" % (i+1))\par
+fileptr.close()\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:49: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10 This is line 11 This is line 12 This is line 13 This is line 14 This is line 15 \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:49: This is line 1 This is line 2 This is line 3 This is line 4 This is line 5 This is line 6 This is line 7 This is line 8 This is line 9 This is line 10\par
+\par
+This is line 11 This is line 12 This is line 13 This is line 14 This is line 15 \cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:49: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='a+' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 11\par
+\par
+Writing: This is line 12\par
+\par
+Writing: This is line 13\par
+\par
+Writing: This is line 14\par
+\par
+Writing: This is line 15\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:50: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='a+' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 11\par
+\par
+Writing: This is line 12\par
+\par
+Writing: This is line 13\par
+\par
+Writing: This is line 14\par
+\par
+Writing: This is line 15\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:50: #open the file.txt in read mode. causes error if no such file exists.    \par
+fileptr=open("C:\\\\Monica\\\\file3.txt","r+")   \par
+\par
+print(fileptr)    \par
+print(fileptr.read())\par
+fileptr.close()\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:51: This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10\par
+\par
+This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:51: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='r+' encoding='cp1252'>\par
+This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:51: This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10\par
+\par
+This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:52: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='a+' encoding='cp1252'>\par
+File opened successfully\par
+Writing: This is line 11\par
+\par
+Writing: This is line 12\par
+\par
+Writing: This is line 13\par
+\par
+Writing: This is line 14\par
+\par
+Writing: This is line 15\par
+\par
+>>> \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:52: <_io.TextIOWrapper name='C:\\\\Monica\\\\file3.txt' mode='r+' encoding='cp1252'>\par
+This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10\par
+\par
+This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\par
+\par
+\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:52: This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10\par
+\par
+This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:52: This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10\par
+\par
+This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:52: <_io.TextIOWrapper name='C:\\\\Saumya\\\\file3.txt' mode='r+' encoding='cp1252'>\par
+This is line 1\par
+\par
+This is line 2\par
+\par
+This is line 3\par
+\par
+This is line 4\par
+\par
+This is line 5\par
+\par
+This is line 6\par
+\par
+This is line 7\par
+\par
+This is line 8\par
+\par
+This is line 9\par
+\par
+This is line 10\par
+\par
+This is line 11\par
+\par
+This is line 12\par
+\par
+This is line 13\par
+\par
+This is line 14\par
+\par
+This is line 15\par
+\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:52: Hello World\par
+This is a file\par
+We will I/O it\par
+from :\par
+Python / Java\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:53: #Python provides the tell() method which is used to print the byte number at which the file pointer currently exists. \par
+#Consider the following example.\par
+\par
+# open the file file4.txt in read mode    \par
+fileptr=open("C:\\\\Monica\\\\file4.txt","r")    \par
+\par
+#initially the filepointer is at 0     \par
+print("The filepointer is at byte :",fileptr.tell())    \par
+\par
+#reading the content of the file    \par
+content = fileptr.read();    \par
+print("The contents of the file are: \\n", content)\par
+ \par
+#after the read operation file pointer modifies. tell() returns the location of the fileptr.\par
+print("After reading, the filepointer is at:",fileptr.tell())\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:54: The filepointer is at byte : 0\par
+The contents of the file are: \par
+ Hello World\par
+This is a file\par
+We will I/O it\par
+from :\par
+Python / Java\par
+\par
+\par
+After reading, the filepointer is at: 70\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:54: The filepointer is at byte : 0\par
+The contents of the file are: \par
+ Hello World\par
+This is a file\par
+We will I/O it\par
+from :\par
+Python / Java\par
+After reading, the filepointer is at: 66\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:54: The filepointer is at byte : 0\par
+The contents of the file are: \par
+ Hello World\par
+This is a file\par
+We will I/O it\par
+from :\par
+Python / Java\par
+After reading, the filepointer is at: 66\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:54: The filepointer is at byte : 0\par
+The contents of the file are: \par
+ Hello World\par
+This is a file\par
+We will I/O it\par
+from :\par
+Python / Java\par
+After reading, the filepointer is at: 66\par
+\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:54: okay ma'am\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:55: The filepointer is at byte : 0\par
+The contents of the file are: \par
+ Hello World\par
+This is a file\par
+We will I/O it\par
+from :\par
+Python / Java\par
+After reading, the filepointer is at: 66\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:56: # open the file file4.txt in read mode    \par
+fileptr=open("C:\\\\Monicafile4.txt","r")    \par
+    \par
+#initially the filepointer is at 0     \par
+print("The filepointer is at byte :",fileptr.tell())    \par
+    \par
+#changing the file pointer location to 10.    \par
+fileptr.seek(10);    \par
+    \par
+#tell() returns the location of the fileptr.     \par
+print("After reading, the filepointer is at:",fileptr.tell())    \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:57: # open the file file4.txt in read mode    \par
+fileptr=open("C:\\\\Monica\\\\file4.txt","r")    \par
+    \par
+#initially the filepointer is at 0     \par
+print("The filepointer is at byte :",fileptr.tell())    \par
+    \par
+#changing the file pointer location to 10.    \par
+fileptr.seek(10);    \par
+    \par
+#tell() returns the location of the fileptr.     \par
+print("After reading, the filepointer is at:",fileptr.tell())    \par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:57: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:57: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:57: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:57: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:57: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:57: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:58: The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:59: == RESTART: C:/Users/Shivaksh/AppData/Local/Programs/Python/Python39/file8.py ==\par
+The filepointer is at byte : 0\par
+After reading, the filepointer is at: 10\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:00: Fine the number of bytes in each line of a file\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:15: file=open("C:\\\\Monica\\\\file4.txt","r")\par
+read=file.readlines()\par
+linescount =0\par
+wordcount=0\par
+for i in read:\par
+     linescount+=1\par
+     for j in i:\par
+          wordcount+=1\par
+     print(f"There are \{wordcount\} byte data in \{linescount\} line" )\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:15: # open the file file4.txt in read mode    \par
+fileptr=open("C:\\\\Monicafile4.txt","r")    \par
+    \par
+#initially the filepointer is at 0     \par
+print("Starting at byte :",fileptr.tell())\par
+n=0\par
+while(True):\par
+    n=n+1\par
+    a=fileptr.readline()\par
+    print("line", n, "size is:",fileptr.tell()) \par
+    print("line", n, ": ", a)\par
+    if(a):\par
+        pass\par
+    else:\par
+        break\par
+print("\\nThe file size is:", fileptr.tell())\par
+ \par
+ \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:18: file1.csv\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:18: Login email,Identifier,First name,Last name\par
+laura@example.com,2070,Laura,Grey\par
+craig@example.com,4081,Craig,Johnson\par
+mary@example.com,9346,Mary,Jenkins\par
+jamie@example.com,5079,Jamie,Smith\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:20: hello\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:25: Total no. of rows: 5\par
+Field names are:Login email, Identifier, First name, Last name\par
+\par
+First 5 rows are:\par
+\par
+laura@example.com      2070     Laura      Grey\par
+\par
+craig@example.com      4081     Craig   Johnson\par
+\par
+mary@example.com      9346      Mary   Jenkins\par
+\par
+jamie@example.com      5079     Jamie     Smith\par
+\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:25: Total no. of rows: 5\par
+Field names are:Login email, Identifier, First name, Last name\par
+\par
+First 5 rows are:\par
+\par
+laura@example.com       2070      Laura       Grey \par
+\par
+craig@example.com       4081      Craig    Johnson \par
+\par
+mary@example.com       9346       Mary    Jenkins \par
+\par
+jamie@example.com       5079      Jamie      Smith \cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:25: Total no. of rows: 5\par
+Field names are:Login email, Identifier, First name, Last name\par
+\par
+First 5 rows are:\par
+\par
+laura@example.com       2070      Laura       Grey \par
+\par
+craig@example.com       4081      Craig    Johnson \par
+\par
+mary@example.com       9346       Mary    Jenkins \par
+\par
+jamie@example.com       5079      Jamie      Smith \par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:26: Ma'am Im not getting the output\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:26: Total no. of rows: 5\par
+Field names are:Login email, Identifier, First name, Last name\par
+\par
+First 5 rows are:\par
+\par
+laura@example.com       2070      Laura       Grey \par
+\par
+craig@example.com       4081      Craig    Johnson \par
+\par
+mary@example.com       9346       Mary    Jenkins \par
+\par
+jamie@example.com       5079      Jamie      Smith\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:27: # importing the csv module\par
+import csv\par
+# field names\par
+fields = ['Name', 'Branch', 'Year', 'CGPA']\par
+# data rows of csv file\par
+rows = [ ['Nikhil', 'COE', '2', '9.0'],\par
+\tab\tab ['Sanchit', 'COE', '2', '9.1'],\par
+\tab\tab ['Aditya', 'IT', '2', '9.3'],\par
+\tab\tab ['Sagar', 'SE', '1', '9.5'],\par
+\tab\tab ['Prateek', 'MCE', '3', '7.8'],\par
+\tab\tab ['Sahil', 'EP', '2', '9.1']]\par
+\par
+# name of csv file\par
+filename = "C:\\\\Monica\\\\file10.csv"\par
+# writing to csv file\par
+with open(filename, 'w') as csvfile:\par
+\tab # creating a csv writer object\par
+\tab csvwriter = csv.writer(csvfile)\par
+\tab # writing the fields\par
+\tab csvwriter.writerow(fields)\par
+\tab # writing the data rows\par
+\tab csvwriter.writerows(rows)\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:28: Name\tab Branch\tab Year\tab CGPA\par
+\tab\tab\tab\par
+Nikhil\tab COE\tab 2\tab 9\par
+\tab\tab\tab\par
+Sanchit\tab COE\tab 2\tab 9.1\par
+\tab\tab\tab\par
+Aditya\tab IT\tab 2\tab 9.3\par
+\tab\tab\tab\par
+Sagar\tab SE\tab 1\tab 9.5\par
+\tab\tab\tab\par
+Prateek\tab MCE\tab 3\tab 7.8\par
+\tab\tab\tab\par
+Sahil\tab EP\tab 2\tab 9.1\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:28: Hello\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:28: Name\tab Branch\tab Year\tab CGPA\par
+\tab\tab\tab\par
+Nikhil\tab COE\tab 2\tab 9\par
+\tab\tab\tab\par
+Sanchit\tab COE\tab 2\tab 9.1\par
+\tab\tab\tab\par
+Aditya\tab IT\tab 2\tab 9.3\par
+\tab\tab\tab\par
+Sagar\tab SE\tab 1\tab 9.5\par
+\tab\tab\tab\par
+Prateek\tab MCE\tab 3\tab 7.8\par
+\tab\tab\tab\par
+Sahil\tab EP\tab 2\tab 9.1\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:28: Name,Branch,Year,CGPA Nikhil,COE,2,9.0 Sanchit,COE,2,9.1 Aditya,IT,2,9.3 Sagar,SE,1,9.5 Prateek,MCE,3,7.8 Sahil,EP,2,9.1\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:30: Name\tab Branch\tab Year\tab CGPA\par
+\tab\tab\tab\par
+Nikhil\tab COE\tab 2\tab 9\par
+\tab\tab\tab\par
+Sanchit\tab COE\tab 2\tab 9.1\par
+\tab\tab\tab\par
+Aditya\tab IT\tab 2\tab 9.3\par
+\tab\tab\tab\par
+Sagar\tab SE\tab 1\tab 9.5\par
+\tab\tab\tab\par
+Prateek\tab MCE\tab 3\tab 7.8\par
+\tab\tab\tab\par
+Sahil\tab EP\tab 2\tab 9.1\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:31: Total no. of rows: 5\par
+Field names are:Login email, Identifier, First name, Last name\par
+\par
+First 5 rows are:\par
+\par
+laura@example.com\par
+      2070\par
+     Laura\par
+      Grey\par
+\par
+\par
+craig@example.com\par
+      4081\par
+     Craig\par
+   Johnson\par
+\par
+\par
+mary@example.com\par
+      9346\par
+      Mary\par
+   Jenkins\par
+\par
+\par
+jamie@example.com\par
+      5079\par
+     Jamie\par
+     Smith\par
+\par
+\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:34: no\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:34: no\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:34: Don't know ma'am\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:34: no idea maam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:34: No ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:34: NO\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:34: no\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:38: Am I audible??\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:38: not audible\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:39: Ma'am you're not audible.\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:39: Ma'am you are not audible\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:39: No ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:39: NO MAM\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:39: yes mam\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:39: Mam you are not audible\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:39: Now?\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:39: mam not audible\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:40: no mam not audible\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:40: I am rejoining the meeting..pk\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:40: ok\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:41: okk\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:42: Yes ma'am\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:42: yes maam\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:42: yes mam\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:42: yes mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:45: import pickle\par
+# initializing data to be stored in db\par
+Jay = \{'key' : 'Jay', 'name' : 'Jay Roy', 'age' : 21, 'pay' : 40000\}\par
+Tom = \{'key' : 'Tom', 'name' : 'Tom Alter', 'age' : 50, 'pay' : 50000\}\par
+\par
+# database\par
+db = \{\}\par
+db['Jay'] = Jay\par
+db['Tom'] = Tom\par
+\par
+# For storing\par
+b = pickle.dumps(db)\tab  # type(b) gives <class 'bytes'>\par
+print("the dumps: \\n", b)\par
+# For loading\par
+myEntry = pickle.loads(b)\par
+print("After load, output : \\n", myEntry)\par
+\par
+#Output:\par
+#\{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:45: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:45: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:45: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\par
+>>> \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:45: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:45: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:46: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\par
+>>> \cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:46: the dumps: \par
+ b'\\x80\\x04\\x95^\\x00\\x00\\x00\\x00\\x00\\x00\\x00\}\\x94(\\x8c\\x03Jay\\x94\}\\x94(\\x8c\\x03key\\x94h\\x01\\x8c\\x04name\\x94\\x8c\\x07Jay Roy\\x94\\x8c\\x03age\\x94K\\x15\\x8c\\x03pay\\x94M@\\x9cu\\x8c\\x03Tom\\x94\}\\x94(h\\x03h\\x08h\\x04\\x8c\\tTom Alter\\x94h\\x06K2h\\x07MP\\xc3uu.'\par
+After load, output : \par
+ \{'Jay': \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}, 'Tom': \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:46: # store efficiently using pickle module. Module translates an in-memory Python object\par
+# into a serialized byte stream\emdash a string of bytes that can be written to any file-like object.\par
+import pickle\par
+def storeData():\par
+\tab # initializing data to be stored in db\par
+\tab Jay = \{'key' : 'Jay', 'name' : 'Jay Roy', 'age' : 21, 'pay' : 40000\}\par
+\tab Tom = \{'key' : 'Tom', 'name' : 'Tom Alter', 'age' : 50, 'pay' : 50000\}\par
+\tab db = \{\} # database\par
+\tab db['Jay'] = Jay\par
+\tab db['Tom'] = Tom\par
+        # Its important to use binary mode\par
+\tab dbfile = open('C:\\\\Monica\\\\filePickle', 'ab')\par
+\tab pickle.dump(db, dbfile)\tab  # source, destination\tab\tab\tab\tab\par
+\tab dbfile.close()\par
+def loadData():\par
+\tab # for reading also binary mode is important\par
+\tab dbfile = open('C:\\\\Monica\\\\filePickle', 'rb')\tab\par
+\tab db = pickle.load(dbfile)\par
+\tab for keys in db:\par
+\tab\tab print(keys, '=>', db[keys])\par
+\tab dbfile.close()\par
+if __name__ == '__main__':\par
+\tab storeData()\par
+\tab loadData()\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:47: Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\par
+>>> \cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:47: Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:47: Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:47: Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\par
+>>> \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:47:  Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:47: Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:48: Jay => \{'key': 'Jay', 'name': 'Jay Roy', 'age': 21, 'pay': 40000\}\par
+Tom => \{'key': 'Tom', 'name': 'Tom Alter', 'age': 50, 'pay': 50000\}\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:48: thanku mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:48: Thank you Ma'am\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:48: thank u maam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:48: Thanku ma'am\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:48: thank you ma'am\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:49: thank you ma'am\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:49: Thank you Ma'am\par
+\cf0\par
+}
+ 

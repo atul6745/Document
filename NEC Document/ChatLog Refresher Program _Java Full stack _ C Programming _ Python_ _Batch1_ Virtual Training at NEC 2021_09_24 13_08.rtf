@@ -1,0 +1,761 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_09_24 13_08.rtf\b0\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:56: back \cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:56: yes mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:56: done\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:56: back\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:03: public class Employee \{\par
+\tab int Emp_id;\par
+\tab String name;\par
+\tab int salary;\par
+\tab String mail;\par
+\tab int age;\par
+\tab public void takeValues(int eid, String n, int s, String m, int a) \{\par
+\tab\tab Emp_id=eid;\par
+\tab\tab name=n;\par
+\tab\tab salary=s;\par
+\tab\tab mail=m;\par
+\tab\tab setAge(a);\par
+\tab\}\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name: " + name + " Age: "+ age + " Salary: "+ salary+ " Mail-id: "+mail);\par
+\tab\}\par
+\par
+\tab public void setAge(int age) \{\par
+\tab\tab if(age<0 || age>100)\par
+\tab\tab\tab this.age=0;\par
+\tab\tab else\par
+\tab\tab\tab this.age = age;\par
+\tab\}\par
+\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Employee e=new Employee();\par
+\tab\tab e.takeValues(2001, "Jay", 200000, "j@abc.com", 20);\par
+\tab\tab e.print();\par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:08: With a positive value-  Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com         With a negative value-    Name: Jay Age: 0 Salary: 200000 Mail-id: j@abc.com         With a  value greater than 100-   Name: Jay Age: 0 Salary: 200000 Mail-id: j@abc.com\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:10: public class Employee \{\par
+\tab int Emp_id;\par
+\tab String name;\par
+\tab int salary;\par
+\tab String mail;\par
+\tab int age;\par
+\tab public void takeValues(int eid, String n, int s, String m, int a) \{\par
+\tab\tab Emp_id=eid;\par
+\tab\tab setName(n);\par
+\tab\tab salary=s;\par
+\tab\tab mail=m;\par
+\tab\tab setAge(a);\par
+\tab\}\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name: " + name + " Age: "+ age + " Salary: "+ salary+ " Mail-id: "+mail);\par
+\tab\}\par
+public void setName(String name) \{\par
+\tab if(this.name==null)\par
+\tab\{\par
+\tab\tab this.name=name;\par
+\tab\}\par
+\}\par
+\tab public void setAge(int age) \{\par
+\tab\tab if(age<0 || age>100)\par
+\tab\tab\tab this.age=0;\par
+\tab\tab else\par
+\tab\tab\tab this.age = age;\par
+\tab\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:10: \par
+\tab public static void main(String[] args) \{\par
+\tab\tab Employee e=new Employee();\par
+\tab\tab e.takeValues(2001, "Jay", 200000, "j@abc.com", 20);\par
+\tab\tab e.takeValues(2001, "Ishu", 2000, "jay@abc.com", 20);\par
+\tab\tab e.print();\par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:14: public Employee() \{\par
+\tab\tab System.out.println("This is the constructor");\par
+\tab\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:14: public Employee() \{\par
+\tab\tab System.out.println("This is the constructor");\par
+\tab\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:15: public class Employee \{\par
+\tab int Emp_id;\par
+\tab String name;\par
+\tab int salary;\par
+\tab String mail;\par
+\tab int age;\par
+\tab public void takeValues(int eid, String n, int s, String m, int a) \{\par
+\tab\tab Emp_id=eid;\par
+\tab\tab name=n;\par
+\tab\tab salary=s;\par
+\tab\tab mail=m;\par
+\tab\tab age=a;\par
+\tab\}\par
+\tab public Employee() \{\par
+\tab\tab System.out.println("This is the constructor");\par
+\tab\}\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name: " + name + " Age: "+ age + " Salary: "+ salary+ " Mail-id: "+mail);\par
+\tab\}\par
+\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Employee e=new Employee();\par
+\tab\tab e.takeValues(2001, "Jay", 200000, "j@abc.com", 20);\par
+\tab\tab e.takeValues(2001, "Ishu", 2000, "jay@abc.com", 20);\par
+\tab\tab e.print();\par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:16: The purpose of a Java constructor is to initializes the newly created object before it is used. \par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:16: Name: Jay Age: 0 Salary: 200000 Mail-id: j@abc.com\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:19: public class Employee \{\par
+\tab int Emp_id;\par
+\tab String name;\par
+\tab int salary;\par
+\tab String mail;\par
+\tab int age;\par
+\tab public void takeValues(int eid, String n, int s, String m, int a) \{\par
+\tab\tab Emp_id=eid;\par
+\tab\tab name=n;\par
+\tab\tab salary=s;\par
+\tab\tab mail=m;\par
+\tab\tab age=a;\par
+\tab\}\par
+\tab public Employee() \{\par
+\tab\tab System.out.println("This is the default constructor");\par
+\tab\}\par
+\tab public Employee(int eid, String n, int s, String m, int a) \{ //parameterized constructor\par
+\tab\tab Emp_id=eid;\par
+\tab\tab name=n;\par
+\tab\tab salary=s;\par
+\tab\tab mail=m;\par
+\tab\tab age=a;\par
+\tab\par
+\tab\}\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name: " + name + " Age: "+ age + " Salary: "+ salary+ " Mail-id: "+mail);\par
+\tab\}\par
+\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Employee e=new Employee();\par
+\tab\tab Employee e2=new Employee(2001, "Jay", 200000, "j@abc.com", 20);\par
+\tab\tab e.takeValues(2001, "Ishu", 2000, "jay@abc.com", 20);\par
+\tab\tab e.print();\par
+\tab\tab e2.print();\par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:20: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:22: shouldnt we be using this keyword\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:23: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:23: Employee e1=new Employee(); //default constructor is called\par
+\tab\tab Employee e2=new Employee(2001, "Jay", 200000, "j@abc.com", 20); //parameterized constructor\par
+\tab\tab e1.takeValues(2001, "Ishu", 2000, "jay@abc.com", 20);\par
+\tab\tab e1.print();\par
+\tab\tab e2.print();\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 11:24: ok mam\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:27: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:29: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+v\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:29: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: AMAN Age: 22 Salary: 200000 Mail-id: abc.com\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:29: This is a default constructor\par
+Name: Ram Age: 0 Salary: 200000 Mail-id: j@abc.com\par
+Name: Jay Age: 0 Salary: 200000 Mail-id: j@abc.com\par
+Name: Ram Age: 0 Salary: 200000 Mail-id: j@abc.com\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:29: This is the default constructor\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:29: This is the constructor\par
+Name: Jay Age: 20 Salary: 200000 Mail_ID: j@abc.com\par
+Name: zac Age: 20 Salary: 200000 Mail_ID: j@abc.com\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:29: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:29: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:29: this is also use in constructor call anothor constructor\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:29: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:29: public static void main(String args[]) \{\par
+\tab\tab Employee obj1=new Employee();\par
+\tab\tab Employee obj2=new Employee(24618,"Shikhar Shukla", 35000, "007shikharr@gmail.com", 20);\par
+\tab\tab obj1.takevalues(24618,"Shikhar Shukla", 35000, "007shikharr@gmail.com", 21);\par
+\tab\tab //obj1.takevalues(24618,"Another name", 35000, "007shikharr@gmail.com", 200);\par
+\tab\tab obj2.print();\par
+\tab\tab obj1.print();\par
+\tab\tab\par
+\tab\tab\}\par
+\tab\}\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:30: This is a constructor\par
+Employee ID :24618\par
+Emp_Name : Shikhar Shukla\par
+Salary : 35000\par
+Email ID : 007shikharr@gmail.com\par
+Age : 20\par
+Employee ID :24618\par
+Emp_Name : Shikhar Shukla\par
+Salary : 35000\par
+Email ID : 007shikharr@gmail.com\par
+Age : 21\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:30: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 11:30: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: AMAN Age: 22 Salary: 200000 Mail-id: abc.com\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:31: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:31: This is the default constructor\par
+Name: Ishu Age: 20 Salary: 2000 Mail-id: jay@abc.com\par
+Name: Jay Age: 20 Salary: 200000 Mail-id: j@abc.com\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:32: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e1=new Emp();\par
+\tab\tab //e1.name="Ishu";//hidden data can not be accessed\par
+\tab\tab e1.getData("Ishu", 5000);\par
+\tab\tab e1.print();\par
+\tab\}\par
+\}\par
+class Emp \{  //Encapsulated: Data Collected in single unit\par
+\tab //attributes Encapsulated: Data Hidden\par
+\tab private\tab String name;\par
+\tab private int sal;\par
+\tab //Behavior\par
+\tab public void getData(String nm, int s) \{\par
+\tab\tab name = nm;\par
+\tab\tab sal = s;\par
+\tab\}\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name : \\"" +name+ "\\" Salary : " + sal +"\\n");\par
+\tab\}\par
+\}\par
+\par
+\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\par
+\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b abhishek rana (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:33: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:33: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e1=new Emp();\par
+\tab\tab //e1.name="Ishu";//hidden data can not be accessed\par
+\tab\tab e1.getData("Ishu", 5000); //Abstracted data can be accessed\par
+\tab\tab e1.print(); //Abstracted data can be accessed\par
+\tab\}\par
+\}\par
+class Emp \{  //Encapsulated: Data Collected in single unit\par
+\tab //attributes Encapsulated: Data Hidden\par
+\tab private\tab String name;\par
+\tab private int sal;\par
+\tab //Behavior Abstracted Data\par
+\tab public void getData(String nm, int s) \{\par
+\tab\tab name = nm;\par
+\tab\tab sal = s;\par
+\tab\}\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name : \\"" +name+ "\\" Salary : " + sal +"\\n");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 11:34: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:34: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b abhishek rana (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:35: Name : "naveen" Salary : 5000\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:35: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:36: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:36: Name : "Ishu" Salary : 5000\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:37: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:37: Name : "Ishu" Salary : 5000\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:38: mam can we say Encapsulation is combination of data hiding +Abstraction\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:38: Ma'am,Is it mandatory to use public before declaring the constructor?\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:47: Encapsulation : data hiding + data binding ?\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:47: ok mam\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:48: mam so isn't data abstraction and data hiding same in a way?\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:48: show only essential data in abstract\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:50: Okay Ma'am\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:52: In abstraction, what is running our work by parent class we just get result what hows is worked we dont know? am I correct mam\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:52: can a private class have public members?...can it be used outside class then?\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:52: ok mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:57: hiding necessary details from the unnecessary ones : abstraction\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:58: maam as you have said that encapsulation is not data hiding but eventually we can hide data using access specifier.\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:58: when we want to hiding necessary details only then we use abstraction\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:58: hiding unnecessary details , giving necessary ones : abstraction\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:59: okk mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:59: when we want to hiding unnecessary details only then we use encapsulation\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:00: when we want to hiding unnecessary details\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:00: WE encapsulate unnecessary details, and abstract necessary details\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:01: abstraction is templating... \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:17: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Manager e1 = new Manager();\par
+\tab\tab e1.getMngrData("Ishu", 5000, 400, 5000); // Abstracted data can be accessed\par
+\tab\tab e1.printMngr(); // Abstracted data can be accessed\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:17: class Emp \{ // Encapsulated: Data Collected in single unit\par
+\tab private String name;\par
+\tab private int sal;\par
+\tab protected int conveyance;\par
+\par
+\tab public void getData(String nm, int s) \{\par
+\tab\tab name = nm;\par
+\tab\tab sal = s;\par
+\tab\}\par
+\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Name : \\"" + name + "\\" Salary : " + sal + "\\n");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:17: class Manager extends Emp \{\par
+\tab private int bonus;\par
+\par
+\tab public void getMngrData(String nm, int s, int conv, int bns) \{\par
+\tab\tab // name = nm; //parent's private attributes are not accessible in child class\par
+\tab\tab getData(nm, s); // parent's public attributes are accessible in child class\par
+\tab\tab conveyance = conv;// parent's protected attributes are accessible in child class\par
+\tab\tab bonus = bns; // own private attributes accessible throughout the class\par
+\tab\}\par
+\par
+\tab public void printMngr() \{\par
+\tab\tab print();\par
+\tab\tab System.out.println("Conveyance : " + conveyance + " bonus : " + bonus + "\\n");\par
+\tab\}\par
+\}\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:18: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:19: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:19: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:19: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 12:19: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:20: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:20: yes mam\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:20: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:20: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\cf2\par
+\cf3\b abhishek rana (to Everyone)\b0 : \cf1 12:21: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:21: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:21: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:22: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:22: Name : "Ishu" Salary : 5000\par
+\par
+Conveyance : 400 bonus : 5000\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:27: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e = new Emp();\par
+\tab\tab e.print();\par
+\tab\tab e.print(3);\par
+\tab\tab e.print(3.5);\par
+\tab\tab e.print(3, 3.5);\par
+\tab\tab e.print(3.5, 3);\par
+\tab\}\par
+\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:33: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e = new Emp();\par
+\tab\tab e.print();\par
+\tab\tab e.print(3);\par
+\tab\tab e.print(3.5);\par
+\tab\tab e.print(3, 3.5);\par
+\tab\tab e.print(3.5, 3);\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:33: class Emp \{\par
+\tab public void print() \{\par
+\tab\tab System.out.println("\\n1. Default Print");\par
+\tab\}\par
+\par
+\tab public void print(int x) \{ //overloading 1. as different no of arguments\par
+\tab\tab System.out.println("\\n2. Print with int x: " + x);\par
+\tab\}\par
+\par
+\par
+\tab\tab System.out.println("\\n3. Print with double x: " + x);\par
+\tab\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:34: public void print(double x) \{//overloading 2. as different data type of arg\par
+\tab\tab System.out.println("\\n3. Print with double x: " + x);\par
+\tab\}\par
+\par
+\tab public void print(int x, double y) \{ //overloading 1., 2, 3, as different no of arguments\par
+\tab\tab System.out.println("\\n4. Print with int x: " + x + " and double y : " + y);\par
+\tab\}\par
+\par
+\tab public void print(double x, int y) \{ //overloading 4. as different series of arg\par
+\tab\tab System.out.println("\\n5.Print with double x: " + x + " and int y : " + y);\par
+\tab\}\par
+\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:34: class Emp \{\par
+\tab public void print() \{\par
+\tab\tab System.out.println("\\n1. Default Print");\par
+\tab\}\par
+\par
+\tab public void print(int x) \{ //overloading 1. as different no of arguments\par
+\tab\tab System.out.println("\\n2. Print with int x: " + x);\par
+\tab\}\par
+\par
+\tab public void print(double x) \{//overloading 2. as different data type of arg\par
+\tab\tab System.out.println("\\n3. Print with double x: " + x);\par
+\tab\}\par
+\par
+\tab public void print(int x, double y) \{ //overloading 1., 2, 3, as different no of arguments\par
+\tab\tab System.out.println("\\n4. Print with int x: " + x + " and double y : " + y);\par
+\tab\}\par
+\par
+\tab public void print(double x, int y) \{ //overloading 4. as different series of arg\par
+\tab\tab System.out.println("\\n5.Print with double x: " + x + " and int y : " + y);\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:34: \par
+1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:35: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:35: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e = new Emp();\par
+\tab\tab e.print();\par
+\tab\tab e.print(3);\par
+\tab\tab e.print(3.5);\par
+\tab\tab e.print(3, 3.5);\par
+\tab\tab e.print(3.5, 3);\par
+\tab\}\par
+\}\par
+\par
+class Emp \{\par
+\tab public void print() \{\par
+\tab\tab System.out.println("\\n1. Default Print");\par
+\tab\}\par
+\par
+\tab public void print(int x) \{ //overloading 1. as different no of arguments\par
+\tab\tab System.out.println("\\n2. Print with int x: " + x);\par
+\tab\}\par
+\par
+\tab public void print(double x) \{//overloading 2. as different data type of arg\par
+\tab\tab System.out.println("\\n3. Print with double x: " + x);\par
+\tab\}\par
+\par
+\tab public void print(int x, double y) \{ //overloading 1., 2, 3, as different no of arguments\par
+\tab\tab System.out.println("\\n4. Print with int x: " + x + " and double y : " + y);\par
+\tab\}\par
+\par
+\tab public void print(double x, int y) \{ //overloading 4. as different series of arg\par
+\tab\tab System.out.println("\\n5.Print with double x: " + x + " and int y : " + y);\par
+\tab\}\par
+\}\par
+\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:35: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:36: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:36: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:36: \par
+1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:37: \par
+1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:37: there is also case of Automatic Promotionn overloading\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:38: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:45: public class Test \{\par
+\tab public void m1(int i) \{\par
+\tab\tab System.out.println("Int-arg Method");\par
+\tab\}\par
+\tab public void m1(float f) \{\par
+\tab\tab System.out.println("float-arg method");\par
+\tab\}\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Test t = new Test();\par
+\tab\tab t.m1(10);\par
+\tab\tab t.m1(10.5f);\par
+\tab\tab t.m1('a');\par
+\tab\tab t.m1(10l);\par
+\tab\tab\par
+\tab\tab\par
+\tab\}\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:45: Int-arg Method\par
+float-arg method\par
+Int-arg Method\par
+float-arg method\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:45: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:46: 1. Default Print\par
+\par
+2. Print with int x: 3\par
+\par
+3. Print with double x: 3.5\par
+\par
+4. Print with int x: 3 and double y : 3.5\par
+\par
+5.Print with double x: 3.5 and int y : 3\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:51: yes mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:51: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e = new Emp();\par
+\tab\par
+\tab\tab e.print(3);\par
+\tab\tab e.print(3.5);\par
+\tab\tab\par
+\tab\}\par
+\}\par
+class Emp \{\par
+\tab public void print(double x) \{\par
+\tab\tab System.out.println("\\n3. Print with double x: " + x);\par
+\tab\}\par
+\}\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:56: yes..clear\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 13:03: yes maam\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:03: yes mam\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 13:03: yess mam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:04: YES MAM CLEAR\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:04: Yes Ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 13:04: public class Prj1Class \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab Emp e=new Emp();  //e can call print(), show() \par
+\tab\tab e.print(); //Default Print in Employee\par
+\tab\tab Manager m=new Manager();  //m can call print(), show(), println()\par
+\tab\tab m.print(); //Overridden Print in Manager\par
+\tab\tab Emp em=new Manager(); //subclassing //em can call print(), show(); but print() belongs to manager\par
+\tab\tab em.print(); //Overridden Print in Manager\par
+\tab\tab //em.println();\par
+\tab\tab int x=(int)3.56; //x will be int  ; but the value of x is got from the double 3.56\par
+\tab\tab\par
+\tab\}\par
+\}\par
+class Emp \{  \par
+\tab public void print() \{\par
+\tab\tab System.out.println("Default Print in Employee");\par
+\tab\}\par
+\tab public void show() \{\par
+\tab\tab System.out.println("Inherited Show in Employee");\par
+\tab\}\par
+\}\par
+class Manager extends Emp\{\par
+\tab public void print() \{\par
+\tab\tab System.out.println("Overridden Print in Manager");\par
+\tab\}\par
+\tab public void println() \{\par
+\tab\tab System.out.println("\\nPrint new line in Manager\\n");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 13:04: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:04: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:05: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 13:05: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 13:05: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 13:05: Name : "null" Salary : 0\par
+\par
+Overridden Print in Manager\par
+Overridden Print in Manager\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 13:05: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 13:05: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 13:06: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:07: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 13:07: Default Print in Employee\par
+Overridden Print in Manager\par
+Overridden Print in Manager\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:07: YES MAM\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 13:08: thankyou mam\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 13:08: thank you ma'am.\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 13:08: Thanku mam\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:08: thnak you mam\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 13:08: thank you... \cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 13:08: thank you ma'am\cf0\par
+}
+ 

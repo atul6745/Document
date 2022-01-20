@@ -1,0 +1,1093 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;\red182\green59\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_10_06 13_07.rtf\b0\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:48: greeting=Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:53: InternationalizationDemo\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:54: import java.util.Locale;\par
+import java.util.ResourceBundle;\par
+public class InternationalizationDemo \{\par
+public static void main(String[] args) \{\par
+ResourceBundle bundle = ResourceBundle.getBundle("MessageBundle", Locale.US);\par
+System.out.println("Message in " + Locale.US + ": " + bundle.getString("greeting"));\par
+Locale.setDefault(new Locale("hi", "IN"));\par
+bundle = ResourceBundle.getBundle("MessageBundle");\par
+System.out.println("Message in " + Locale.getDefault() + ": " + bundle.getString("greeting"));\par
+\}\par
+\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:54: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:54: Message in en_US: Hello, How Are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:55: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:55: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 09:55: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:55: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 09:55: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 09:56: Message in en_US: Hello, How are You?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 09:56: Message in en_US: Hello, How are You?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, How are You?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:57: mam not get it\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, How are You?\par
+Message in hi_IN: Hallo, apka Kya khabar?\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo,apka Kya khabar?\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:57: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:58: import java.text.DateFormat;\par
+import java.util.*;\par
+public class InternationalizationDate \{\par
+static void printDate(Locale locale)\{\par
+DateFormat formatter  = DateFormat.getDateInstance(DateFormat.DEFAULT,locale);\par
+Date currentDate=new Date();\par
+String date=formatter.format(currentDate);\par
+System.out.println(date+" "+locale);\par
+\}\par
+public static void main(String[] args) \{\par
+printDate(Locale.UK);\par
+printDate(Locale.US);\par
+printDate(Locale.FRANCE);\par
+\}\par
+\}\par
+\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 09:58: Message in en_US: Hello, how are you?\par
+Message in hi_IN: Hallo, apka Kya khabar?\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 09:59: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:59: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:00: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:00: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:00: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:00: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:00: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:00: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 10:01: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:02: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:02: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:04: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:05: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:06: MessageBundle_en_US.properties\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:06: MessageBundle_en_US.properties\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:07: greeting=Hello, how are you?\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:07: greeting=Hallo, apka Kya khabar?\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:07: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:08: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:09: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:10: import java.text.DateFormat;\par
+import java.util.*;\par
+public class InternationalizationDate \{\par
+static void printDate(Locale locale)\{\par
+DateFormat formatter  = DateFormat.getDateInstance(DateFormat.DEFAULT,locale);\par
+Date currentDate=new Date();\par
+String date=formatter.format(currentDate);\par
+System.out.println(date+" "+locale);\par
+\}\par
+public static void main(String[] args) \{\par
+printDate(Locale.UK);\par
+printDate(Locale.US);\par
+printDate(Locale.FRANCE);\par
+\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:11: import java.text.NumberFormat;\par
+import java.util.*;\par
+public class InternalizationCurrency \{\par
+static void printCurrency(Locale locale)\{\par
+double dbl=10500.3245;\par
+NumberFormat formatter=NumberFormat.getCurrencyInstance(locale);\par
+String currency=formatter.format(dbl);\par
+System.out.println(currency+" for the locale "+locale);\par
+\}\par
+public static void main(String[] args) \{\par
+printCurrency(Locale.UK);\par
+printCurrency(Locale.US);\par
+printCurrency(Locale.FRANCE);\par
+\}\par
+\}\par
+\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:11: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:11: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32\~\'80 for the locale fr_FR\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:12: tea break 20 min\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:12: 6 Oct 2021 en_GB\par
+Oct 6, 2021 en_US\par
+6 oct. 2021 fr_FR\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32\~\'80 for the locale fr_FR\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32\~\'80 for the locale fr_FR\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32\~\'80 for the locale fr_FR\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:12: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:13: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:13: \par
+\par
+\'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:13: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32\~\'80 for the locale fr_FR\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:13: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:13: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32 \'80 for the locale fr_FR\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:13: \'a310,500.32 for the locale en_GB\par
+$10,500.32 for the locale en_US\par
+10?500,32\~\'80 for the locale fr_FR\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:31: Back\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:31: Back\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 10:31: baxk\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:31: back\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 10:31: back \cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:32: back\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:32: back\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:32: back\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:32: back\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:42: yes maam\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:42: yes mam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:42: Yes ma'am\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:42: Yes mam\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:42: yes mam\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:42: yes ma'am\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 10:42: yes mam\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:42: yes mam\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:42: yes ma'am\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:43: we are attentive mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:43: Yes Ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:56: public String getMessage()\par
+Returns a detailed message about the exception that has occurred. This message is initialized in the Throwable constructor.\par
+public Throwable getCause()\par
+Returns the cause of the exception as represented by a Throwable object.\par
+public String toString()\par
+Returns the name of the class concatenated with the result of getMessage()\par
+public void printStackTrace()\par
+Prints the result of toString() along with the stack trace to System.err, the error output stream.\par
+public StackTraceElement [] getStackTrace()\par
+Returns an array containing each element on the stack trace. The element at index 0 represents the top of the call stack, and the last element in the array represents the method at the bottom of the call stack.\par
+public Throwable fillInStackTrace()\par
+Fills the stack trace of this Throwable object with the current stack trace, adding to any previous information in the stack trace\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:01: public class JavaExceptionExample\{  \par
+  public static void main(String args[])\{  \par
+   try\{  \par
+      //code that may raise exception  \par
+      int data=100/0;  \par
+   \}\par
+   catch(ArithmeticException e)    \{\par
+    System.out.println(e);\}  \par
+   //rest code of the program   \par
+   System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:02: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:03: java.lang.ArithmeticException: / by zero\par
+rest of the code...\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:10: \par
+public class ExceptionPrg1 \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab int x=100;\par
+\tab\tab int y=0;\par
+\tab\tab int z;\par
+\tab\tab try \{\par
+\tab\tab\tab z=x/y;\par
+\tab\tab\}\par
+\tab\tab catch(Exception e) \{\par
+\tab\tab\tab z=0;\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\tab System.out.println("Result : z: "+ z);\par
+\tab\tab System.out.println("Rest of the code");\par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:11: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:12: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:12: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:12: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:13: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\par
+\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 11:13: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:13: java.lang.ArithmeticException: / by zero\par
+Result : z: 0\par
+Rest of the code\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:32: what will happen if we apply exception e first ly and then any other exception , will it give any error?\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:33: mam but in python code executes sucessfully if we do so\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:33: ok mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:34: ma'am why would we put individual catch after a super catch block in program??\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:39: mam,  is there any exception that cant be resolved by super catch block?\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:41: mam,if we write RunTimeException in catch block then will it handled?\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:42: okay mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:42: Ma'am,Can we put finally block before catch block in our java program?Does it gives any error during execution.\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:44: Mam ,if exceptions occurs outside try block will finally block execute?\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:44: Ok Ma'am\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:45: Mam like\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:45: mam\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:45: try\{\}\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:47: mam can their be more then 1 finally?\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:47: mam can we have nested try blocks?\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:47: Ma'am can we throw a exception manually?\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:47: i have not googled it mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:51: import java.io.*;\par
+public class ExcepTest\{\par
+   public static void main(String args[])\{\par
+       try\{\par
+          int a[] = new int[2];\par
+          a[3]=100/0;\par
+          System.out.println("Access element :" + a[0]);\par
+        \}\par
+\par
+        catch(ArrayIndexOutOfBoundsException e)\{\par
+           System.out.println("Out of Bounds Exception thrown :" + e);\par
+        \}\par
+       catch(ArithmeticException e)\{\par
+           System.out.println("Arithmetic Exception thrown :" + e);\par
+        \}\par
+\par
+       catch(Exception e) \{\par
+    \tab    System.out.println("Unknown Exception thrown :" + e);\par
+       \}\par
+       \par
+       System.out.println("Out of the block");\par
+   \} \par
+\}\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:51: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:51: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:51: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:51: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:51: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 11:52: rithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:52: Arithmetic Exception thrown :java.lang.ArithmeticException: / by zero\par
+Out of the block\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:52: Mam finally block always executed whether try block or catch block executed\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:58: class TestFinallyBlock\{  \par
+  public static void main(String args[])\{  \par
+  try\{  \par
+   int data=25/5;  \par
+   System.out.println(data);  \par
+  \}  \par
+  catch(NullPointerException e)\{\par
+     System.out.println(e);   \}  \par
+  finally\{\par
+      System.out.println("finally block is always executed");   \}  \par
+  System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:59: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:00: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 12:00: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 12:00: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:00: 5\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:00: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 12:01: 5\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:06: class TestFinallyBlock1\{  \par
+  public static void main(String args[])\{  \par
+  try\{  \par
+   int data=25/0;  \par
+   System.out.println(data);  \par
+  \}  \par
+  catch(NullPointerException e)\{\par
+      System.out.println(e);\}  \par
+  finally\{\par
+      System.out.println("finally block is always executed");    \}  \par
+  System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at TestFinallyBlock.main(TestFinallyBlock.java:8)\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+ at TestFinallyBlock.main(TestFinallyBlock.java:8)\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at ExceptionEx.main(ExceptionEx.java:64)\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at JavaExceptionExample.main(JavaExceptionExample.java:4)\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at waf.main(waf.java:4)\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at Day11.TestFinallyBlock1.main(TestFinallyBlock1.java:6)\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by\par
+ zero\par
+\tab at TestFinallyBlock.main(TestFinallyBlock.java:8)\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at octo05/octo05.excepti.main(excepti.java:81)\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at TestFinallyBlock1.main(TestFinallyBlock1.java:4)\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+ at ExceptionEx.main(ExceptionEx.java:64)\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at exceptionEx.TestFinallyBlock.main(TestFinallyBlock.java:21)\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at Example3.main(Example3.java:7)\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:07: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at Exceptionproject/exception.TestFinallyBlock1.main(TestFinallyBlock1.java:6)\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+ at TestFinallyBlock.main(TestFinallyBlock.java:8)\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at necday9.wrongexception.main(wrongexception.java:5)\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at loc.JavaException.main(JavaException.java:75)\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+ at ExceptionEx.main(ExceptionEx.java:64)\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at pkg1.TestFinallyBlock1.main(TestFinallyBlock1.java:5)\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+\tab at pkg1.TestFinallyBlock1.main(TestFinallyBlock1.java:7)\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:08: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+ at pkg1.TestFinallyBlock1.main(TestFinallyBlock1.java:5)\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:08: public class TestFinallyBlock2\{  \par
+  public static void main(String args[])\{  \par
+  try\{  \par
+   int data=25/0;  \par
+   System.out.println(data);  \par
+  \}  \par
+  catch(ArithmeticException e)\{\par
+     System.out.println(e);    \}  \par
+  finally\{\par
+      System.out.println("finally block is always executed");   \}  \par
+  System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 12:09: finally block is always executed\par
+Exception in thread "main" java.lang.ArithmeticException: / by zero\par
+        at TestFinallyBlock1.main(06_10.java:4)\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by \par
+zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:09: java.lang.ArithmeticException: / by \par
+zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by \par
+zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:10: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:19: mam resourse is local variable here\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:28: import java.io.*;\par
+class myInt\{\par
+\tab public int r;\par
+\}\par
+public class ExcepTest\{\par
+\tab public static int div(int x, int y, myInt res) \{\par
+\tab\tab int z=0;\par
+\tab\tab try \{\par
+\tab\tab\tab z=x/y;\par
+\tab\tab\tab\par
+\tab\tab\}\par
+\tab\tab catch(ArithmeticException e) \{\par
+\tab\tab\tab return 0;\par
+\tab\tab\}\par
+\tab\tab finally \{\par
+\tab\tab\tab System.out.println("Finally with closure of resources");\par
+\tab\tab\tab res.r=0;\par
+\tab\tab\}\par
+\tab\tab System.out.println("Out side the try blocks");\par
+\tab\tab return z;\par
+\tab\tab\par
+\tab\}\par
+   public static void main(String args[])\{\par
+\tab    \tab myInt resource=new myInt();\par
+\tab    \tab resource.r=90;\par
+\tab    \tab int x=100;\par
+\tab    \tab int y=0;\par
+\tab    \tab System.out.println("Resource before div(): "+ resource.r);\par
+\tab    \tab int result=div(x, y, resource);\par
+\tab    \tab System.out.println("Result: "+ result);\par
+\tab    \tab System.out.println("Resource after div(): "+ resource.r);\par
+   \} \par
+\}\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 12:28: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:28: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:29: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:29: Yes ma'am got all concepts\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:29: Yes ma'am\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:29: yes ma'am\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:29: java.lang.ArithmeticException: / by zero\par
+finally block is always executed\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:29: Yes\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:29: yes mam\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:29: yes mam\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 12:29: yes ma'am\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:29: yes\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:29: yes ma'am\par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 12:30: yes maam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:30: Yes Ma'am\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:30: Resource before div(): 90\par
+Finally with closure of resources\par
+Out side the try blocks\par
+Result: 2\par
+Resource after div(): 0\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:30: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 12:30: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 0\par
+Resource after div(): 0\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:30: yes Mam\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 12:30: Resource before div(): 90\par
+Finally with closure of resources\par
+Result: 2\par
+Resource after div(): 0\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:31: Take inputs from a user/ give a value to a variable and run exception handling on the input in case the input number is 0.\par
+Do not use throw statement.\par
+\cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 12:47: import java.util.*;\par
+public class excepti \{\par
+\tab public static void main(String[] args) \{\par
+\tab Scanner sc=new Scanner(System.in);\par
+\tab try \{\par
+\tab int a=sc.nextInt();\par
+\tab if(a==0)\par
+\tab\{\par
+\tab\tab int m=100/0;\par
+\tab\}\par
+\tab else\par
+\tab\{\par
+\tab\tab System.out.println(a);\par
+\tab\}\par
+\tab  \}\par
+\tab   catch(ArithmeticException e) \{\par
+\tab   \par
+\tab    System.out.println(e);\par
+\tab   \}\par
+\}\par
+\}\par
+\par
+\cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 12:50: import java.util.*;\par
+public class excepti \{\par
+\tab public static void main(String[] args) \{\par
+\tab Scanner sc=new Scanner(System.in);\par
+\tab try \{\par
+\tab int a=sc.nextInt();\par
+\tab if(a==0)\par
+\tab\{\par
+\tab\tab int m=100/0;\par
+\tab\}\par
+\tab else\par
+\tab\{\par
+\tab\tab System.out.println(a);\par
+\tab\}\par
+\tab  \}\par
+\tab   catch(ArithmeticException e) \{\par
+\tab   \par
+//\tab    System.out.println(e);\par
+\tab   \}\par
+\}\par
+\}\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:53: import java.util.*;\par
+public class Main \{\par
+\par
+ public static void main(String[] args) \{\par
+\tab  Scanner scn = new Scanner(System.in);\par
+\tab  System.out.println("Enter number ");\par
+\tab  int x = scn.nextInt();\par
+  try \{\par
+   x = x/x;\par
+  \}\par
+  catch(ArithmeticException e) \{\par
+   System.out.println(e);\par
+  \}\par
+ \par
+\par
+ \}\par
+\par
+\}\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 13:03: can u hear me?\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 13:03: ma i think mic issue\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:04: No Ma'am I have'nt presented anthing.\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:05: Ok Ma'am\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:05: Thank you Ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 13:05: Topic: Immutability:\par
+How to make an object immutable\par
+Which are the imp immutable in-built objects in Java\par
+Presenter: Piyush Shukla\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 13:06: Thank you ma'am\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:06: Thank You Ma'am.\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 13:06: Thank you Ma'am\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 13:06: Thank you Ma'am\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:06: Thank You Ma'am\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 13:06: Thank you ma'am\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:06: Thank you ma'am.\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 13:06: Thank you ma'am\par
+\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 13:06: Thank you mam\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 13:06: thank you maam\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 13:07: Thank you maam\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 13:07: Thankyou maam\cf0\par
+}
+ 

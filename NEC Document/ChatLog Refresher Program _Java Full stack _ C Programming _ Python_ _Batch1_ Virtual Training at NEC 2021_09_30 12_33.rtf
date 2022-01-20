@@ -1,0 +1,577 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;\red182\green59\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_09_30 12_33.rtf\b0\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:01: no one\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:02: Good Morning Mam\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:02: good morning mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:02: good morning mam\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:02: good morning maam\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:02: good morning mam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:03: Good Morning Ma'am\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:05: 8171917952\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:05: Naveen Kumar Mittal\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:05: Naveen Mittal\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:12: similar datatype\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:31: Yes mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:31: Yes Ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:31: yes mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:32: yes mam\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:32: Yes Mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:37: public int compareTo(Object d)\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:41: import java.util.*;\par
+\par
+class Emp implements Comparator<Emp>, Comparable<Emp> \{\par
+\tab public String name;\par
+\tab public int age;\par
+\par
+\tab Emp() \{\par
+\tab\}\par
+\par
+\tab Emp(String n, int a) \{\par
+\tab\tab name = n;\par
+\tab\tab age = a;\par
+\tab\}\par
+\par
+\tab // Overriding the compareTo method\par
+\tab public int compareTo(Emp d) \{\par
+\tab\tab return (this.name).compareTo(d.name);\par
+\tab\}\par
+\par
+\tab // Overriding the compare method to sort the age\par
+\tab public int compare(Emp d, Emp d1) \{\par
+\tab\tab return d.age - d1.age;\par
+\tab\}\par
+\}\par
+\par
+public class MainPrg \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab List<Emp> list = new ArrayList<Emp>();\par
+\tab\tab list.add(new Emp("Ram", 23));\par
+\tab\tab list.add(new Emp("Rohan", 22));\par
+\tab\tab list.add(new Emp("Roy", 30));\par
+\tab\tab list.add(new Emp("Tom", 24));\par
+\tab\tab Collections.sort(list);// Sorts the array list\par
+\tab\tab for (Emp a : list)\par
+\tab\tab\tab System.out.print(a.name + " : " + a.age + ", ");\par
+\tab\tab Collections.sort(list, new Emp()); // Sorts the array list using comparator\par
+\tab\tab System.out.println(" \\n\\n\\nSorted According to Age\\n\\n");\par
+\tab\tab for (Emp a : list)// printing the sorted list of ages\par
+\tab\tab\tab System.out.print(a.name + " : " + a.age + ", ");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:42: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 09:43: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+Sorted According to Age\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:43: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 09:43: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:43: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30,\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:43: Akshay : 23, Rohan : 22, Tom : 24, Woy : 30,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Akshay : 23, Tom : 24, Woy : 30, \cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:43: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30,\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:43: Akshay : 23, Rohan : 22, Tom : 24, Woy : 30,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Akshay : 23, Tom : 24, Woy : 30, \par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 09:43: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:44: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Yashas Anand (to Everyone)\b0 : \cf1 09:44: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 09:44: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:44: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+Sorted According to Age\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 09:44: Abc : 23, Rohan : 22, Soy : 30, Tom : 24,  Sorted According to Age\par
+Rohan : 22, Abc : 23, Tom : 24, Soy : 30, \cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:44: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+Sorted According to Age\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 09:44: Akshay : 23, Rohan : 22, Tom : 24, Woy : 30,  \par
+Sorted According to Age\par
+Rohan : 22, Akshay : 23, Tom : 24, Woy : 30, \cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:44: \par
+Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \par
+\par
+\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:45: Ram : 23, Rohan : 22, Roy : 30, Tom : 24, \par
+Sorted According to Age\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:45: Ram : 23, Rohan : 22, Roy : 30, Tom : 24, \par
+Sorted According to Age\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:45: Ram : 23, Rohan : 34, Roy : 30, Tom : 24, \par
+\par
+Sorted According to Age\par
+\par
+Ram : 23, Tom : 24, Roy : 30, Rohan : 34, \cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:46: Ram : 23, Rohan : 34, Roy : 30, Tom : 24, \par
+\par
+Sorted According to Age\par
+\par
+Ram : 23, Tom : 24, Roy : 30, Rohan : 34, \par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 09:46: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:48: import java.util.*;\par
+\par
+class Emp implements  Comparable<Emp> \{\par
+\tab public String name;\par
+\tab public int age;\par
+\par
+\tab Emp() \{\par
+\tab\}\par
+\par
+\tab Emp(String n, int a) \{\par
+\tab\tab name = n;\par
+\tab\tab age = a;\par
+\tab\}\par
+\par
+\tab // Overriding the compareTo method\par
+\tab public int compareTo(Emp d) \{\par
+\tab\tab return (this.name).compareTo(d.name);\par
+\tab\}\par
+\par
+\tab\par
+\}\par
+\par
+class AA implements Comparator<Emp>\{\par
+\tab // Overriding the compare method to sort the age\par
+\tab\tab public int compare(Emp d, Emp d1) \{\par
+\tab\tab\tab return d.age - d1.age;\par
+\tab\tab\}\par
+\}\par
+public class MainPrg \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab List<Emp> list = new ArrayList<Emp>();\par
+\tab\tab list.add(new Emp("Ashay", 23));\par
+\tab\tab list.add(new Emp("Rohan", 22));\par
+\tab\tab list.add(new Emp("Woy", 30));\par
+\tab\tab list.add(new Emp("Tom", 24));\par
+\tab\tab Collections.sort(list);// Sorts the array list\par
+\tab\tab for (Emp a : list)\par
+\tab\tab\tab System.out.print(a.name + " : " + a.age + ", ");\par
+\tab\tab Collections.sort(list, new AA()); // Sorts the array list using comparator\par
+\tab\tab System.out.println(" \\nSorted According to Age\\n");\par
+\tab\tab for (Emp a : list)// printing the sorted list of ages\par
+\tab\tab\tab System.out.print(a.name + " : " + a.age + ", ");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:48: yes mam\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 09:48: how is it sorting basis of age?\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:50: Mam I am getting error\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:55: WAP in Java to create an Employee class with Name and Salary as a compulsory attribute.\par
+Each name entered should have two parts: FirstName and LastName. Name=\ldblquote FN LN\rdblquote\par
+Prepare a comparator object, which compares the employee objects based on the LastName.\par
+Use String method split() to split the name to FirstNAme and LastName.\par
+By default, salary wise sorting should be implemented.\par
+Prepare a List of 5 Employees and show the sorting algorithm usage.\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:05: mam now it is working\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:05: Ram : 23, Rohan : 22, Roy : 30, Tom : 24,  \par
+\par
+\par
+Sorted According to Age\par
+\par
+\par
+Rohan : 22, Ram : 23, Tom : 24, Roy : 30, \cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 10:13: package projcollecjava8;\par
+\par
+import java.util.*;\par
+\par
+class Emp implements Comparator<Emp>, Comparable<Emp> \{\par
+ public String name;\par
+ public String surname;\par
+ public int salary;\par
+\par
+ Emp() \{\par
+ \}\par
+\par
+ Emp(String first_name,String last_name, int a) \{\par
+  name = first_name;\par
+  surname=last_name;\par
+  salary = a;\par
+ \}\par
+\par
+ // Overriding the compareTo method\par
+ public int compareTo(Emp d) \{\par
+  return (this.surname).compareTo(d.surname);\par
+ \}\par
+\par
+ // Overriding the compare method to sort the age\par
+ public int compare(Emp d, Emp d1) \{\par
+  return d.salary- d1.salary;\par
+ \}\par
+\}\par
+\par
+public class sept30 \{\par
+ public static void main(String args[]) \{\par
+  List<Emp> list = new ArrayList<Emp>();\par
+  list.add(new Emp("Ram","Singh", 23000));\par
+  list.add(new Emp("Raj","Gupta" ,22000));\par
+  list.add(new Emp("Jay","Singh",30000));\par
+  list.add(new Emp("Ravi","Shikar", 24000));\par
+  list.add(new Emp("Sanju","Sarju", 50000));\par
+  Collections.sort(list);// Sorts the array list\par
+  for (Emp a : list)\par
+   System.out.print(a.name + a.surname+" : " + a.salary + ", ");\par
+  Collections.sort(list, new Emp()); // Sorts the array list using comparator\par
+  System.out.println(" \\n\\n\\nSorted According to Salary\\n\\n");\par
+  for (Emp a : list)// printing the sorted salary\par
+   System.out.print(a.name + a.surname+" : " + a.salary + ", ");\par
+ \}\par
+\}\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:33: import java.util.ArrayList;\par
+import java.util.Collections;\par
+import java.util.Comparator;\par
+import java.util.List;\par
+\par
+class Empl implements Comparator<Empl>, Comparable<Empl> \{\par
+ public String name;\par
+ public int Salary;\par
+ String[] Name1;\par
+ \par
+ Empl() \{\par
+ \}\par
+\par
+ Empl(String n, int s) \{\par
+  name = n;\par
+  Salary = s;\par
+  Name1=name.split(" ");\par
+ \}\par
+ public int compareTo(Empl d) \{\par
+  return (this.Name1[1]).compareTo(d.Name1[1]);\par
+ \}\par
+ public int compare(Empl d, Empl d1) \{\par
+  return d.Salary - d1.Salary;\par
+ \}\par
+\}\par
+\par
+public class Sort_Exercise \{\par
+ public static void main(String args[]) \{\par
+  List<Empl> list = new ArrayList<Empl>();\par
+  list.add(new Empl("Ram Singh", 5000));\par
+  list.add(new Empl("Rohan Khanna", 20000));\par
+  list.add(new Empl("Roy Ayyer", 10000));\par
+  list.add(new Empl("Tom Chopra", 15000));\par
+  list.add(new Empl("Amitabh Kapoor", 15000));\par
+  System.out.println("By Default:\\n");\par
+  Collections.sort(list, new Empl());\par
+  for (Empl a : list)\par
+    System.out.print(a.name + " : " + a.Salary + ",  ");\par
+  System.out.println("\\n\\nSorted According to Last_Name\\n");\par
+  Collections.sort(list);\par
+  for (Empl a : list)\par
+   System.out.print(a.name + " : " + a.Salary + ",  ");\par
+ \}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:34: Tea break 20 min\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:34: cancelled\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:35: set\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:35: hashtable\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:36: ArrayList\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:36: Array\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:36: vector\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:36: vector\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:36: Vector\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:36: Vector\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:37: vector\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:37: vector\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:41: Design a class that acts as a library for the following kinds of media: book, video, and newspaper. Provide one version of the class that uses generics and one that does not. Feel free to use any additional APIs for storing and retrieving the media.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:43: Tea break 20 min\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:03: Back\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:03: Back\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 11:03: back\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:04: back\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:04: Back\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 11:04: Back\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:04: back\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:04: back\cf2\par
+\cf4\b Atul Gupta (to Piyush Shukla)\b0 : \cf1 11:04: back\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:04: back\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:08: abstract\~class\~Person\{\~\~\par
+\~\~abstract\~void\~eat();\~\~\par
+\}\~\~\par
+class\~TestAnonymousInner\{\~\~\par
+\~public\~static\~void\~main(String\~args[])\{\~\~\par
+\~\~Person\~p=new\~Person()\{\~\~\par
+\~\~void\~eat()\{System.out.println("nice\~fruits");\}\~\~\par
+\~\~\};\~\~\par
+\~\~p.eat();\~\~//nice fruits\par
+\~\}\~\~\par
+\}\~\~\par
+\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:10: WAP to create anonymous class for mathematical operation such as add, subtract, multiply, divide based on an interface for operation.\par
+Eg:\par
+Interface MathOp\{\par
+Int operation(int x, int y);\par
+\}\par
+\cf0\'85\par
+MathOp add= new MathOp()\{\par
+Int operation(int x, int y)\{\par
+Return x+y;\par
+\}\par
+Add.operation(1,8) -> 9\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:30: interface MathOp \{\par
+\tab int op(int x, int y);\par
+\}\par
+\par
+public class MainPrg \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab MathOp add = new MathOp() \{\par
+\tab\tab\tab public int op(int x, int y) \{\par
+\tab\tab\tab\tab return x + y;\par
+\tab\tab\tab\}\par
+\tab\tab\};\par
+\tab\tab MathOp mul = new MathOp() \{\par
+\tab\tab\tab public int op(int x, int y) \{\par
+\tab\tab\tab\tab return x * y;\par
+\tab\tab\tab\}\par
+\tab\tab\};\par
+\tab\tab MathOp div = new MathOp() \{\par
+\tab\tab\tab public int op(int x, int y) \{\par
+\tab\tab\tab\tab return y == 0 ? y : x / y;\par
+\tab\tab\tab\}\par
+\tab\tab\};\par
+\tab\tab MathOp sub = new MathOp() \{\par
+\tab\tab\tab public int op(int x, int y) \{\par
+\tab\tab\tab\tab return x > y ? x - y : y - x;\par
+\tab\tab\tab\}\par
+\tab\tab\};\par
+\tab\tab System.out.println("Addition: add.op(5,6): " + add.op(5, 6));\par
+\tab\tab System.out.println("Substraction: y>x sub.op(5,6): " + sub.op(5, 6));\par
+\tab\tab System.out.println("Substraction: x>y sub.op(6,5): " + sub.op(6, 5));\par
+\tab\tab System.out.println("division: y==0 div.op(5,0): " + div.op(5, 0));\par
+\tab\tab System.out.println("division: y!=0 div.op(5,1): " + div.op(5, 1));\par
+\tab\tab System.out.println("Multiplcation: mul.op(5,6): " + mul.op(5, 6));\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:32: adding implement keyword would make program any different?\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:33: after main class name line 5\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:34: yes mam\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 11:38: maam plz explain line no 7\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:02: interface Ab \{\par
+\tab void print();\par
+\}\par
+\par
+public class MainPrg  \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab Ab a=new Ab() \{public void print() \{System.out.println("Hello");\}\};\par
+\tab\tab a.print();\par
+\tab\tab Ab aa=()->System.out.println("Hello");//goes for (->) Operator\par
+\tab\tab aa.print();\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:02: mam what if...if we have more functions in interface?\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Yashas Anand (to Everyone)\b0 : \cf1 12:03: Hello\par
+Hello\cf2\par
+\cf3\b Sumukh G (to Everyone)\b0 : \cf1 12:04: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:04: Hello\par
+Hello\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:05: Hello\par
+Hello\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:06: Mam if we have mutiple agruments...then we use var args?\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:07: What multiple  arguments in single method?\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:15: Yes mam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:17: Yes mam clear\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:17: yes mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:17: Yes Mam\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:17: yes ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:17: yes mam\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:17: yes maam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:17: yes mam\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:27: interface Ab \{ //Functional Interface\par
+\tab void print(int x); //SAM: Single Abstract Method\par
+\}\par
+\par
+public class MainPrg  \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab Ab aa=(int a)->System.out.println("Hello " + a);\par
+\tab\tab aa.print(10);\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:29: interface Ab \{ //Functional Interface\par
+\tab void print(int x); //SAM: Single Abstract Method\par
+\}\par
+\par
+public class MainPrg  \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab Ab aa1=(int a)->System.out.println("Hello " + a);//Optional datatype of parameter\par
+\tab\tab Ab aa2=(a)->System.out.println("Hello " + a);//interpreting the datatype of parameter\par
+\tab\tab aa1.print(10);\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:30: Hello 10\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:30: Hello 10\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:30: Hello 10\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf4\b shivendra gupta (Private)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:30: Hello 10\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:31: Hello 10\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:31: Hello 10\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:31: Hello 10\par
+\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:31: Hello 10\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:31: Hello 10\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:31: Hello 10\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:31: Hello 10\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:32: Hello 10\par
+Hello 20\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 12:32: Hello 10\par
+Hello 20\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:33: Hello 10\par
+Hello 20\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:33: Hello 10\par
+Hello 20\par
+\cf0\par
+}
+ 

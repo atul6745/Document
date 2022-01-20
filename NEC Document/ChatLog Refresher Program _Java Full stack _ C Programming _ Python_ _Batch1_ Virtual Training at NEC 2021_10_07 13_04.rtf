@@ -1,0 +1,1611 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;\red182\green59\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_10_07 13_04.rtf\b0\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 08:57: Good Morning Ma'am\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:00: Good Morning Ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:00: good morning mam\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:00: good morning Maam\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:00: Good Morning Ma'am\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:01: Ma'am is I'am audible?\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:17: To create immutable class in java, you have to do following steps.\par
+Declare the class as final so it can\rquote t be extended.\par
+Make all fields private so that direct access is not allowed.\par
+Don\rquote t provide setter methods for variables\par
+Make all mutable fields final so that it\rquote s value can be assigned only once.\par
+Initialize all the fields via a constructor performing deep copy.\par
+Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:18: ImmutableStudent\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:20: public final class ImmutableStudent \{\par
+    private final int id;\par
+    private final String name;\par
+    public ImmutableStudent(int id, String name) \{\par
+        this.name = name;\par
+        this.id = id;\par
+    \}\par
+    public int getId() \{\par
+        return id;\par
+    \}\par
+    public String getName() \{\par
+        return name;\par
+    \}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:21: class TestClass \{\par
+  public static void main(String[] args) \{\par
+    ImmutableStudent student = new ImmutableStudent(1, "Alex");\par
+    System.out.println("ID: "+student.getId()+" Name: "+student.getName());\par
+ \}\par
+\}\par
+\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:22: public class Age \{\par
+    private int day;\par
+    private int month;\par
+    private int year;\par
+    public int getDay() \{         return day;     \}\par
+    public void setDay(int day) \{     this.day = day;     \}\par
+    public int getMonth() \{     return month;     \}\par
+    public void setMonth(int month) \{     this.month = month;     \}\par
+    public int getYear() \{     return year;     \}\par
+    public void setYear(int year) \{    this.year = year;     \}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:24: public final class ImmutableStudent \{\par
+    private final int id;\par
+    private final String name;\par
+    private final Age age;\par
+    public ImmutableStudent(int id, String name, Age age) \{\par
+    this.name = name;\par
+    this.id = id;\par
+    this.age = age;\par
+    \}\par
+    public int getId() \{     return id;     \}\par
+    public String getName() \{    return name;     \}\par
+    public Age getAge() \{    return age;     \}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:26: class TestClass \{\par
+  public static void main(String[] args) \{\par
+    Age age = new Age();\par
+    age.setDay(1);\par
+    age.setMonth(1);\par
+    age.setYear(1992);\par
+    ImmutableStudent student = new ImmutableStudent(1, "Alex", age);\par
+    System.out.println("Alex age year before modification = " + student.getAge().getYear());\par
+    age.setYear(1993);\par
+    System.out.println("Alex age year after modification = " + student.getAge().getYear());\par
+ \}\par
+\}\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:29: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 09:30: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:30: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:30: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:30: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:30: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 09:31: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:31: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 09:31: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:32: package pkg1;\par
+\par
+public final class ImmutableStudent \{\par
+    private final int id;\par
+    private final String name;\par
+    private final Age age;\par
+    public ImmutableStudent(int id, String name, Age age) \{\par
+        this.name = name;\par
+        this.id = id;\par
+        Age cloneAge = new Age();\par
+        cloneAge.setDay(age.getDay());\par
+        cloneAge.setMonth(age.getMonth());\par
+        cloneAge.setYear(age.getYear());\par
+        this.age = cloneAge;\par
+    \}\par
+\par
+    public int getId() \{     return id;     \}\par
+    public String getName() \{    return name;     \}\par
+    public Age getAge() \{    return age;     \}\par
+\}\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:33: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:34: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:34: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:45: package pkg1;\par
+\par
+class TestClass \{\par
+\tab   public static void main(String[] args) \{\par
+\tab     Age age = new Age();\par
+\tab     age.setDay(1);\par
+\tab     age.setMonth(1);\par
+\tab     age.setYear(1992);\par
+\tab     ImmutableStudent student = new ImmutableStudent(1, "Alex", age);\par
+\tab     System.out.println("Alex age year before modification = " + student.getAge().getYear());\par
+\tab     student.getAge().setYear(1993);\par
+\tab     System.out.println("Alex age year after modification = " + student.getAge().getYear());\par
+\tab  \}\par
+\tab\}\par
+\par
+\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:46: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 09:47: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:47: Alex age year before modification = 1992\par
+Alex age year after modification = 1993\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:48: package pkg1;\par
+\par
+public final class ImmutableStudent \{\par
+    private final int id;\par
+    private final String name;\par
+    private final Age age;\par
+    public ImmutableStudent(int id, String name, Age age) \{\par
+        this.name = name;\par
+        this.id = id;\par
+        Age cloneAge = new Age();\par
+        cloneAge.setDay(age.getDay());\par
+        cloneAge.setMonth(age.getMonth());\par
+        cloneAge.setYear(age.getYear());\par
+        this.age = cloneAge;\par
+    \}\par
+\par
+    public int getId() \{     return id;     \}\par
+    public String getName() \{    return name;     \}\par
+    \par
+    public Age getAge() \{\par
+        Age cloneAge = new Age();\par
+        cloneAge.setDay(this.age.getDay());\par
+        cloneAge.setMonth(this.age.getMonth());\par
+        cloneAge.setYear(this.age.getYear());\par
+        return cloneAge;\par
+    \}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:49: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:49: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:49: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:49: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 09:49: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:49: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:50: To create immutable class in java, you have to do following steps.\par
+Declare the class as final so it can\rquote t be extended.\par
+Make all fields private so that direct access is not allowed.\par
+Don\rquote t provide setter methods for variables\par
+Make all mutable fields final so that it\rquote s value can be assigned only once.\par
+Initialize all the fields via a constructor performing deep copy.\par
+Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:50: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:50: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:50: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:50: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:50: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:50: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 09:51: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 09:51: Alex age year before modification = 1992\par
+Alex age year after modification = 1992\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:56: Apart from your written classes, JDK itself has lots of immutable classes. Given is such a list of immutable classes in Java.\par
+String\par
+Wrapper classes such as Integer, Long, Double etc.\par
+Immutable collection classes such as Collections.singletonMap() etc.\par
+java.lang.StackTraceElement\par
+Java enums (ideally they should be)\par
+java.util.Locale\par
+java.util.UUID\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 09:58: yes\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:58: yes maam\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 09:58: Yes mam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:58: Yes mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 09:58: yes ma'am\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:58: yes mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:58: Yes Ma'am\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 09:58: Yes Ma'am\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 09:58: Yes Maam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:59: Ok Ma'am\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 09:59: Okay ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:01: public class TestThrow1\{  \par
+   static void validate(int age)\{  \par
+     if(age<18)  \par
+      throw new ArithmeticException("not valid");  \par
+     else  \par
+      System.out.println("welcome to vote");  \par
+   \}  \par
+   public static void main(String args[])\{  \par
+      validate(13);  \par
+      System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at TestThrow1.validate(TestThrow1.java:4)\par
+\tab at TestThrow1.main(TestThrow1.java:9)\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at TestThrow1.validate(TestThrow1.java:4)\par
+\tab at TestThrow1.main(TestThrow1.java:9)\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at exceptionEx.TestThrow.validate(TestThrow.java:6)\par
+\tab at exceptionEx.TestThrow.main(TestThrow.java:11)\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at TestThrow.validate(TestThrow.java:4)\par
+\tab at TestThrow.main(TestThrow.java:9)\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+ at TestThrow1.validate(TestThrow1.java:4)\par
+ at TestThrow1.main(TestThrow1.java:9)\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+ at TestThrow1.validate(TestThrow1.java:4)\par
+ at TestThrow1.main(TestThrow1.java:9)\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at oct07.excep.validate(excep.java:6)\par
+\tab at oct07.excep.main(excep.java:11)\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at TestThrow.validate(TestThrow.java:4)\par
+\tab at TestThrow.main(TestThrow.java:9)\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at TestThrow1.validate(TestThrow1.java:4)\par
+\tab at TestThrow1.main(TestThrow1.java:9)\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+ at TestThrow1.validate(TestThrow1.java:4)\par
+ at TestThrow1.main(TestThrow1.java:9)\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+ at TestThrow1.validate(TestThrow1.java:4)\par
+ at TestThrow1.main(TestThrow1.java:9)\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:03: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+ at TestThrow1.validate(TestThrow1.java:4)\par
+ at TestThrow1.main(TestThrow1.java:9)\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 10:04: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+ at TestThrow1.validate(TestThrow1.java:4)\par
+ at TestThrow1.main(TestThrow1.java:9)\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:04: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at ExcepTest.validate(ExcepTest.java:4)\par
+\tab at ExcepTest.main(ExcepTest.java:9)\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:04: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at Day12.TestThrow1.validate(TestThrow1.java:6)\par
+\tab at Day12.TestThrow1.main(TestThrow1.java:12)\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:04: public class ExcepTest\{  \par
+   static void validate(int age)\{  \par
+     if(age<18)  \par
+      throw new ArithmeticException("not valid");  \par
+     else  \par
+      System.out.println("welcome to vote");  \par
+   \}  \par
+   public static void main(String args[])\{  \par
+      try \{\par
+    \tab   validate(13); \par
+      \}\par
+      catch(ArithmeticException e) \{\par
+    \tab   System.out.println(e);\par
+      \}\par
+      System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:04: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at Day12.TestThrow1.validate(TestThrow1.java:6)\par
+\tab at Day12.TestThrow1.main(TestThrow1.java:12)\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:05: Exception in thread "main" java.lang.ArithmeticException: not valid\par
+\tab at pkg1.TestThrow1.validate(TestThrow1.java:6)\par
+\tab at pkg1.TestThrow1.main(TestThrow1.java:11)\par
+\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:05: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:05: \par
+\par
+java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:06: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:06: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:06: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:06: java.lang.ArithmeticException: not valid\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:07: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:10: public class ExcepTest\{  \par
+   static void validate(int age) throws ArithmeticException\{  \par
+     if(age<18)  \par
+      throw new ArithmeticException("not valid");  \par
+     else  \par
+      System.out.println("welcome to vote");  \par
+   \}  \par
+   public static void main(String args[])\{  \par
+     try \{\par
+    \tab   validate(13); \par
+      \}\par
+      catch(ArithmeticException e) \{\par
+    \tab   System.out.println(e);\par
+      \}\par
+      System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:10: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:10: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:10: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:10: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not \par
+valid\par
+rest of the code...\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not \par
+valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:11: java.lang.ArithmeticException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:18: mam you are not audible\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:18: mam u r not audible\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:18: mam you are not audible\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:18: Yes Ma'am\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:22: import java.io.IOException; for IOException\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:23: ok ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:28: import java.io.IOException;  \par
+class Testthrows1\{  \par
+  void m()throws IOException\{  \par
+    throw new IOException("device error");//checked exception  \par
+  \}  \par
+  void n()throws IOException\{  \par
+    m();  \par
+  \}  \par
+  void p()\{  \par
+   try\{  \par
+    n();  \par
+   \}catch(Exception e)\{System.out.println("exception handled");\}  \par
+  \}  \par
+  public static void main(String args[])\{  \par
+   Testthrows1 obj=new Testthrows1();  \par
+   obj.p();  \par
+   System.out.println("normal flow...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:29: \par
+exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:29: exception handled\par
+normal flow...\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:30: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:31: exception handled\par
+normal flow...\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:31: import java.io.*;  \par
+class M\{  \par
+ void method()throws IOException\{  \par
+  throw new IOException("device error");  \par
+ \}  \par
+\}  \par
+public class Testthrows2\{  \par
+   public static void main(String args[])\{  \par
+    try\{  \par
+     M m=new M();  \par
+     m.method();  \par
+    \}catch(Exception e)\{System.out.println("exception handled");\}     \par
+     System.out.println("normal flow...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:31: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:31: exception handled\par
+normal flow...\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:32: import java.io.*;  \par
+class M\{  \par
+ void method()throws IOException\{  \par
+  System.out.println("device operation performed");  \par
+ \}  \par
+\}  \par
+class Testthrows3\{  \par
+   public static void main(String args[]) throws IOException\{//declare exception  \par
+     M m=new M();  \par
+     m.method();  \par
+  \par
+    System.out.println("normal flow...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:32: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:33: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:33: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:33: exception handled\par
+normal flow...\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:33: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:34: device operation performed\par
+normal flow...\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:34: device operation performed\par
+normal flow...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:34: device operation performed\par
+normal flow...\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:34: device operation performed\par
+normal flow...\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:35: import java.io.*;  \par
+class M\{  \par
+ void method()throws IOException\{  \par
+  throw new IOException("device error");  \par
+ \}  \par
+\}  \par
+class Testthrows4\{  \par
+   public static void main(String args[])throws IOException\{//declare exception  \par
+     M m=new M();  \par
+     m.method();  \par
+  \par
+    System.out.println("normal flow...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:35: In this case exception handle by JVM\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:36: yes mam\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at M2.method(TestThrows4.java:5)\par
+\tab at TestThrows4.main(TestThrows4.java:12)\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at M.method(TestThrows4.java:4)\par
+\tab at TestThrows4.main(TestThrows4.java:10)\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at M.method(Exception3.java:36)\par
+\tab at Exception3.main(Exception3.java:42)\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at M.method(TestThrow1.java:83)\par
+\tab at TestThrow1.main(TestThrow1.java:89)\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at Day12.M.method(Testthrows4.java:42)\par
+\tab at Day12.Testthrows4.main(Testthrows4.java:49)\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at M.method(Testthrows4.java:4)\par
+\tab at Testthrows4.main(Testthrows4.java:10)\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+ at M.method(Exception3.java:36)\par
+ at Exception3.main(Exception3.java:42)\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:37: Exception in thread "main" java.io.IOException: device error\par
+\tab at exceptionEx.M.method(TestThrows.java:63)\par
+\tab at exceptionEx.TestThrows.main(TestThrows.java:69)\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:38: xception in thread "main" java.io.IOException: device error\par
+\tab at M1.method(D_Exception_Two.java:20)\par
+\tab at D_Exception_Two.main(D_Exception_Two.java:26)\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:38: Exception in thread "main"\par
+java.io.IOException: device error\par
+at M.method(Exception3.java:36)\par
+at \par
+Exception3.main(Exception3.java:42)\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:38: Exception in thread "main" java.io.IOException: device error\par
+ at M.method(Exception3.java:36)\par
+ at Exception3.main(Exception3.java:42)\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:40: Exception in thread "main" java.io.IOException: device error\par
+\tab at MI.method(M.java:4)\par
+\tab at M.main(M.java:10)\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:41: Exception in thread "main" java.io.IOException: device error\par
+ at M.method(Exception3.java:36)\par
+ at Exception3.main(Exception3.java:42)\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:41: Exception in thread "main" java.io.IOException: device error\par
+ at M.method(Exception3.java:36)\par
+ at Exception3.main(Exception3.java:42)\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:41: Exception in thread "main" java.io.IOException: device error\par
+\tab at oct07.M.method(excep.java:97)\par
+\tab at oct07.excep.main(excep.java:103)\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:41: Same to you mam\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:41: Exception in thread "main" java.io.IOException: device error\par
+ at oct07.M.method(excep.java:97)\par
+ at oct07.excep.main(excep.java:103)\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:41: Same to you mam\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:41: Same to you mam\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:41: Same to you ma'am\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:41: Same to you mam\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:41: Same to you ma'am\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:41: Same to you mam\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:41: Same to you maam\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:41: Same to you mam\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:41: same to u ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:41: Exception in thread "main" java.io.IOException: device error\par
+ at M.method(Exception3.java:36)\par
+ at Exception3.main(Exception3.java:42)\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:42: same to you mam\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:42: same to u ma'am\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:42: Same to u Ma'am\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:42: same to u ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:42: If the superclass method does not declare an exception\par
+* Rule: If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:43: import java.io.*;  \par
+class Parent\{  \par
+  void msg()\{System.out.println("parent");\}  \par
+\}  \par
+  \par
+class TestExceptionChild extends Parent\{  \par
+  void msg()throws IOException\{  \par
+    System.out.println("TestExceptionChild");  \par
+  \}  \par
+  public static void main(String args[])\{  \par
+   Parent p=new TestExceptionChild();  \par
+   p.msg();  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:44: If the superclass method does not declare an exception\par
+* Rule: If the superclass method does not declare an exception, subclass overridden method cannot declare the checked exception but can declare unchecked exception.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:45: import java.io.*;  \par
+class Parent\{  \par
+  void msg()\{System.out.println("parent");\}  \par
+\}  \par
+  \par
+class TestExceptionChild1 extends Parent\{  \par
+  void msg()throws ArithmeticException\{  \par
+    System.out.println("child");  \par
+  \}  \par
+  public static void main(String args[])\{  \par
+   Parent p=new TestExceptionChild1();  \par
+   p.msg();  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:45: child\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:46: child\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:46: child\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:46: Child\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:46: child\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:46: child\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:46: child\par
+\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:46: child\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:46: child\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:46: child\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:46: child\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:46: child\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:47: child\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:47: If the superclass method declares an exception\par
+* Rule: If the superclass method declares an exception, subclass overridden method can declare same, subclass exception or no exception but cannot declare parent exception.\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:47: child\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:48: import java.io.*;  \par
+class Parent\{  \par
+  void msg()throws ArithmeticException\{ System.out.println("parent");\}  \par
+\}  \par
+  \par
+class TestExceptionChild2 extends Parent\{  \par
+  void msg()throws Exception\{System.out.println("child");\}  \par
+  \par
+  public static void main(String args[])\{  \par
+   Parent p=new TestExceptionChild2();  \par
+   try\{  \par
+   p.msg();  \par
+   \}catch(Exception e)\{\}  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:48: If the superclass method declares an exception\par
+* Rule: If the superclass method declares an exception, subclass overridden method can declare same, subclass exception or no exception but cannot declare parent exception.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:48: import\~java.io.*;\~\~\par
+class\~Parent\{\~\~\par
+\~\~void\~msg()throws\~Exception\{System.out.println("parent");\}\~\~\par
+\}\~\~\par
+\~\~\par
+class\~TestExceptionChild3\~extends\~Parent\{\~\~\par
+\~\~void\~msg()throws\~Exception\{System.out.println("child");\}\~\~\par
+\~\~\par
+\~\~public\~static\~void\~main(String\~args[])\{\~\~\par
+\~\~\~Parent\~p=new\~TestExceptionChild3();\~\~\par
+\~\~\~try\{\~\~\par
+\~\~\~p.msg();\~\~\par
+\~\~\~\}catch(Exception\~e)\{\}\~\~\par
+\~\~\}\~\~\par
+\}\~\~\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:49: child\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:49: child\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:49: child\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:49: child\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:49: child\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:49: Child\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:49: child\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:49: child\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:49: child\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:50: child\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:50: child\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:50: child\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:50: child\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:50: child\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:50: child\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:50: If the superclass method declares an exception\par
+* Rule: If the superclass method declares an exception, subclass overridden method can declare same, subclass exception or no exception but cannot declare parent exception.\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:50: child\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:50: child\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:50: import\~java.io.*;\~\~\par
+class\~Parent\{\~\~\par
+\~\~void\~msg()throws\~Exception\{System.out.println("parent");\}\~\~\par
+\}\~\~\par
+\~\~\par
+class\~TestExceptionChild4\~extends\~Parent\{\~\~\par
+\~\~void\~msg()throws\~ArithmeticException\{System.out.println("child");\}\~\~\par
+\~\~\par
+\~\~public\~static\~void\~main(String\~args[])\{\~\~\par
+\~\~\~Parent\~p=new\~TestExceptionChild4();\~\~\par
+\~\~\~try\{\~\~\par
+\~\~\~p.msg();\~\~\par
+\~\~\~\}catch(Exception\~e)\{\}\~\~\par
+\~\~\}\~\~\par
+\}\~\~\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:51: child\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:51: child\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:51: child\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:51: child\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:51: child\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:51: Child\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:52: child\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:52: child\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:52: child\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:52: child\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:52: child\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:52: If the superclass method declares an exception\par
+* Rule: If the superclass method declares an exception, subclass overridden method can declare same, subclass exception or no exception but cannot declare parent exception.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:52: import\~java.io.*;\~\~\par
+class\~Parent\{\~\~\par
+\~\~void\~msg()throws\~Exception\{System.out.println("parent");\}\~\~\par
+\}\~\~\par
+\~\~\par
+class\~TestExceptionChild5\~extends\~Parent\{\~\~\par
+\~\~void\~msg()\{System.out.println("child");\}\~\~\par
+\~\~\par
+\~\~public\~static\~void\~main(String\~args[])\{\~\~\par
+\~\~\~Parent\~p=new\~TestExceptionChild5();\~\~\par
+\~\~\~try\{\~\~\par
+\~\~\~p.msg();\~\~\par
+\~\~\~\}catch(Exception\~e)\{\}\~\~\par
+\~\~\}\~\~\par
+\}\~\~\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:53: child\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:53: child\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:53: child\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:53: child\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:53: child\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:53: child\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:53: child\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:53: child\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:53: child\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:53: child\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:53: child\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:54: child\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:54: \par
+child\par
+\par
+\par
+\par
+\par
+10:53\par
+\par
+shivendra gupta to Everyone\par
+\par
+child\par
+\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:54: Child\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:54: child\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:54: no mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:54: child\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:54: child\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:54: actually I am copy the code\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:55: child\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:55: child\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:58: class WrongInputException extends Exception \{ \par
+WrongInputException(String s) \{ \par
+super(s); \} \par
+\} \par
+class Input \{ \par
+void method() throws WrongInputException \{ \par
+throw new WrongInputException("Wrong input"); \par
+\}\tab\} \par
+class UserExceptionDemo \{ \par
+public static void main(String[] args)\{ \par
+try \{ \par
+Input n =new Input();\par
+n.method(); \par
+\} catch(WrongInputException wie) \{ \par
+System.out.println(wie.getMessage()); \par
+\} \tab\}\tab\}\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:58: Wrong input\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:59: Wrong input\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:59: Wrong input\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:59: Wrong input\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:59: Wrong input\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:59: Wrong input\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:59: Wrong input\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:59: Wrong input\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:00: Wrong input\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:00: Wrong input\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:00: class InvalidAgeException extends Exception\{  \par
+ InvalidAgeException(String s)\{  \par
+  super(s);  \par
+ \}  \par
+\}  \par
+class TestCustomException1\{  \par
+   static void validate(int age)throws InvalidAgeException\{  \par
+     if(age<18)  \par
+      throw new InvalidAgeException("not valid");  \par
+     else  \par
+      System.out.println("welcome to vote");  \par
+   \}  \par
+   public static void main(String args[])\{  \par
+      try\{  \par
+      validate(13);  \par
+      \}catch(Exception m)\{System.out.println("Exception occured: "+m);\}  \par
+      System.out.println("rest of the code...");  \par
+  \}  \par
+\} \par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:01: Exception occured: pkg1.InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:01: Exception occured: Day11.InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:01: Exception occured: oct07.InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:01: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:02: Exception occured: UserdefinedException.InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:02: Exception occured: oct07.InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:02: Exception occured: pkg1.InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:02: Exception occured:\par
+ InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:02: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:02: Tea break 15 min\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:02: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:02: Exception occured: InvalidAgeException: not valid\par
+rest of the code...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:17: Back\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:17: back\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:17: Back\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:17: Back\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 11:17: Back\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:17: Back\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:17: back\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:18: back\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:18: back\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:21: Create a class called Employee that asks the user to input the name and the age of an employee. Raise a custom defined exception when the user enters an employee name that has already been entered in the array/Collection of employees and raise another exception if the age is negative or less than 18 or greater than 60. If there is any occurrence of any other exception, throw those also as user defined exceptions.\par
+If age <18: \ldblquote Children are not allowed as Employees\rdblquote\par
+If Age<0 : \ldblquote Ghosts are not allowed as Employees\rdblquote\par
+If age>60: \ldblquote Seniors are not allowed as Employees\rdblquote\par
+If age> 100 : \ldblquote Purvaj are not allowed as Employees\rdblquote\par
+If name is duplicate: \ldblquote Duplicate names are not allowed as Employees\rdblquote\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:25: Create a class called Employee that asks the user to input the name and the age of an employee. Raise a custom defined exception when the user enters an employee name that has already been entered in the array/Collection of employees and raise another exception if the age is negative or less than 18 or greater than 60. If there is any occurrence of any other exception, throw those also as user defined exceptions.\par
+If age <18: \ldblquote Children are not allowed as Employees\rdblquote\par
+If Age<0 : \ldblquote Ghosts are not allowed as Employees\rdblquote\par
+If age>60: \ldblquote Seniors are not allowed as Employees\rdblquote\par
+If age> 100 : \ldblquote Purvaj are not allowed as Employees\rdblquote\par
+If name is duplicate: \ldblquote Duplicate names are not allowed as Employees\rdblquote\par
+Hint: At least classes: Employee, InvalidAge, DuplicateName, Main; Use a collection/Array to store Employee details.\par
+Menu driven: 1. Add Employees, 2. View the EmployeeList, 3. Exit\par
+\cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 11:51: import java.util.*;\par
+import java.util.Scanner;\par
+class NamedException extends Exception \{\par
+\tab  \par
+\tab  public NamedException(String str) \{\par
+\tab   System.out.println(str);\par
+\tab  \}\par
+\tab\}\par
+class AgeException extends Exception \{\par
+ \par
+ public AgeException(String str) \{\par
+  System.out.println(str);\par
+ \}\par
+\}\par
+public class excep \{\par
+ \par
+ public static void main(String[] args) \{\par
+\tab List<String> names = new ArrayList<>();\par
+\tab names.add("Delhi");\par
+    names.add("Mumbai");\par
+    names.add("Bangalore");\par
+    names.add("Chennai");\par
+    names.add("Kolkata");\par
+    names.add("Mumbai");\par
+    Scanner s=new Scanner(System.in);\par
+    System.out.print("Enter ur age :: ");\par
+    int age = s.nextInt();\par
+    List<String> final_list = new ArrayList<>();\par
+    try \{\par
+    for(String value:names)\par
+    \tab if(final_list.contains(value))\par
+    \tab\tab  throw new NamedException("Duplicate names are not allowed as Employees");\par
+    \tab else\par
+    \tab\tab final_list.add(value);\par
+    System.out.println(final_list);\par
+    \}\par
+    catch (NamedException a) \{\par
+    \tab    System.out.println(a);\par
+  \par
+    \}\par
+  try \{\par
+   if(age<18) \par
+    throw new AgeException("Children are not allowed as Employees");\par
+   else if(age<0) \par
+\tab     throw new AgeException("Ghosts are not allowed as Employees");\par
+   else if(age>60 && age<100) \par
+\tab     throw new AgeException("Seniors are not allowed as Employees");\par
+   else if(age>100) \par
+\tab     throw new AgeException("Purvaj are not allowed as Employees");\par
+   else\par
+    System.out.println("Valid age");\par
+  \}\par
+  catch (AgeException a) \{\par
+   System.out.println(a);\par
+  \}\par
+ \}\par
+\}\par
+\par
+\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:51: am i audible\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:51: maam\cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 11:55: import java.util.*;\par
+import java.util.Scanner;\par
+class NamedException extends Exception \{\par
+\tab  \par
+\tab  public NamedException(String str) \{\par
+\tab   System.out.println(str);\par
+\tab  \}\par
+\tab\}\par
+class AgeException extends Exception \{\par
+ \par
+ public AgeException(String str) \{\par
+  System.out.println(str);\par
+ \}\par
+\}\par
+public class excep \{\par
+ \par
+ public static void main(String[] args) \{\par
+\tab List<String> names = new ArrayList<>();\par
+\tab names.add("Delhi");\par
+    names.add("Mumbai");\par
+    names.add("Bangalore");\par
+    names.add("Chennai");\par
+    names.add("Kolkata");\par
+    names.add("Mumbai");\par
+    Scanner s=new Scanner(System.in);\par
+    System.out.print("Enter ur age :: ");\par
+    int age = s.nextInt();\par
+    List<String> final_list = new ArrayList<>();\par
+    try \{\par
+    for(String value:names)\par
+    \tab if(final_list.contains(value))\par
+    \tab\tab  throw new NamedException("Duplicate names are not allowed as Employees");\par
+    \tab else\par
+    \tab\tab final_list.add(value);\par
+    System.out.println(final_list);\par
+    \}\par
+    catch (NamedException a) \{\par
+    \tab    System.out.println(a);\par
+  \par
+    \}\par
+  try \{\par
+   if(age<18) \par
+    throw new AgeException("Children are not allowed as Employees");\par
+   else if(age<0) \par
+\tab     throw new AgeException("Ghosts are not allowed as Employees");\par
+   else if(age>60 && age<100) \par
+\tab     throw new AgeException("Seniors are not allowed as Employees");\par
+   else if(age>100) \par
+\tab     throw new AgeException("Purvaj are not allowed as Employees");\par
+   else\par
+    System.out.println("Valid age");\par
+  \}\par
+  catch (AgeException a) \{\par
+   System.out.println(a);\par
+  \}\par
+ \}\par
+\}\par
+\par
+\par
+\cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 12:13: import java.util.*;\par
+import java.util.Scanner;\par
+class NamedException extends Exception \{\par
+\tab  \par
+\tab  public NamedException(String str) \{\par
+\tab   System.out.println(str);\par
+\tab  \}\par
+\tab\}\par
+class AgeException extends Exception \{\par
+ \par
+ public AgeException(String str) \{\par
+  System.out.println(str);\par
+ \}\par
+\}\par
+public class excep \{\par
+ \par
+ public static void main(String[] args) \{\par
+\tab List<String> names = new ArrayList<>();\par
+    try \{\par
+    Scanner sc=new Scanner(System.in);\par
+    System.out.print("Enter ur name :: ");\par
+    for(int i=0;i<5;i++)\par
+    \{\par
+    String na=sc.nextLine();\par
+    if(names.contains(na))\par
+    \tab\tab  throw new NamedException("Duplicate names are not allowed as Employees");\par
+    \tab else\par
+    \tab\tab names.add(na);\par
+    \}\par
+    \}\par
+    catch (NamedException a) \{\par
+    \tab    System.out.println(a);\par
+  \par
+    \}\par
+    finally\par
+    \{\par
+    \tab System.out.println(names);\par
+    \}\par
+    Scanner s=new Scanner(System.in);\par
+    System.out.print("Enter ur age :: ");\par
+    int age = s.nextInt();\par
+    try \{\par
+     if(age<18) \par
+    throw new AgeException("Children are not allowed as Employees");\par
+   else if(age<0) \par
+\tab     throw new AgeException("Ghosts are not allowed as Employees");\par
+   else if(age>60 && age<100) \par
+\tab     throw new AgeException("Seniors are not allowed as Employees");\par
+   else if(age>100) \par
+\tab     throw new AgeException("Purvaj are not allowed as Employees");\par
+   else\par
+    System.out.println("Valid age");\par
+  \}\par
+  catch (AgeException a) \{\par
+   System.out.println(a);\par
+  \}\par
+ \}\par
+\}\par
+\par
+\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:36: import java.util.*;\par
+\par
+class WrongAgeException extends Exception \{\par
+\tab WrongAgeException(String s) \{\par
+\tab\tab super(s);\par
+\tab\}\par
+\}\par
+\par
+class DuplicateNameException extends Exception \{\par
+\tab DuplicateNameException(String s) \{\par
+\tab\tab super(s);\par
+\tab\}\par
+\}\par
+\par
+class Emp \{\par
+\tab int age;\par
+\tab String name;\par
+\par
+\tab Emp() \{\par
+\tab\}\par
+\par
+\tab Emp(int age, String name) \{\par
+\tab\tab this.age = age;\par
+\tab\tab this.name = name;\par
+\tab\}\par
+\par
+\tab public String toString() \{\par
+\tab\tab return "\\nAge: " + age + " Name: " + name;\par
+\tab\}\par
+\par
+\}\par
+\par
+public class ExcepTest \{\par
+\tab static Boolean validateAge(int age) \{\par
+\tab\tab try \{\par
+\tab\tab\tab if (age < 18)\par
+\tab\tab\tab\tab throw new WrongAgeException("Children are not allowed as Employees");\par
+\tab\tab\tab if (age < 0)\par
+\tab\tab\tab\tab throw new WrongAgeException("Ghosts are not allowed as Employees");\par
+\tab\tab\tab if (age > 60)\par
+\tab\tab\tab\tab throw new WrongAgeException("Seniors are not allowed as Employees");\par
+\tab\tab\tab if (age > 100)\par
+\tab\tab\tab\tab throw new WrongAgeException("Purvaj are not allowed as Employees");\par
+\tab\tab\} catch (WrongAgeException w) \{\par
+\tab\tab\tab System.out.println(w.getMessage());\par
+\tab\tab\tab return false;\par
+\tab\tab\}\par
+\tab\tab return true;\par
+\par
+\tab\}\par
+\par
+\tab static Boolean validateName(Emp n, List<Emp> l) \{\par
+\tab\tab try \{\par
+\tab\tab\tab List<String> name=new ArrayList<String>();\par
+\tab\tab\tab for(Emp nn : l) \{\par
+\tab\tab\tab\tab name.add(nn.name);\par
+\tab\tab\tab\}\par
+\tab\tab\tab if(name.contains(n.name))\par
+\tab\tab\tab\tab throw new DuplicateNameException("Duplicate Name");\par
+\tab\tab\tab\par
+\tab\tab\} catch (DuplicateNameException e) \{\par
+\tab\tab\tab System.out.println(e.getMessage());\par
+\tab\tab\tab return false;\par
+\tab\tab\}\par
+\tab\tab return true;\par
+\tab\}\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab List<Emp> l = new ArrayList<Emp>();\par
+\tab\tab Scanner s = new Scanner(System.in);\par
+\tab\tab while (true) \{\par
+\tab\tab\tab System.out.println("1. Add Emp\\n2. View List\\n3. Exit\\nEnter Choice: ");\par
+\tab\tab\tab int ch = s.nextInt();\par
+\tab\tab\tab if (ch == 1) \{\par
+\tab\tab\tab\tab Emp e = new Emp();\par
+\tab\tab\tab\tab System.out.println("Enter age");\par
+\tab\tab\tab\tab e.age = s.nextInt();\par
+\tab\tab\tab\tab e.name = s.nextLine();\par
+\tab\tab\tab\tab System.out.println("Enter name");\par
+\tab\tab\tab\tab e.name = s.nextLine();\par
+\tab\tab\tab\tab if (validateAge(e.age) && validateName(e, l))\par
+\tab\tab\tab\tab\tab l.add(e);\par
+\par
+\tab\tab\tab\} else if (ch == 2) \{\par
+\tab\tab\tab\tab System.out.println(l);\par
+\tab\tab\tab\} else if (ch == 3) \{\par
+\tab\tab\tab\tab break;\par
+\tab\tab\tab\} else \{\par
+\tab\tab\tab\tab System.out.println("Invalid choice");\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:38: A comma separated list  containing pairs of topic name and time in hours ( Java 14, JEE 49, JME 28) will be entered in the command line arguments. If a day consists of 8 hours, list out the topics that will be covered day-wise. Define all necessary custom exception for the program. Catch them and all the other possible exceptions.\par
+If the hours and the course is not separated from other values by comma: Raise an exception\par
+If the input is not in pairs: Raise an exception : args.length is even\par
+If hours are not given as numbers: Raise an exception\par
+\par
+\par
+Output: Sample Run:\par
+>java prog Java_AdvJava 73, JEE 104, MySQL 15\par
+Java : 10 Days\par
+JEE : 13 Days\par
+MySQL : 2 Days\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:44: A comma separated list  containing pairs of topic name and time in hours ( Java 14, JEE 49, JME 28) will be entered in the command line arguments. If a day consists of 8 hours, list out the topics that will be covered day-wise. Define all necessary custom exception for the program. Catch them and all the other possible exceptions.\par
+If the hours and the course is not separated from other values by comma: Raise an exception\par
+If the input is not in pairs: Raise an exception : args.length is even\par
+If hours are not given as numbers: Raise an exception\par
+Java_AdvJava 73, JEE 104, MySQL 15\par
+\par
+Output: Sample Run:\par
+>java prog Java_AdvJava 73, JEE 104, MySQL 15\par
+Java_AdvJava : 10 Days\par
+JEE : 13 Days\par
+MySQL : 2 Days\par
+\tab\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:57: class MyAutoClosable implements AutoCloseable \{\par
+\tab public void doIt() \{\par
+\tab\tab System.out.println("MyAutoClosable doing it!");\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void close() throws Exception \{\par
+\tab\tab System.out.println("MyAutoClosable closed!");\par
+\tab\}\par
+\}\par
+\par
+public class ExcepTest \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab // Using try-with-resources\par
+\tab\tab try (MyAutoClosable myAutoClosable = new MyAutoClosable()) \{\par
+\tab\tab\tab myAutoClosable.doIt();\par
+\tab\tab\} catch (Exception exception) \{\par
+\tab\tab\tab System.out.println(exception);\par
+\tab\tab\}\par
+\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:59: class MyAutoClosable implements AutoCloseable \{\par
+\tab public void doIt() \{\par
+\tab\tab System.out.println("MyAutoClosable doing it!");\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void close() throws Exception \{\par
+\tab\tab System.out.println("MyAutoClosable closed!");\par
+\tab\}\par
+\}\par
+class MyAutoClosable2 implements AutoCloseable \{\par
+\tab public void doIt() \{\par
+\tab\tab System.out.println("MyAutoClosable2 doing it!");\par
+\tab\}\par
+\par
+\tab @Override\par
+\tab public void close() throws Exception \{\par
+\tab\tab System.out.println("MyAutoClosable2 closed!");\par
+\tab\}\par
+\}\par
+public class ExcepTest \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab // Using try-with-resources\par
+\tab\tab try (MyAutoClosable myAutoClosable = new MyAutoClosable();\par
+\tab\tab\tab\tab MyAutoClosable2 myAutoClosable2 = new MyAutoClosable2()) \{\par
+\tab\tab\tab myAutoClosable.doIt();\par
+\tab\tab\} catch (Exception exception) \{\par
+\tab\tab\tab System.out.println(exception);\par
+\tab\tab\}\par
+\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 13:00: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:01: MyAutoClosable doing it!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:01: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 13:01: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:01: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 13:01: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:01: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 13:02: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 13:02: MyAutoClosable doing it!\par
+MyAutoClosable2 closed!\par
+MyAutoClosable closed!\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:02: yes ma'am\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 13:02: yes maam\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 13:02: yes maam \cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:03: Yes ma'am\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 13:03: yes maam\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:03: yes ma'am\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 13:03: yes maam\cf0\par
+}
+ 

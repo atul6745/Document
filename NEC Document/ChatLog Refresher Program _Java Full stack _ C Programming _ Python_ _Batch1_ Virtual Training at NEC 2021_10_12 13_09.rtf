@@ -1,0 +1,2657 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;\red182\green59\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_10_12 13_09.rtf\b0\par
+\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 09:38: present maam\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 09:38: i think, there is a mic problem.\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 09:40: ma'am we have not got the recorded session from 7th oct....could you please ask for that also?\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:46: Ma'am please repeat again\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:46: Our connection was lost \cf2\par
+\cf3\b Amar JKT (to Everyone)\b0 : \cf1 09:53: Please find the link for 2nd session :Please join my meeting from your computer, tablet or smartphone.\par
+https://global.gotomeeting.com/join/918984605\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:56: Implement a ProducerConsumer class using synchronized, wait(), and notify() in Java.\par
+Producer Produces :\par
+Other producers can also produce\par
+None of the Consumers can consume\par
+Consumer Consumes :\par
+Other Consumers can also consume\par
+None of Producers can produce.\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:05: ma'am how many times do we have to make producer produce\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:05: ok ma'am\cf2\par
+\cf4\b Atul Gupta (to Monica)\b0 : \cf1 10:15: class Q\par
+\{\par
+\tab int num;\par
+\tab boolean valueSet=false;\par
+\tab public synchronized void put(int num)\par
+\tab\{\par
+\tab\tab while(valueSet)\par
+\tab\tab\{\par
+\tab\tab\tab try\{wait();\} catch(Exception e) \{\}\par
+\tab\tab\}\par
+\tab\tab System.out.println("Put: "+ num);\par
+\tab\tab this.num=num;\par
+\tab\tab valueSet=true;\par
+\tab\tab notify();\par
+\tab\}\par
+\tab public synchronized   void get()\par
+\tab\{  \par
+\tab while(!valueSet)\par
+\tab\{\par
+\tab\tab try\{wait();\} catch(Exception e) \{\}\par
+\tab\}\par
+\tab\tab System.out.println("Get: "+ num);\par
+\tab\tab valueSet=false;\par
+\tab\tab notify();\par
+\tab\} \par
+\}\par
+class Producer implements Runnable\par
+\{\par
+\tab Q q;\par
+\tab public Producer(Q q)\par
+\tab\{\par
+\tab\tab this.q=q;\par
+\tab\tab Thread t = new Thread(this,"Producer");\par
+\tab\tab t.start();\par
+\tab\}\par
+\tab public void run()\par
+\tab\{\par
+\tab\tab int i=0;\par
+\tab\tab while(true)\par
+\tab\tab\{\par
+\tab\tab\tab q.put(i++);\par
+\tab\tab\tab try \{\par
+\tab\tab\tab\tab Thread.sleep(1000);\} catch(Exception e) \{\}\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\par
+class Consumer implements Runnable\par
+\{\par
+\tab Q q;\par
+\tab public Consumer(Q q)\par
+\tab\{\par
+\tab\tab this.q=q;\par
+\tab\tab Thread t = new Thread(this,"Consumer");\par
+\tab\tab t.start();\par
+\tab\}\par
+\tab public void run()\par
+\tab\{\par
+\tab\tab while(true)\par
+\tab\tab\{\par
+\tab\tab\tab q.get();\par
+\tab\tab\tab try \{\par
+\tab\tab\tab\tab Thread.sleep(1000);\} catch(Exception e) \{\}\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\par
+public class program1\par
+\{\par
+\tab public static void main(String [] args)\par
+\tab\{\par
+\tab\tab Q q = new Q();\par
+\tab\tab new Producer(q);\par
+\tab\tab new Consumer(q);\par
+\tab\}\par
+\}\par
+class MyThread extends Thread \{ \par
+\tab   String ss;\par
+\tab   public MyThread(String S) \{  ss=S; \}\par
+\tab      public synchronized void run() \{\par
+\tab    for(int i=0;i<10;i++)\par
+\tab     System.out.println(ss + " thread is running ... with Stage " + i);\par
+\tab      \}  \par
+\}\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:26: import java.util.LinkedList;\par
+import java.util.Queue;\par
+import java.util.Random;\par
+\par
+public class Ex_producer_consumer \{\par
+\par
+    public static void main(String args[]) \{\par
+        Queue<Integer> buffer = new LinkedList<>();\par
+        int maxSize = 5;\par
+        \par
+        Thread producer = new Producer(buffer, maxSize, "PRODUCER");\par
+        Thread consumer = new Consumer(buffer, maxSize, "CONSUMER");\par
+        \par
+        producer.start();\par
+        consumer.start();\par
+        \par
+\par
+    \}\par
+\par
+\}\par
+\par
+class Producer extends Thread \{\par
+    private Queue<Integer> queue;\par
+    private int maxSize;\par
+    \par
+    public Producer(Queue<Integer> queue, int maxSize, String name)\{\par
+        super(name);\par
+        this.queue = queue;\par
+        this.maxSize = maxSize;\par
+    \}\par
+    \par
+    @Override\par
+    public void run() \{\par
+    \tab int k=0;\par
+        while (k<5)\{\par
+            synchronized (queue) \{\par
+                while (queue.size() == maxSize) \{\par
+                    try \{\par
+                        System.out .println("Queue is full, "\par
+                                + "Producer thread waiting for "\par
+                                + "consumer to take something from queue");\par
+                        queue.wait();\par
+                    \} catch (Exception ex) \{\par
+                        ex.printStackTrace();\par
+                    \}\par
+                  k++;\par
+                \}\par
+\par
+                Random random = new Random();\par
+                int i = random.nextInt();\par
+                System.out.println("Producing value : " + i);\par
+                queue.add(i);\par
+                queue.notifyAll();\par
+            \}\par
+\par
+        \}\par
+    \}\par
+\}\par
+\par
+class Consumer extends Thread \{\par
+    private Queue<Integer> queue;\par
+    private int maxSize;\par
+    \par
+    public Consumer(Queue<Integer> queue, int maxSize, String name)\{\par
+        super(name);\par
+        this.queue = queue;\par
+        this.maxSize = maxSize;\par
+    \}\par
+    \par
+    @Override\par
+    public void run() \{\par
+    \tab int j=0;\par
+        while (j<5) \{\par
+            synchronized (queue) \{\par
+                while (queue.isEmpty()) \{\par
+                    System.out.println("Queue is empty,"\par
+                            + "Consumer thread is waiting"\par
+                            + " for producer thread to put something in queue");\par
+                    try \{\par
+                        queue.wait();\par
+                    \} catch (Exception ex) \{\par
+                        ex.printStackTrace();\par
+                    \}\par
+                    j++;\par
+                \}\par
+                System.out.println("Consuming value : " + queue.remove());\par
+                queue.notifyAll();\par
+            \}\par
+\par
+        \}\par
+    \}\par
+\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:26: import java.util.LinkedList;\par
+import java.util.Queue;\par
+import java.util.Random;\par
+\par
+public class ProducerConsumer \{\par
+\par
+    public static void main(String args[]) \{\par
+        Queue<Integer> buffer = new LinkedList<>();\par
+        int maxSize = 5;\par
+        \par
+        Thread producer = new Producer(buffer, maxSize, "producer");\par
+        Thread consumer = new Consumer(buffer, maxSize, "consumer");\par
+        \par
+        producer.start();\par
+        consumer.start();\par
+        \par
+\par
+    \}\par
+\par
+\}\par
+\par
+class Producer extends Thread \{\par
+    private Queue<Integer> queue;\par
+    private int maxSize;\par
+    \par
+    public Producer(Queue<Integer> queue, int maxSize, String name)\{\par
+        super(name);\par
+        this.queue = queue;\par
+        this.maxSize = maxSize;\par
+    \}\par
+    \par
+    @Override\par
+    public void run() \{\par
+    \tab int k=0;\par
+        while (k<5)\{\par
+            synchronized (queue) \{\par
+                while (queue.size() == maxSize) \{\par
+                    try \{\par
+                        System.out .println("Queue is full, "\par
+                                + "Producer thread waiting for "\par
+                                + "consumer to take something from queue");\par
+                        queue.wait();\par
+                    \} catch (Exception ex) \{\par
+                        ex.printStackTrace();\par
+                    \}\par
+                  k++;\par
+                \}\par
+\par
+                Random random = new Random();\par
+                int i = random.nextInt();\par
+                System.out.println("Producing value : " + i);\par
+                queue.add(i);\par
+                queue.notifyAll();\par
+            \}\par
+\par
+        \}\par
+    \}\par
+\}\par
+\par
+class Consumer extends Thread \{\par
+    private Queue<Integer> queue;\par
+    private int maxSize;\par
+    \par
+    public Consumer(Queue<Integer> queue, int maxSize, String name)\{\par
+        super(name);\par
+        this.queue = queue;\par
+        this.maxSize = maxSize;\par
+    \}\par
+    \par
+    @Override\par
+    public void run() \{\par
+    \tab int j=0;\par
+        while (j<5) \{\par
+            synchronized (queue) \{\par
+                while (queue.isEmpty()) \{\par
+                    System.out.println("Queue is empty,"\par
+                            + "Consumer thread is waiting"\par
+                            + " for producer thread to put something in queue");\par
+                    try \{\par
+                        queue.wait();\par
+                    \} catch (Exception ex) \{\par
+                        ex.printStackTrace();\par
+                    \}\par
+                    j++;\par
+                \}\par
+                System.out.println("Consuming value : " + queue.remove());\par
+                queue.notifyAll();\par
+            \}\par
+\par
+        \}\par
+    \}\par
+\}\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:27: Producing value : 229516404\par
+Producing value : 1299892171\par
+Producing value : 1993104741\par
+Producing value : 999172407\par
+Producing value : -492875207\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 229516404\par
+Consuming value : 1299892171\par
+Consuming value : 1993104741\par
+Consuming value : 999172407\par
+Consuming value : -492875207\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1481920754\par
+Producing value : -964512727\par
+Producing value : 1069974142\par
+Producing value : -1245236096\par
+Producing value : 509455033\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1481920754\par
+Consuming value : -964512727\par
+Consuming value : 1069974142\par
+Consuming value : -1245236096\par
+Consuming value : 509455033\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 163040716\par
+Producing value : -494756341\par
+Producing value : -1918355358\par
+Producing value : -726334545\par
+Producing value : -1545058034\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 163040716\par
+Consuming value : -494756341\par
+Consuming value : -1918355358\par
+Consuming value : -726334545\par
+Consuming value : -1545058034\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -186074632\par
+Producing value : 1677761792\par
+Producing value : -836409428\par
+Producing value : -2088624174\par
+Producing value : -91320109\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -186074632\par
+Consuming value : 1677761792\par
+Consuming value : -836409428\par
+Consuming value : -2088624174\par
+Consuming value : -91320109\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1180010600\par
+Producing value : -1606751345\par
+Producing value : -589621729\par
+Producing value : -264273680\par
+Producing value : 1751730902\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1180010600\par
+Consuming value : -1606751345\par
+Consuming value : -589621729\par
+Consuming value : -264273680\par
+Consuming value : 1751730902\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -55649415\par
+Consuming value : -55649415\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:28: Producing value : -548979643\par
+Producing value : -1364246007\par
+Producing value : -471183409\par
+Producing value : 775907513\par
+Producing value : 1902145413\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -548979643\par
+Consuming value : -1364246007\par
+Consuming value : -471183409\par
+Consuming value : 775907513\par
+Consuming value : 1902145413\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1681678275\par
+Producing value : -168957786\par
+Producing value : 73838547\par
+Producing value : 1495323962\par
+Producing value : 316977393\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1681678275\par
+Consuming value : -168957786\par
+Consuming value : 73838547\par
+Consuming value : 1495323962\par
+Consuming value : 316977393\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 556946362\par
+Producing value : 714442254\par
+Producing value : 860651544\par
+Producing value : 1960479226\par
+Producing value : -1038546261\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 556946362\par
+Consuming value : 714442254\par
+Consuming value : 860651544\par
+Producing value : 1937992047\par
+Producing value : -837955519\par
+Producing value : -115997352\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1960479226\par
+Consuming value : -1038546261\par
+Consuming value : 1937992047\par
+Consuming value : -837955519\par
+Consuming value : -115997352\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -644781703\par
+Producing value : 892341369\par
+Producing value : 1714586088\par
+Producing value : -600306773\par
+Producing value : -158383922\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -644781703\par
+Consuming value : 892341369\par
+Consuming value : 1714586088\par
+Consuming value : -600306773\par
+Consuming value : -158383922\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 516386370\par
+Consuming value : 516386370\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:28: Producing value : 1080683836\par
+Producing value : 2043830768\par
+Producing value : -347007417\par
+Producing value : -2080313543\par
+Producing value : 1213574853\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1080683836\par
+Consuming value : 2043830768\par
+Consuming value : -347007417\par
+Consuming value : -2080313543\par
+Consuming value : 1213574853\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -81820887\par
+Producing value : -855595538\par
+Producing value : 1923792209\par
+Producing value : -2097420028\par
+Producing value : -1313561190\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -81820887\par
+Consuming value : -855595538\par
+Consuming value : 1923792209\par
+Consuming value : -2097420028\par
+Consuming value : -1313561190\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1946699\par
+Producing value : -1850814258\par
+Producing value : 565205724\par
+Producing value : 447509495\par
+Producing value : 877049737\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1946699\par
+Consuming value : -1850814258\par
+Consuming value : 565205724\par
+Consuming value : 447509495\par
+Consuming value : 877049737\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 590081369\par
+Producing value : 748391426\par
+Producing value : 1554363255\par
+Producing value : -638218899\par
+Producing value : 2100617732\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 590081369\par
+Consuming value : 748391426\par
+Consuming value : 1554363255\par
+Consuming value : -638218899\par
+Consuming value : 2100617732\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 382583021\par
+Producing value : -708455249\par
+Producing value : -1431124266\par
+Producing value : -1150009386\par
+Producing value : 998602268\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 382583021\par
+Consuming value : -708455249\par
+Consuming value : -1431124266\par
+Consuming value : -1150009386\par
+Consuming value : 998602268\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1354642705\par
+Consuming value : 1354642705\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:28: Producing value : -548979643\par
+Producing value : -1364246007\par
+Producing value : -471183409\par
+Producing value : 775907513\par
+Producing value : 1902145413\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -548979643\par
+Consuming value : -1364246007\par
+Consuming value : -471183409\par
+Consuming value : 775907513\par
+Consuming value : 1902145413\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1681678275\par
+Producing value : -168957786\par
+Producing value : 73838547\par
+Producing value : 1495323962\par
+Producing value : 316977393\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1681678275\par
+Consuming value : -168957786\par
+Consuming value : 73838547\par
+Consuming value : 1495323962\par
+Consuming value : 316977393\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 556946362\par
+Producing value : 714442254\par
+Producing value : 860651544\par
+Producing value : 1960479226\par
+Producing value : -1038546261\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 556946362\par
+Consuming value : 714442254\par
+Consuming value : 860651544\par
+Producing value : 1937992047\par
+Producing value : -837955519\par
+Producing value : -115997352\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1960479226\par
+Consuming value : -1038546261\par
+Consuming value : 1937992047\par
+Consuming value : -837955519\par
+Consuming value : -115997352\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -644781703\par
+Producing value : 892341369\par
+Producing value : 1714586088\par
+Producing value : -600306773\par
+Producing value : -158383922\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -644781703\par
+Consuming value : 892341369\par
+Consuming value : 1714586088\par
+Consuming value : -600306773\par
+Consuming value : -158383922\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 516386370\par
+Consuming value : 516386370\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:28: Producing value : 663309500\par
+Producing value : 269179781\par
+Producing value : -1973007744\par
+Producing value : -822339057\par
+Producing value : 279205482\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 663309500\par
+Consuming value : 269179781\par
+Consuming value : -1973007744\par
+Consuming value : -822339057\par
+Consuming value : 279205482\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1303435119\par
+Producing value : -1972209295\par
+Producing value : 1450064522\par
+Producing value : 1478360889\par
+Producing value : -1887126735\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1303435119\par
+Consuming value : -1972209295\par
+Consuming value : 1450064522\par
+Consuming value : 1478360889\par
+Consuming value : -1887126735\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 223587844\par
+Producing value : -1222907934\par
+Producing value : 1041468900\par
+Producing value : 1668598787\par
+Producing value : 505256119\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 223587844\par
+Consuming value : -1222907934\par
+Consuming value : 1041468900\par
+Consuming value : 1668598787\par
+Consuming value : 505256119\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -966217666\par
+Producing value : 29124346\par
+Producing value : -201290224\par
+Producing value : 1085670160\par
+Producing value : -1471607470\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -966217666\par
+Consuming value : 29124346\par
+Consuming value : -201290224\par
+Consuming value : 1085670160\par
+Consuming value : -1471607470\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1492215024\par
+Producing value : 944901819\par
+Producing value : 1013549244\par
+Producing value : -808990260\par
+Producing value : -1829816612\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1492215024\par
+Consuming value : 944901819\par
+Consuming value : 1013549244\par
+Consuming value : -808990260\par
+Consuming value : -1829816612\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1838786526\par
+Consuming value : 1838786526\par
+\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 10:29: yes mam\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:29: \par
+Producing value : -548979643\par
+Producing value : -1364246007\par
+Producing value : -471183409\par
+Producing value : 775907513\par
+Producing value : 1902145413\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -548979643\par
+Consuming value : -1364246007\par
+Consuming value : -471183409\par
+Consuming value : 775907513\par
+Consuming value : 1902145413\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1681678275\par
+Producing value : -168957786\par
+Producing value : 73838547\par
+Producing value : 1495323962\par
+Producing value : 316977393\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1681678275\par
+Consuming value : -168957786\par
+Consuming value : 73838547\par
+Consuming value : 1495323962\par
+Consuming value : 316977393\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 556946362\par
+Producing value : 714442254\par
+Producing value : 860651544\par
+Producing value : 1960479226\par
+Producing value : -1038546261\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 556946362\par
+Consuming value : 714442254\par
+Consuming value : 860651544\par
+Producing value : 1937992047\par
+Producing value : -837955519\par
+Producing value : -115997352\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1960479226\par
+Consuming value : -1038546261\par
+Consuming value : 1937992047\par
+Consuming value : -837955519\par
+Consuming value : -115997352\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -644781703\par
+Producing value : 892341369\par
+Producing value : 1714586088\par
+Producing value : -600306773\par
+Producing value : -158383922\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -644781703\par
+Consuming value : 892341369\par
+Consuming value : 1714586088\par
+Consuming value : -600306773\par
+Consuming value : -158383922\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 516386370\par
+Consuming value : 516386370\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+\par
+\par
+\par
+\par
+\par
+10:28\par
+\par
+Deep Shikhar Singh to Everyone\par
+\par
+Producing value : 663309500\par
+Producing value : 269179781\par
+Producing value : -1973007744\par
+Producing value : -822339057\par
+Producing value : 279205482\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 663309500\par
+Consuming value : 269179781\par
+Consuming value : -1973007744\par
+Consuming value : -822339057\par
+Consuming value : 279205482\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1303435119\par
+Producing value : -1972209295\par
+Producing value : 1450064522\par
+Producing value : 1478360889\par
+Producing value : -1887126735\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1303435119\par
+Consuming value : -1972209295\par
+Consuming value : 1450064522\par
+Consuming value : 1478360889\par
+Consuming value : -1887126735\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 223587844\par
+Producing value : -1222907934\par
+Producing value : 1041468900\par
+Producing value : 1668598787\par
+Producing value : 505256119\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 223587844\par
+Consuming value : -1222907934\par
+Consuming value : 1041468900\par
+Consuming value : 1668598787\par
+Consuming value : 505256119\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -966217666\par
+Producing value : 29124346\par
+Producing value : -201290224\par
+Producing value : 1085670160\par
+Producing value : -1471607470\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -966217666\par
+Consuming value : 29124346\par
+Consuming value : -201290224\par
+Consuming value : 1085670160\par
+Consuming value : -1471607470\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1492215024\par
+Producing value : 944901819\par
+Producing value : 1013549244\par
+Producing value : -808990260\par
+Producing value : -1829816612\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1492215024\par
+Consuming value : 944901819\par
+Consuming value : 1013549244\par
+Consuming value : -808990260\par
+Consuming value : -1829816612\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1838786526\par
+Consuming value : 1838786526\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:29: Producing value : -1480424356\par
+Producing value : -754321560\par
+Producing value : -1279026798\par
+Consuming value : -1480424356\par
+Consuming value : -754321560\par
+Consuming value : -1279026798\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 165616788\par
+Producing value : 1797565134\par
+Producing value : -1388899203\par
+Producing value : 1562472180\par
+Producing value : -1828622734\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 165616788\par
+Consuming value : 1797565134\par
+Consuming value : -1388899203\par
+Consuming value : 1562472180\par
+Consuming value : -1828622734\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 257447986\par
+Producing value : -166469365\par
+Producing value : 558495701\par
+Producing value : -615929923\par
+Producing value : -409589378\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 257447986\par
+Consuming value : -166469365\par
+Consuming value : 558495701\par
+Consuming value : -615929923\par
+Consuming value : -409589378\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -327423432\par
+Producing value : 1006554173\par
+Producing value : -1012563150\par
+Producing value : 1100769037\par
+Producing value : 262003637\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -327423432\par
+Consuming value : 1006554173\par
+Consuming value : -1012563150\par
+Consuming value : 1100769037\par
+Consuming value : 262003637\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 2094572725\par
+Producing value : -986008164\par
+Producing value : -1613108541\par
+Producing value : -845455618\par
+Producing value : -1587158279\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 2094572725\par
+Consuming value : -986008164\par
+Consuming value : -1613108541\par
+Consuming value : -845455618\par
+Consuming value : -1587158279\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -2106722491\par
+Producing value : -1737099232\par
+Producing value : 1579261360\par
+Producing value : -862118644\par
+Producing value : -1980399811\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -2106722491\par
+Producing value : 667564474\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:29: Producing value : -771729591\par
+Consuming value : -771729591\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1271418284\par
+Producing value : 1986015025\par
+Producing value : -1242971417\par
+Producing value : 1118943647\par
+Producing value : 1699523797\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1271418284\par
+Consuming value : 1986015025\par
+Consuming value : -1242971417\par
+Consuming value : 1118943647\par
+Consuming value : 1699523797\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1389160409\par
+Producing value : -374001128\par
+Producing value : -1507346669\par
+Producing value : 1694086574\par
+Producing value : -820945316\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1389160409\par
+Consuming value : -374001128\par
+Consuming value : -1507346669\par
+Consuming value : 1694086574\par
+Consuming value : -820945316\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -382099939\par
+Producing value : 919387212\par
+Producing value : -1864182623\par
+Producing value : 1753054593\par
+Producing value : 1732629189\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -382099939\par
+Consuming value : 919387212\par
+Consuming value : -1864182623\par
+Consuming value : 1753054593\par
+Consuming value : 1732629189\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -199413909\par
+Producing value : -1536212896\par
+Producing value : -1953018944\par
+Producing value : 420307704\par
+Producing value : 173311315\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -199413909\par
+Consuming value : -1536212896\par
+Consuming value : -1953018944\par
+Consuming value : 420307704\par
+Consuming value : 173311315\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 143024671\par
+Producing value : 492113584\par
+Producing value : 1890580904\par
+Producing value : 1240964216\par
+Producing value : 1875901388\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 143024671\par
+Producing value : 623447804\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:29: Producing value : 1452337510\par
+Producing value : -944278485\par
+Producing value : -205844527\par
+Producing value : 1169608142\par
+Consuming value : 1452337510\par
+Consuming value : -944278485\par
+Consuming value : -205844527\par
+Consuming value : 1169608142\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -164953259\par
+Producing value : 1716168419\par
+Producing value : 1939452330\par
+Producing value : -1214930121\par
+Producing value : 1748445621\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -164953259\par
+Consuming value : 1716168419\par
+Consuming value : 1939452330\par
+Consuming value : -1214930121\par
+Consuming value : 1748445621\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 680953872\par
+Producing value : -1629879528\par
+Producing value : 12743537\par
+Producing value : -651037267\par
+Producing value : -1760488178\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 680953872\par
+Consuming value : -1629879528\par
+Consuming value : 12743537\par
+Consuming value : -651037267\par
+Consuming value : -1760488178\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1440228536\par
+Producing value : -937692227\par
+Producing value : -340905399\par
+Producing value : 68409920\par
+Producing value : 396118797\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1440228536\par
+Consuming value : -937692227\par
+Consuming value : -340905399\par
+Consuming value : 68409920\par
+Consuming value : 396118797\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1332280961\par
+Producing value : -808129968\par
+Producing value : -1906387674\par
+Producing value : -1166599089\par
+Producing value : -2104415764\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1332280961\par
+Consuming value : -808129968\par
+Consuming value : -1906387674\par
+Consuming value : -1166599089\par
+Consuming value : -2104415764\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1775723136\par
+Producing value : -2121008721\par
+Producing value : -2025764337\par
+Producing value : -476734193\par
+Producing value : -806897932\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1775723136\par
+Producing value : 2020557335\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:29: Producing value : -938429902\par
+Producing value : 989179829\par
+Producing value : 369442415\par
+Producing value : -254422671\par
+Producing value : 267565377\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -938429902\par
+Consuming value : 989179829\par
+Consuming value : 369442415\par
+Consuming value : -254422671\par
+Consuming value : 267565377\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -755739636\par
+Producing value : 1578455087\par
+Producing value : 731945624\par
+Producing value : -81480418\par
+Producing value : -1582841024\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -755739636\par
+Consuming value : 1578455087\par
+Consuming value : 731945624\par
+Consuming value : -81480418\par
+Consuming value : -1582841024\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 584648383\par
+Producing value : 1216531029\par
+Producing value : -1900536817\par
+Producing value : -850379124\par
+Producing value : -2064725348\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 584648383\par
+Consuming value : 1216531029\par
+Consuming value : -1900536817\par
+Consuming value : -850379124\par
+Consuming value : -2064725348\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -273458413\par
+Producing value : 2044828391\par
+Producing value : -1779281870\par
+Producing value : 1392047589\par
+Producing value : 1181660680\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -273458413\par
+Consuming value : 2044828391\par
+Consuming value : -1779281870\par
+Consuming value : 1392047589\par
+Consuming value : 1181660680\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1192906623\par
+Producing value : 1172364543\par
+Producing value : 607125121\par
+Producing value : -17535291\par
+Producing value : 1410507492\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1192906623\par
+Consuming value : 1172364543\par
+Consuming value : 607125121\par
+Consuming value : -17535291\par
+Consuming value : 1410507492\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -843038551\par
+Consuming value : -843038551\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:30: Producing value : -771729591\par
+Consuming value : -771729591\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 1271418284\par
+Producing value : 1986015025\par
+Producing value : -1242971417\par
+Producing value : 1118943647\par
+Producing value : 1699523797\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1271418284\par
+Consuming value : 1986015025\par
+Consuming value : -1242971417\par
+Consuming value : 1118943647\par
+Consuming value : 1699523797\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1389160409\par
+Producing value : -374001128\par
+Producing value : -1507346669\par
+Producing value : 1694086574\par
+Producing value : -820945316\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1389160409\par
+Consuming value : -374001128\par
+Consuming value : -1507346669\par
+Consuming value : 1694086574\par
+Consuming value : -820945316\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -382099939\par
+Producing value : 919387212\par
+Producing value : -1864182623\par
+Producing value : 1753054593\par
+Producing value : 1732629189\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -382099939\par
+Consuming value : 919387212\par
+Consuming value : -1864182623\par
+Consuming value : 1753054593\par
+Consuming value : 1732629189\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -199413909\par
+Producing value : -1536212896\par
+Producing value : -1953018944\par
+Producing value : 420307704\par
+Producing value : 173311315\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -199413909\par
+Consuming value : -1536212896\par
+Consuming value : -1953018944\par
+Consuming value : 420307704\par
+Consuming value : 173311315\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 143024671\par
+Producing value : 492113584\par
+Producing value : 1890580904\par
+Producing value : 1240964216\par
+Producing value : 1875901388\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 143024671\par
+Producing value : 623447804\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:30: https://anmolsehgal.medium.com/multi-threading-producer-consumer-pattern-using-wait-notify-3dde8fd49f65\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:30: https://codepumpkin.com/producer-consumer-using-wait-notify/\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:30: Producing value : 1666701577\par
+Producing value : -817746625\par
+Producing value : -1325035963\par
+Producing value : 1879238689\par
+Producing value : 619411039\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 1666701577\par
+Consuming value : -817746625\par
+Consuming value : -1325035963\par
+Consuming value : 1879238689\par
+Consuming value : 619411039\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -863996537\par
+Producing value : -86083761\par
+Producing value : -843989207\par
+Producing value : 1616597725\par
+Producing value : 1944699294\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -863996537\par
+Consuming value : -86083761\par
+Consuming value : -843989207\par
+Consuming value : 1616597725\par
+Consuming value : 1944699294\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -849426206\par
+Producing value : 502593230\par
+Producing value : -861305996\par
+Producing value : 77032980\par
+Producing value : 644787791\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -849426206\par
+Consuming value : 502593230\par
+Consuming value : -861305996\par
+Consuming value : 77032980\par
+Consuming value : 644787791\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : -1860723999\par
+Producing value : 86891424\par
+Producing value : 502837920\par
+Producing value : -2026744986\par
+Producing value : 536838420\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : -1860723999\par
+Consuming value : 86891424\par
+Consuming value : 502837920\par
+Consuming value : -2026744986\par
+Consuming value : 536838420\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\par
+Producing value : 558526563\par
+Producing value : -1179896487\par
+Producing value : -339493973\par
+Producing value : 862890058\par
+Producing value : -1159600875\par
+Queue is full, Producer thread waiting for consumer to take something from queue\par
+Consuming value : 558526563\par
+Consuming value : -1179896487\par
+Producing value : 1049115827\par
+Consuming value : -339493973\par
+Consuming value : 862890058\par
+Consuming value : -1159600875\par
+Consuming value : 1049115827\par
+Queue is empty,Consumer thread is waiting for producer thread to put something in queue\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:58: Tea break 15 min\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:15: back\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:15: back\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:15: Back\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:15: Back\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:15: back\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:15: back\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:15: back\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:16: back\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:16: back\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 11:16: back\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:16: back\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:16: back\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:16: Back\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:18: back\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:19: back\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:19: back\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:20: back\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:30: package Batch1;\par
+\par
+public class DeadlockEg \{\par
+   public static Object Lock1 = new Object();\par
+   public static Object Lock2 = new Object();\par
+   \par
+   public static void main(String args[]) \{\par
+      ThreadDemo1 T1 = new ThreadDemo1();\par
+      ThreadDemo2 T2 = new ThreadDemo2();\par
+      T1.start();\par
+      T2.start();\par
+   \}\par
+   private static class ThreadDemo1 extends Thread \{\par
+\tab       public void run() \{\par
+\tab          synchronized (Lock1) \{\par
+\tab             System.out.println("Thread 1: Holding lock 1...");\par
+\tab             try \{\par
+\tab                Thread.sleep(10);\par
+\tab             \} catch (InterruptedException e) \{\}\par
+\tab             System.out.println("Thread 1: Waiting for lock 2...");\par
+\tab             synchronized (Lock2) \{\par
+\tab                System.out.println("Thread 1: Holding lock 1 & 2...");\par
+\tab             \}\par
+\tab          \}\par
+\tab       \}\par
+\tab    \}\par
+   private static class ThreadDemo2 extends Thread \{\par
+\tab       public void run() \{\par
+\tab          synchronized (Lock2) \{\par
+\tab             System.out.println("Thread 2: Holding lock 2...");\par
+\tab             try \{\par
+\tab                Thread.sleep(10);\par
+\tab             \} catch (InterruptedException e) \{\}\par
+\tab             System.out.println("Thread 2: Waiting for lock 1...");\par
+\tab             synchronized (Lock1) \{\par
+\tab                System.out.println("Thread 2: Holding lock 1 & 2...");\par
+\tab             \}\par
+\tab          \}\par
+\tab       \}\par
+\tab    \} \par
+\tab\}\par
+\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:31: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:31: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:31: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 11:31: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:31: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:31: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:31: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:31: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:32: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:32: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\par
+\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 11:32: maam while the thread is sleeping, does it hold the lock that it had acquired before sleeping??\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:32: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:32: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\par
+\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 11:33: Thread 2: Holding lock 2...\par
+Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:33: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 2: Waiting for lock 1...\par
+Thread 1: Waiting for lock 2...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:33: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:33: Thread 1: Holding lock 1...\par
+Thread 2: Holding lock 2...\par
+Thread 1: Waiting for lock 2...\par
+Thread 2: Waiting for lock 1...\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:34: package Batch1;\par
+\par
+public class DeadlockEg \{\par
+   public static Object Lock1 = new Object();\par
+   public static Object Lock2 = new Object();\par
+   \par
+   public static void main(String args[]) \{\par
+      ThreadDemo1 T1 = new ThreadDemo1();\par
+      ThreadDemo2 T2 = new ThreadDemo2();\par
+      T1.start();\par
+      T2.start();\par
+   \}\par
+   private static class ThreadDemo1 extends Thread \{\par
+\tab       public void run() \{\par
+\tab          synchronized (Lock1) \{\par
+\tab             System.out.println("Thread 1: Holding lock 1...");\par
+\tab             try \{\par
+\tab                Thread.sleep(10);\par
+\tab             \} catch (InterruptedException e) \{\}\par
+\tab             System.out.println("Thread 1: Waiting for lock 2...");\par
+\tab             synchronized (Lock2) \{\par
+\tab                System.out.println("Thread 1: Holding lock 1 & 2...");\par
+\tab             \}\par
+\tab          \}\par
+\tab       \}\par
+\tab    \}\par
+   private static class ThreadDemo2 extends Thread \{\par
+\tab       public void run() \{\par
+\tab          synchronized (Lock1) \{\par
+\tab             System.out.println("Thread 2: Holding lock 1...");\par
+\tab             try \{\par
+\tab                Thread.sleep(10);\par
+\tab             \} catch (InterruptedException e) \{\}\par
+\tab             System.out.println("Thread 2: Waiting for lock 2...");\par
+\tab             synchronized (Lock2) \{\par
+\tab                System.out.println("Thread 2: Holding lock 1 & 2...");\par
+\tab             \}\par
+\tab          \}\par
+\tab       \}\par
+\tab    \} \par
+\tab\}\par
+\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:35: Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:35: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:37: Thread 1: Holding lock 1...\par
+Thread 1: Waiting for lock 2...\par
+Thread 1: Holding lock 1 & 2...\par
+Thread 2: Holding lock 1...\par
+Thread 2: Waiting for lock 2...\par
+Thread 2: Holding lock 1 & 2...\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:03: in this specific example threads are like items ryt?\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:04: so in case of more items concurrency is bettter?\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:05: Ma'am,Do Fork and Join can be neglected by CPU?\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:18: package Batch1;\par
+\par
+import java.util.Date;\par
+import java.util.Timer;\par
+import java.util.TimerTask;\par
+\par
+public class Main extends TimerTask \{\par
+\tab @Override\par
+\tab public void run() \{\par
+\tab\tab System.out.println("Timer task started at:" + new Date());\par
+\tab\tab completeTask();\par
+\tab\tab System.out.println("Timer task finished at:" + new Date());\par
+\tab\}\par
+\par
+\tab private void completeTask() \{\par
+\tab\tab try \{\par
+\tab\tab\tab // assuming it takes 20 secs to complete the task\par
+\tab\tab\tab Thread.sleep(2000);\par
+\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\par
+\tab public static void main(String args[]) \{\par
+\tab\tab Main timerTask = new Main();\par
+\tab\tab // running timer task as daemon thread\par
+\tab\tab Timer timer = new Timer(true);\par
+\tab\tab timer.scheduleAtFixedRate(timerTask, 0, 10 * 100);\par
+\tab\tab System.out.println("TimerTask started");\par
+\tab\tab // cancel after sometime\par
+\tab\tab try \{\par
+\tab\tab\tab Thread.sleep(12000);\par
+\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\tab timer.cancel();\par
+\tab\tab System.out.println("TimerTask cancelled");\par
+\tab\tab try \{\par
+\tab\tab\tab Thread.sleep(3000);\par
+\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:20: TimerTask started\par
+Timer task started at:Tue Oct 12 12:19:43 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:45 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:45 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:47 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:47 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:49 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:49 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:51 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:51 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:53 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:53 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:19:55 IST 2021\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:20: TimerTask started\par
+Timer task started at:Tue Oct 12 06:49:27 GMT 2021\par
+Timer task finished at:Tue Oct 12 06:49:29 GMT 2021\par
+Timer task started at:Tue Oct 12 06:49:29 GMT 2021\par
+Timer task finished at:Tue Oct 12 06:49:31 GMT 2021\par
+Timer task started at:Tue Oct 12 06:49:31 GMT 2021\par
+Timer task finished at:Tue Oct 12 06:49:33 GMT 2021\par
+Timer task started at:Tue Oct 12 06:49:33 GMT 2021\par
+Timer task finished at:Tue Oct 12 06:49:35 GMT 2021\par
+Timer task started at:Tue Oct 12 06:49:35 GMT 2021\par
+Timer task finished at:Tue Oct 12 06:49:37 GMT 2021\par
+Timer task started at:Tue Oct 12 06:49:37 GMT 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 06:49:39 GMT 2021\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:20: TimerTask started\par
+Timer task started at:Tue Oct 12 12:19:26 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:29 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:29 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:31 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:31 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:33 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:33 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:35 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:35 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:37 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:37 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:19:39 IST 2021\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:20: TimerTask started\par
+Timer task started at:Tue Oct 12 12:19:26 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:29 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:29 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:31 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:31 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:33 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:33 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:35 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:35 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:37 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:37 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:19:39 IST 2021\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:20: TimerTask started\par
+Timer task started at:Tue Oct 12 12:19:26 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:29 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:29 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:31 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:31 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:33 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:33 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:35 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:35 IST 2021\par
+Timer task finished at:Tue Oct 12 12:19:37 IST 2021\par
+Timer task started at:Tue Oct 12 12:19:37 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:19:39 IST 2021\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:21: TimerTask started\par
+Timer task started at:Tue Oct 12 12:20:21 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:23 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:23 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:25 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:25 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:27 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:27 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:29 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:29 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:31 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:31 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:20:33 IST 2021\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:21: TimerTask started\par
+Timer task started at:Tue Oct 12 12:20:50 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:52 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:52 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:54 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:54 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:56 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:56 IST 2021\par
+Timer task finished at:Tue Oct 12 12:20:58 IST 2021\par
+Timer task started at:Tue Oct 12 12:20:58 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:00 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:00 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:21:02 IST 2021\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:21: TimerTask started\par
+Timer task started at:Tue Oct 12 12:21:16 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:18 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:18 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:20 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:20 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:22 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:22 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:24 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:24 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:26 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:26 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:21:28 IST 2021\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:22: TimerTask started\par
+Timer task started at:Tue Oct 12 12:21:48 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:50 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:50 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:52 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:52 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:54 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:54 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:56 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:56 IST 2021\par
+Timer task finished at:Tue Oct 12 12:21:58 IST 2021\par
+Timer task started at:Tue Oct 12 12:21:58 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:22:00 IST 2021\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:22: TimerTask started\par
+Timer task started at:Tue Oct 12 12:22:15 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:17 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:17 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:19 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:19 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:21 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:21 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:23 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:23 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:25 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:25 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:22:27 IST 2021\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:22: what does schedule at fixed rate function do?\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:22: TimerTask started\par
+Timer task started at:Tue Oct 12 12:22:35 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:38 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:38 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:40 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:40 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:42 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:42 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:44 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:44 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:46 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:46 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:22:48 IST 2021\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:23: TimerTask started\par
+Timer task started at:Tue Oct 12 12:22:43 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:45 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:45 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:47 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:47 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:49 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:49 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:51 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:51 IST 2021\par
+Timer task finished at:Tue Oct 12 12:22:53 IST 2021\par
+Timer task started at:Tue Oct 12 12:22:53 IST 2021\par
+TimerTask cancelled\par
+Timer task finished at:Tue Oct 12 12:22:55 IST 2021\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:23: is it like setinterval?\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:24: milisecond and  callback\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:29: package Batch1;\par
+\par
+import java.util.TimerTask;\par
+import java.util.Date;\par
+import java.util.Timer;\par
+\par
+class ScheduledTask extends TimerTask \{\par
+\tab Date now;\par
+\par
+\tab public void run() \{\par
+\tab\tab now = new Date();\par
+\tab\tab System.out.println("Time is :" + now); // Display current time\par
+\tab\}\par
+\}\par
+\par
+public class SchedulerMain \{\par
+\tab public static void main(String args[]) throws InterruptedException \{\par
+\tab\tab Timer time = new Timer(); // Instantiate Timer Object\par
+\tab\tab ScheduledTask st = new ScheduledTask(); // Instantiate SheduledTask class\par
+\tab\tab time.schedule(st, 0, 1000); // Create Repetitively task for every 1 secs\par
+\tab\tab for (int i = 0; i <= 5; i++) \{\par
+\tab\tab\tab System.out.println("Execution in Main Thread...." + i);\par
+\tab\tab\tab Thread.sleep(2000);\par
+\tab\tab\tab if (i == 5) \{\par
+\tab\tab\tab\tab System.out.println("Application Terminates");\par
+\tab\tab\tab\tab System.exit(0);\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:29:49 IST 2021\par
+Time is :Tue Oct 12 12:29:50 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:29:51 IST 2021\par
+Time is :Tue Oct 12 12:29:52 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:29:53 IST 2021\par
+Time is :Tue Oct 12 12:29:54 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:29:55 IST 2021\par
+Time is :Tue Oct 12 12:29:56 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:29:57 IST 2021\par
+Time is :Tue Oct 12 12:29:58 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:29:59 IST 2021\par
+Time is :Tue Oct 12 12:30:00 IST 2021\par
+Application Terminates\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:29:55 IST 2021\par
+Time is :Tue Oct 12 12:29:56 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:29:57 IST 2021\par
+Time is :Tue Oct 12 12:29:58 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:29:59 IST 2021\par
+Time is :Tue Oct 12 12:30:00 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:01 IST 2021\par
+Time is :Tue Oct 12 12:30:02 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:03 IST 2021\par
+Time is :Tue Oct 12 12:30:04 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:05 IST 2021\par
+Time is :Tue Oct 12 12:30:06 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:01 IST 2021\par
+Time is :Tue Oct 12 12:30:02 IST 2021\par
+Time is :Tue Oct 12 12:30:03 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:04 IST 2021\par
+Time is :Tue Oct 12 12:30:05 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:06 IST 2021\par
+Time is :Tue Oct 12 12:30:07 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:08 IST 2021\par
+Time is :Tue Oct 12 12:30:09 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:10 IST 2021\par
+Time is :Tue Oct 12 12:30:11 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:12 IST 2021\par
+Time is :Tue Oct 12 12:30:13 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:00 IST 2021\par
+Time is :Tue Oct 12 12:30:01 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:02 IST 2021\par
+Time is :Tue Oct 12 12:30:03 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:04 IST 2021\par
+Time is :Tue Oct 12 12:30:05 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:06 IST 2021\par
+Time is :Tue Oct 12 12:30:07 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:08 IST 2021\par
+Time is :Tue Oct 12 12:30:09 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:10 IST 2021\par
+Time is :Tue Oct 12 12:30:11 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:29:55 IST 2021\par
+Time is :Tue Oct 12 12:29:56 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:29:57 IST 2021\par
+Time is :Tue Oct 12 12:29:58 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:29:59 IST 2021\par
+Time is :Tue Oct 12 12:30:00 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:01 IST 2021\par
+Time is :Tue Oct 12 12:30:02 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:03 IST 2021\par
+Time is :Tue Oct 12 12:30:04 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:05 IST 2021\par
+Time is :Tue Oct 12 12:30:06 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 06:59:43 GMT 2021\par
+Time is :Tue Oct 12 06:59:44 GMT 2021\par
+Time is :Tue Oct 12 06:59:45 GMT 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 06:59:46 GMT 2021\par
+Time is :Tue Oct 12 06:59:47 GMT 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 06:59:48 GMT 2021\par
+Time is :Tue Oct 12 06:59:49 GMT 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 06:59:50 GMT 2021\par
+Time is :Tue Oct 12 06:59:51 GMT 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 06:59:52 GMT 2021\par
+Time is :Tue Oct 12 06:59:53 GMT 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 06:59:54 GMT 2021\par
+Time is :Tue Oct 12 06:59:55 GMT 2021\par
+Application Terminates\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:29 IST 2021\par
+Time is :Tue Oct 12 12:30:30 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:31 IST 2021\par
+Time is :Tue Oct 12 12:30:32 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:33 IST 2021\par
+Time is :Tue Oct 12 12:30:34 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:35 IST 2021\par
+Time is :Tue Oct 12 12:30:36 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:37 IST 2021\par
+Time is :Tue Oct 12 12:30:39 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:40 IST 2021\par
+Time is :Tue Oct 12 12:30:41 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:17 IST 2021\par
+Time is :Tue Oct 12 12:30:18 IST 2021\par
+Time is :Tue Oct 12 12:30:19 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:20 IST 2021\par
+Time is :Tue Oct 12 12:30:21 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:22 IST 2021\par
+Time is :Tue Oct 12 12:30:23 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:24 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:25 IST 2021\par
+Time is :Tue Oct 12 12:30:26 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:27 IST 2021\par
+Time is :Tue Oct 12 12:30:28 IST 2021\par
+Application Terminates\par
+Time is :Tue Oct 12 12:30:29 IST 2021\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:30: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:32 IST 2021\par
+Time is :Tue Oct 12 12:30:33 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:34 IST 2021\par
+Time is :Tue Oct 12 12:30:35 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:36 IST 2021\par
+Time is :Tue Oct 12 12:30:37 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:38 IST 2021\par
+Time is :Tue Oct 12 12:30:39 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:40 IST 2021\par
+Time is :Tue Oct 12 12:30:41 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:42 IST 2021\par
+Time is :Tue Oct 12 12:30:43 IST 2021\par
+Application Terminates\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:31: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:54 IST 2021\par
+Time is :Tue Oct 12 12:30:55 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:56 IST 2021\par
+Time is :Tue Oct 12 12:30:57 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:58 IST 2021\par
+Time is :Tue Oct 12 12:30:59 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:31:00 IST 2021\par
+Time is :Tue Oct 12 12:31:01 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:31:02 IST 2021\par
+Time is :Tue Oct 12 12:31:03 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:31:04 IST 2021\par
+Time is :Tue Oct 12 12:31:05 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:32: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:30:29 IST 2021\par
+Time is :Tue Oct 12 12:30:30 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:30:31 IST 2021\par
+Time is :Tue Oct 12 12:30:32 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:30:33 IST 2021\par
+Time is :Tue Oct 12 12:30:34 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:30:35 IST 2021\par
+Time is :Tue Oct 12 12:30:36 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:30:37 IST 2021\par
+Time is :Tue Oct 12 12:30:39 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:30:40 IST 2021\par
+Time is :Tue Oct 12 12:30:41 IST 2021\par
+Application Terminates\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:33: Execution in Main Thread....0\par
+Time is :Tue Oct 12 12:31:32 IST 2021\par
+Time is :Tue Oct 12 12:31:33 IST 2021\par
+Execution in Main Thread....1\par
+Time is :Tue Oct 12 12:31:34 IST 2021\par
+Time is :Tue Oct 12 12:31:35 IST 2021\par
+Execution in Main Thread....2\par
+Time is :Tue Oct 12 12:31:36 IST 2021\par
+Time is :Tue Oct 12 12:31:37 IST 2021\par
+Execution in Main Thread....3\par
+Time is :Tue Oct 12 12:31:38 IST 2021\par
+Time is :Tue Oct 12 12:31:39 IST 2021\par
+Execution in Main Thread....4\par
+Time is :Tue Oct 12 12:31:40 IST 2021\par
+Time is :Tue Oct 12 12:31:41 IST 2021\par
+Execution in Main Thread....5\par
+Time is :Tue Oct 12 12:31:42 IST 2021\par
+Time is :Tue Oct 12 12:31:43 IST 2021\par
+Application Terminates\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:38: public interface Runnable \{\par
+    public void run();\par
+\}\par
+\par
+public interface Callable\{\par
+    public FutureObject call() throws Exception;\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:44: package Batch1;\par
+\par
+import java.util.concurrent.ExecutorService;\par
+import java.util.concurrent.Executors;\par
+\par
+class WorkerThread implements Runnable \{\par
+\tab private String message;\par
+\par
+\tab public WorkerThread(String s) \{\par
+\tab\tab this.message = s;\par
+\tab\}\par
+\par
+\tab public void run() \{\par
+\tab\tab System.out.println(Thread.currentThread().getName() + " (Start) message = " + message);\par
+\tab\tab processmessage(); // Thread sleeps for 2 seconds\par
+\tab\tab System.out.println(Thread.currentThread().getName() + " (End)"); // prints thread name\par
+\tab\}\par
+\par
+\tab private void processmessage() \{\par
+\tab\tab try \{\par
+\tab\tab\tab Thread.sleep(2000);\par
+\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+public class TestThreadPool \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab ExecutorService executor = Executors.newFixedThreadPool(5);// creating a pool of 5 threads\par
+\tab\tab for (int i = 0; i < 10; i++) \{\par
+\tab\tab\tab Runnable worker = new WorkerThread("" + i);\par
+\tab\tab\tab executor.execute(worker);// execute() worker returns void\par
+\tab\tab\}\par
+\tab\tab executor.shutdown();\par
+\tab\tab while (!executor.isTerminated()) \{\par
+\tab\tab\}\par
+\par
+\tab\tab System.out.println("Finished all threads");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:45: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 5\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 6\par
+pool-1-thread-5 (End)\par
+pool-1-thread-5 (Start) message = 7\par
+pool-1-thread-3 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-3 (Start) message = 8\par
+pool-1-thread-4 (Start) message = 9\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-4 (End)\par
+Finished all threads\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:45: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (Start) message = 5\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 6\par
+pool-1-thread-5 (End)\par
+pool-1-thread-1 (Start) message = 7\par
+pool-1-thread-5 (Start) message = 8\par
+pool-1-thread-3 (End)\par
+pool-1-thread-3 (Start) message = 9\par
+pool-1-thread-5 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-4 (End)\par
+Finished all threads\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:45: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-5 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 8\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (Start) message = 7\par
+pool-1-thread-5 (Start) message = 6\par
+pool-1-thread-3 (Start) message = 9\par
+pool-1-thread-4 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-3 (End)\par
+Finished all threads\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:45: pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (Start) message = 8\par
+pool-1-thread-1 (Start) message = 6\par
+pool-1-thread-2 (Start) message = 7\par
+pool-1-thread-3 (Start) message = 5\par
+pool-1-thread-5 (Start) message = 9\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+Finished all threads\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:45: pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-2 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-3 (Start) message = 7\par
+pool-1-thread-2 (Start) message = 6\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 9\par
+pool-1-thread-5 (Start) message = 8\par
+pool-1-thread-4 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-3 (End)\par
+Finished all threads\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 12:45: pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-4 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 6\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-5 (Start) message = 7\par
+pool-1-thread-1 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (Start) message = 8\par
+pool-1-thread-3 (Start) message = 9\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-3 (End)\par
+Finished all threads\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 12:46: \par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-2 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-3 (Start) message = 7\par
+pool-1-thread-2 (Start) message = 6\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 9\par
+pool-1-thread-5 (Start) message = 8\par
+pool-1-thread-4 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-3 (End)\par
+Finished all threads\par
+\par
+\par
+\par
+\par
+12:45\par
+\par
+Harshit Mimani to Everyone\par
+\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-4 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 6\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-5 (Start) message = 7\par
+pool-1-thread-1 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (Start) message = 8\par
+pool-1-thread-3 (Start) message = 9\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-3 (End)\par
+Finished all threads\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:46: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-1 (Start) message = 5\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (Start) message = 6\par
+pool-1-thread-4 (Start) message = 7\par
+pool-1-thread-2 (Start) message = 8\par
+pool-1-thread-3 (End)\par
+pool-1-thread-3 (Start) message = 9\par
+pool-1-thread-5 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-3 (End)\par
+Finished all threads\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:46: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 5\par
+pool-1-thread-3 (End)\par
+pool-1-thread-3 (Start) message = 6\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 9\par
+pool-1-thread-5 (Start) message = 7\par
+pool-1-thread-4 (Start) message = 8\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+Finished all threads\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:46: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-1 (Start) message = 5\par
+pool-1-thread-2 (Start) message = 6\par
+pool-1-thread-3 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (Start) message = 8\par
+pool-1-thread-4 (Start) message = 9\par
+pool-1-thread-3 (Start) message = 7\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-2 (End)\par
+Finished all threads\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:47: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-3 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 6\par
+pool-1-thread-3 (Start) message = 5\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 7\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 8\par
+pool-1-thread-5 (End)\par
+pool-1-thread-5 (Start) message = 9\par
+pool-1-thread-4 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-5 (End)\par
+Finished all threads\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:47: pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-5 (End)\par
+pool-1-thread-5 (Start) message = 5\par
+pool-1-thread-2 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-3 (Start) message = 6\par
+pool-1-thread-4 (Start) message = 7\par
+pool-1-thread-2 (Start) message = 8\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 9\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-2 (End)\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (End)\par
+Finished all threads\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:47: mam please xplain code once again\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 12:47: pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-5 (Start) message = 6\par
+pool-1-thread-3 (End)\par
+pool-1-thread-3 (Start) message = 7\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 8\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 9\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-2 (End)\par
+Finished all threads\par
+\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 12:50: \par
+pool-1-thread-1 (Start) message = 0\par
+pool-1-thread-5 (Start) message = 4\par
+pool-1-thread-4 (Start) message = 3\par
+pool-1-thread-3 (Start) message = 2\par
+pool-1-thread-2 (Start) message = 1\par
+pool-1-thread-5 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-4 (Start) message = 5\par
+pool-1-thread-5 (Start) message = 6\par
+pool-1-thread-3 (End)\par
+pool-1-thread-3 (Start) message = 7\par
+pool-1-thread-1 (End)\par
+pool-1-thread-1 (Start) message = 8\par
+pool-1-thread-2 (End)\par
+pool-1-thread-2 (Start) message = 9\par
+pool-1-thread-3 (End)\par
+pool-1-thread-1 (End)\par
+pool-1-thread-4 (End)\par
+pool-1-thread-5 (End)\par
+pool-1-thread-2 (End)\par
+Finished all threads\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:55: package Batch1;\par
+\par
+import java.util.*;\par
+import java.util.concurrent.*;\par
+\par
+class WorkerThread1 implements Callable<String> \{\par
+\tab private String message;\par
+\par
+\tab public WorkerThread1(String s) \{\par
+\tab\tab this.message = s;\par
+\tab\}\par
+\par
+\tab public String call() \{\par
+\tab\tab processmessage(); // Thread sleeps for 2 seconds\par
+\tab\tab return Thread.currentThread().getName() + " message = " + message;\par
+\tab\}\par
+\par
+\tab private void processmessage() \{\par
+\tab\tab try \{\par
+\tab\tab\tab Thread.sleep(2000);\par
+\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:55: the prg:\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:55: package Batch1;\par
+\par
+import java.util.*;\par
+import java.util.concurrent.*;\par
+\par
+class WorkerThread1 implements Callable<String> \{\par
+\tab private String message;\par
+\par
+\tab public WorkerThread1(String s) \{\par
+\tab\tab this.message = s;\par
+\tab\}\par
+\par
+\tab public String call() \{\par
+\tab\tab processmessage(); // Thread sleeps for 2 seconds\par
+\tab\tab return Thread.currentThread().getName() + " message = " + message;\par
+\tab\}\par
+\par
+\tab private void processmessage() \{\par
+\tab\tab try \{\par
+\tab\tab\tab Thread.sleep(2000);\par
+\tab\tab\} catch (InterruptedException e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:56: \par
+public class Main12 \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab ExecutorService executor = Executors.newFixedThreadPool(5);// creating a pool of 5 threads\par
+\tab\tab List<Future<String>> list = new ArrayList<Future<String>>();\par
+\tab\tab Callable<String> callable = new WorkerThread1("callable obj");\par
+\tab\tab for (int i = 0; i < 10; i++) \{\par
+\tab\tab\tab Future<String> future = executor.submit(callable);\par
+\tab\tab\tab // add Future to the list, we can get return value using Future\par
+\tab\tab\tab list.add(future);\par
+\tab\tab\}\par
+\tab\tab for (Future<String> fut : list) \{\par
+\tab\tab\tab try \{\par
+\tab\tab\tab\tab System.out.println(fut.get());\par
+\tab\tab\tab\} catch (InterruptedException | ExecutionException e) \{\par
+\tab\tab\tab\tab e.printStackTrace();\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab executor.shutdown();\par
+\tab\tab while (!executor.isTerminated()) \{\par
+\tab\tab\}\par
+\tab\tab System.out.println("Finished all threads");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:56: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:56: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:56: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+Finished all threads\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+Finished all threads\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+Finished all threads\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:57: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 12:58: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+Finished all threads\par
+\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 12:58: pool-1-thread-1 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-4 message = callable obj\par
+pool-1-thread-2 message = callable obj\par
+pool-1-thread-1 message = callable obj\par
+pool-1-thread-5 message = callable obj\par
+pool-1-thread-3 message = callable obj\par
+Finished all threads\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 13:00: Topic: Java Memory Management\par
+Heap\par
+Stack\par
+Presenter: Mohit Rai\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 13:02: training test will be mcq? and project will be in teams\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 13:03: github\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 13:04: oky\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 13:05: can we have revision class or doubts class?\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:06: //Save it by JavaReflection_AIO.java\par
+\par
+import java.lang.Class;\par
+import java.lang.reflect.Array;\par
+import java.lang.reflect.Constructor;\par
+import java.lang.reflect.Field;\par
+import java.lang.reflect.Method;\par
+import java.lang.reflect.Modifier;\par
+\par
+interface May \{\par
+\}\par
+\par
+class Animals \{\par
+\}\par
+\par
+class Dog extends Animals \{\par
+\tab public void display() \{\par
+\tab\tab System.out.println("I am a dog.");\par
+\tab\}\par
+\}\par
+\par
+class Simplex \{\par
+\tab public void display() \{\par
+\tab\tab System.out.println("I am a simple.");\par
+\tab\}\par
+\}\par
+\par
+public class JavaReflection_AIO \{\par
+\tab public JavaReflection_AIO() \{\par
+\par
+\tab\}\par
+\par
+\tab // private constructor with a single parameter\par
+\tab private JavaReflection_AIO(int age) \{\par
+\par
+\tab\}\par
+\par
+\tab public String type;\par
+\tab private String run1;\par
+\tab String waits;\par
+\tab protected int Sleep;\par
+\par
+\tab public void run() \{\par
+\tab\}\par
+\par
+\tab protected void waits() \{\par
+\tab\}\par
+\par
+\tab private int yeild(int i) \{\par
+\tab\tab System.out.println(i);\par
+\tab\tab return i;\par
+\tab\}\par
+\par
+\tab void interrupts() \{\par
+\tab\}\par
+\par
+\tab public static void main(String args[]) throws ClassNotFoundException \{\par
+\tab\tab // BY ForName\par
+\tab\tab Class c = Class.forName("JavaReflection_AIO"); /// It can be used for create instance of self class..\par
+\tab\tab System.out.println(c.getName());\par
+\tab\tab Class c1 = Class.forName("Simplex"); // if you know the fully qualified name of class.\par
+\tab\tab System.out.println(c1.getName());\par
+\tab\tab // By .getClass\par
+\tab\tab Simplex s = new Simplex(); // create an object of Simple\par
+\tab\tab Class t = s.getClass(); // create an object of Class using getClass()\par
+\tab\tab System.out.println(t.getName());\par
+\tab\tab // By .Class\par
+\tab\tab Class c5 = int.class; // It can be used for primitive data types also.\par
+\tab\tab System.out.println(c.getName());\par
+\tab\tab Class c2 = JavaReflection_AIO.class;\par
+\tab\tab System.out.println(c2.getName());\par
+\tab\tab Class c3 = Simplex.class; // It can be used for user defined class also.\par
+\tab\tab System.out.println(c3.getName());\par
+\tab\tab try \{\par
+\tab\tab\tab // Class_class_Imp_Method\par
+\tab\tab\tab Dog d1 = new Dog(); // create an new instance of class Dog\par
+\tab\tab\tab Class obj = d1.getClass(); // create an object of Class using getClass()\par
+\tab\tab\tab System.out.println("Name: " + obj.getName()); // get the superclass of Dog\par
+\par
+\tab\tab\tab int modifier = obj.getModifiers(); // get the access modifier of the class\par
+\tab\tab\tab String mod = Modifier.toString(modifier); // convert the access modifier to string\par
+\tab\tab\tab System.out.println("Modifier: " + mod);\par
+\par
+\tab\tab\tab Class superClass = obj.getSuperclass(); // get the superclass of Dog\par
+\tab\tab\tab System.out.println("Superclass: " + superClass.getName());\par
+\par
+\tab\tab\tab Class cm2 = Class.forName("May");// get the boolean output\par
+\tab\tab\tab System.out.println("Interface checks?= " + cm2.isInterface());\par
+\par
+\tab\tab\tab Class cm = Class.forName("Simplex"); // get the boolean output\par
+\tab\tab\tab System.out.println("Interface checks?= " + cm.isInterface());\par
+\par
+\tab\tab\tab Class cm3 = int.class; // get the boolean output and new instance of primitive class int\par
+\tab\tab\tab System.out.println("Primitve checks?= " + cm3.isPrimitive());\par
+\tab\tab\tab // Field_EX_method\par
+\tab\tab\tab System.out.println("Field Name created by jvm: ");\par
+\tab\tab\tab Field[] fields = JavaReflection_AIO.class.getFields();\par
+\tab\tab\tab for (Field field : fields)\par
+\tab\tab\tab\tab System.out.println("\\nField Name : " + field.getName());\par
+\tab\tab\tab System.out.println("\\nField name created by user: ");\par
+\tab\tab\tab Field[] Field_dec = JavaReflection_AIO.class.getDeclaredFields();\par
+\tab\tab\tab for (Field Field : Field_dec) \{\par
+\tab\tab\tab\tab System.out.println("\\"Field Name\\": " + Field.getName());\par
+\tab\tab\tab\tab int modifier2 = Field.getModifiers();\par
+\tab\tab\tab\tab System.out.println("Modifier: " + Modifier.toString(modifier2));\par
+\tab\tab\tab\tab System.out.println(" ");\par
+\tab\tab\tab\}\par
+\tab\tab\tab JavaReflection_AIO df = new JavaReflection_AIO();\par
+\tab\tab\tab Class objf = df.getClass();\par
+\tab\tab\tab Field field1 = objf.getField("type");\par
+\tab\tab\tab field1.set(df, "String");\par
+\tab\tab\tab String s2 = (String) field1.get(df);\par
+\tab\tab\tab System.out.println(s2);\par
+\tab\tab\tab // Method_Ex_method\par
+\par
+\tab\tab\tab System.out.println("Method name created by jvm: ");\par
+\tab\tab\tab Method[] methods = JavaReflection_AIO.class.getMethods();\par
+\tab\tab\tab for (Method method : methods)\par
+\tab\tab\tab\tab System.out.println("\\nMethod Name : " + method.getName());\par
+\par
+\tab\tab\tab System.out.println("\\nMethod Name created by user: ");\par
+\tab\tab\tab Method[] method_dec = JavaReflection_AIO.class.getDeclaredMethods();\par
+\tab\tab\tab for (Method method : method_dec) \{\par
+\tab\tab\tab\tab System.out.println("\\"Method Name\\": " + method.getName());\par
+\tab\tab\tab\tab int modifier1 = method.getModifiers();\par
+\tab\tab\tab\tab System.out.println("Modifier: " + Modifier.toString(modifier1));\par
+\tab\tab\tab\tab System.out.println("Return Types: " + method.getReturnType());// get the return types of method\par
+\tab\tab\tab\tab int parameterTypes = method.getParameterCount();\par
+\tab\tab\tab\tab System.out.println("Parameter Types: " + parameterTypes);\par
+\tab\tab\tab\tab System.out.println(" ");\par
+\tab\tab\tab\}\par
+\tab\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:06: \tab\tab\tab // Construction_Ex_method\par
+\par
+\tab\tab\tab // create an object of JavaReflection\par
+\tab\tab\tab JavaReflection_AIO d12 = new JavaReflection_AIO();\par
+\tab\tab\tab // create an object of Class\par
+\tab\tab\tab // using getClass()\par
+\tab\tab\tab Class objc = d12.getClass();\par
+\tab\tab\tab // get all constructors of Java Reflection\par
+\tab\tab\tab Constructor[] constructors = objc.getConstructors();\par
+\tab\tab\tab System.out.println("Constructor name created by jvm: ");\par
+\tab\tab\tab for (Constructor con : constructors)\par
+\tab\tab\tab\tab // get the name of constructors\par
+\tab\tab\tab\tab System.out.println("\\nConstructor Name: " + con.getName());\par
+\tab\tab\tab Constructor[] constructors1 = objc.getDeclaredConstructors();\par
+\tab\tab\tab System.out.println("\\nConstructor name created by user: \\n");\par
+\tab\tab\tab for (Constructor con : constructors1) \{\par
+\tab\tab\tab\tab // get the name of constructors\par
+\tab\tab\tab\tab System.out.println("Constructor Name: " + con.getName());\par
+\par
+\tab\tab\tab\tab int modifierc = c.getModifiers();\par
+\tab\tab\tab\tab String modc = Modifier.toString(modifierc);\par
+\tab\tab\tab\tab System.out.println("Modifier: " + modc);\par
+\par
+\tab\tab\tab\tab // get the number of parameters in constructors\par
+\tab\tab\tab\tab System.out.println("Parameters: " + con.getParameterCount());\par
+\tab\tab\tab\tab System.out.println("");\par
+\tab\tab\tab\}\par
+\tab\tab\tab // Array in java reflection\par
+\tab\tab\tab int[] intArray = (int[]) Array.newInstance(int.class, 3);\par
+\tab\tab\tab Array.set(intArray, 0, 123);\par
+\tab\tab\tab Array.set(intArray, 1, 456);\par
+\tab\tab\tab Array.set(intArray, 2, 789);\par
+\tab\tab\tab System.out.println("intArray[0] = " + Array.get(intArray, 0));\par
+\tab\tab\tab System.out.println("intArray[1] = " + Array.get(intArray, 1));\par
+\tab\tab\tab System.out.println("intArray[2] = " + Array.get(intArray, 2));\par
+\tab\tab\tab // Accessible object in java reflection\par
+\tab\tab\tab Dog objd = new Dog();\par
+\tab\tab\tab JavaReflection_AIO obja1 = new JavaReflection_AIO();\par
+\tab\tab\tab Method m = objd.getClass().getDeclaredMethod("display");\par
+\tab\tab\tab System.out.println(m.isAccessible());\par
+\tab\tab\tab Method ma = obja1.getClass().getDeclaredMethod("interrupts");\par
+\tab\tab\tab System.out.println(ma.isAccessible());\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab e.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:06: Java Reflection whole concepts\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:07: okay ma'am\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 13:08: thank you ma'am\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:08: Thank you ma'am\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:08: Thank you Ma'am\cf2\par
+\cf3\b Saloni Dhawan (to Everyone)\b0 : \cf1 13:08: Thankyou mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:08: Thank You Ma'am.\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 13:08: thank you mam\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 13:08: thank you ma'am\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 13:08: Thanku mam\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 13:08: Thankyou mam\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 13:08: Thank you Ma'am\par
+\cf0\par
+}
+ 

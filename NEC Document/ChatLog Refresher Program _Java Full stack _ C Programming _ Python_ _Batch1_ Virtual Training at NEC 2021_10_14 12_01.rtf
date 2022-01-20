@@ -1,0 +1,1408 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_10_14 12_01.rtf\b0\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 08:29: Good morning ma'am and happy navratri\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 08:30: Good morning mam\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 08:30: Good morning mam\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 08:30: Good Morning Ma'am\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 08:30: Good morning mam\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 08:30: Good Morning Ma'am\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 08:30: good morning maam\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 08:30: Good morning mam same to you\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 08:31: Good morning maam\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 08:31: Good Morning ma'am \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 08:31: Good  Morning Ma'am\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 08:34: Maam Recording\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 08:36: yess mam\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 08:36: Yes Ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 08:46: import java.sql.*;\par
+\par
+public class MysqlConRead \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab // here javadb is database name, root is username and password\par
+\tab\tab\tab Statement stmt = con.createStatement();\par
+\tab\tab\tab ResultSet rs = stmt.executeQuery("select * from emp");\par
+\tab\tab\tab System.out.println("Id  Name   Age");\par
+\tab\tab\tab while (rs.next())\par
+\tab\tab\tab\tab System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getInt(3));\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 08:47: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 08:47: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 08:47: create\~database\~javadb;\~\~\par
+use\~javadb;\~\~\par
+create table emp(id int, name varchar(40), age int); \~\~\par
+Insert into emp values(101, 'Emp1', 30); \par
+Insert into emp values(102, 'Emp2', 35); \par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 08:47: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 08:47: CREATE TABLE users (\par
+\tab user_id int NOT NULL AUTO_INCREMENT,\par
+\tab username varchar(45) NOT NULL,\par
+\tab password varchar(45) NOT NULL,\par
+\tab fullname varchar(45) NOT NULL,\par
+\tab email varchar(45) NOT NULL,\par
+\tab PRIMARY KEY (user_id)\par
+);\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 08:47: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 08:47: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 08:48: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 08:48: import java.sql.*;\par
+public class Main1 \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab System.out.println("Connected with MySQL successfully");\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\tab\}\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 08:48: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 08:49: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 08:49: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 08:50: Id UserName FullName Email\par
+101  abc101  1234  abc\par
+102  abcd102  12345  abcd\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 08:52: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 08:52: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 08:53: show variables where variable_name = 'port';\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 09:16: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:16: mam attendence\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 09:17: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 09:17: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 09:18: Id  Name  address   city  state  zip_code\par
+234  abhi  aa  abcd  awer  wer  \par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:29: Hello\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:35: Connected with MySQL successfully\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:35: Ma'am Now resolved\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 09:40: Id   Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:40: tea break 20 min\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:45: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:46: mam on installing xampp it is showing a dialouge box with some error\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:59: create\~database\~javadb;\~\~\par
+use\~javadb;\~\~\par
+create table emp(id int, name varchar(40), age int); \~\~\par
+Insert into emp values(101, 'Emp1', 30); \par
+Insert into emp values(102, 'Emp2', 35); \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 09:59: create\~database\~javadb;\~\~\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:00: create table emp(id int, name varchar(40), age int); \~\~\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:00: Insert into emp values(101, 'Emp1', 30); \par
+Insert into emp values(102, 'Emp2', 35); \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:00: CREATE TABLE users (\par
+\tab user_id int NOT NULL AUTO_INCREMENT,\par
+\tab username varchar(45) NOT NULL,\par
+\tab password varchar(45) NOT NULL,\par
+\tab fullname varchar(45) NOT NULL,\par
+\tab email varchar(45) NOT NULL,\par
+\tab PRIMARY KEY (user_id)\par
+);\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:01: import java.sql.*;\par
+public class Main1 \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab System.out.println("Connected with MySQL successfully");\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\tab\}\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:01: back\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b Apurv Agnihotri (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:01: back\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:01: back\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:01: Back\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 10:01: back\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:01: back\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 10:01: back\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:01: Connected with MySQL successfully\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:02: back\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:02: back\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 10:02: back\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:02: import java.sql.*;\par
+public class MysqlConRead \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+//here javadb is database name, root is username and password  \par
+\tab\tab\tab Statement stmt = con.createStatement();\par
+\tab\tab\tab ResultSet rs = stmt.executeQuery("select * from emp");\par
+\tab\tab\tab while (rs.next())\par
+\tab\tab\tab\tab System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3));\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\tab\}\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:03: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:03: 101  Emp1  30\par
+102  Emp2  35\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:05: Download and Paste the mysqlconnector.jar file in jre/lib/ext folder from \par
+http://www.java2s.com/Code/Jar/m/Downloadmysqlconnectorjar.htm\par
+Set classpath of environment or eclipse project.\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:06: mam before that we saved our jar file in java folder\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:09: import java.sql.*;\par
+\par
+public class MysqlCon1 \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab Statement stmt = con.createStatement();\par
+\tab\tab\tab int s = stmt.executeUpdate("insert into emp values(104,'HarryPotter',18)");\par
+\tab\tab\tab System.out.println(s + " Records inserted");\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:09: 1 Records inserted\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:10: 1 Records inserted\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:11: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:11: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:11: \par
+id\tab\par
+name\tab\par
+age\tab\par
+101\par
+Emp1\par
+30\par
+102\par
+Emp2\par
+35\par
+104\par
+HarryPotter\par
+18\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:11: 1 Records inserted\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:11: Id   Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 10:11: 1 Records inserted\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:11: 101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:12: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:12: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:12: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:12: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:12: id\tab\par
+name\tab\par
+age\tab\par
+101\par
+Emp1\par
+30\par
+102\par
+Emp2\par
+35\par
+104\par
+HarryPotter\par
+18\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:12: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:12: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:12: 127.0.0.1/javadb/emp/\tab\tab http://localhost/phpmyadmin/index.php?route=/database/sql&db=javadb\par
+\par
+   Showing rows 0 -  2 (3 total, Query took 0.0006 seconds.)\par
+\par
+\par
+select * from emp;\par
+\par
+\par
+id\tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+104\tab HarryPotter\tab 18\tab\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:12: \par
+id\tab\par
+name\tab\par
+age\tab\par
+101\par
+Emp1\par
+30\par
+102\par
+Emp2\par
+35\par
+104\par
+HarryPotter\par
+18\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:13: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+103  HarryPotter  21\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:13: import java.sql.*;\par
+\par
+public class MysqlCon1 \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab Statement stmt = con.createStatement();\par
+\tab\tab\tab int s = stmt.executeUpdate("insert into emp values(105,'Harmoine',17),(106,'Ronie',18);");\par
+\tab\tab\tab System.out.println(s + " Records inserted");\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:13: 2 Records inserted\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:14: Id   Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Hermoine  17\par
+106  Ron  18\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:14: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:14: 101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:14: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+103  HarryPotter  21\par
+105  Harmoine  17\par
+106  Ronie  18\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:14: 127.0.0.1/javadb/emp/\tab\tab http://localhost/phpmyadmin/index.php?route=/table/sql&db=javadb&table=emp\par
+\par
+   Showing rows 0 -  4 (5 total, Query took 0.0015 seconds.)\par
+\par
+\par
+SELECT * FROM emp;\par
+\par
+\par
+id\tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+104\tab HarryPotter\tab 18\tab\par
+105\tab Harmoine\tab 17\tab\par
+106\tab Ronie\tab 18\tab\par
+\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:14: 2 Records inserted\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 10:14: 101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:14: id\tab\par
+name\tab\par
+age\tab\par
+101\par
+Emp1\par
+30\par
+102\par
+Emp2\par
+35\par
+104\par
+HarryPotter\par
+18\par
+105\par
+Harmoine\par
+17\par
+106\par
+Ronie\par
+18\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:14: id\tab\par
+name\tab\par
+age\tab\par
+101\par
+Emp1\par
+30\par
+102\par
+Emp2\par
+35\par
+104\par
+HarryPotter\par
+18\par
+104\par
+HarryPotter\par
+18\par
+105\par
+Harmoine\par
+17\par
+106\par
+Ronie\par
+18\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:15: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:15: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:15: 2 Records inserted\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:15: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:15: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:15: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:15: id\tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+104\tab HarryPotter\tab 18\tab\par
+105\tab Harmoine\tab 17\tab\par
+106\tab Ronie\tab 18\tab\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:15: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:16: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+105  Harmoine  17\par
+106  Ronie  18\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:16: 2 Records inserted\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:17: 3 Records updated\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:17: import java.sql.*;\par
+\par
+public class MysqlCon2 \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab Statement stmt = con.createStatement();\par
+\tab\tab\tab int s = stmt.executeUpdate("Update emp set age=age+6 where id>104");\par
+\tab\tab\tab System.out.println(s + " Records updated");\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:17: Id   Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Hermoine  23\par
+106  Ron  24\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:17: 3 Records updated\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:18: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  23\par
+106  Ronie  24\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:18: 3 Records updated\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:18: 3 Records updated\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:18: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:18: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  23\par
+106  Ronie  24\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:18: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:18: 3 Records updated\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:18: 3 Records updated\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:18: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+103  HarryPotter  21\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:18: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  30\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:19: \par
+\par
+\par
+\par
+\par
+\par
+id\tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+104\tab HarryPotter\tab 24\tab\par
+105\tab Harmoine\tab 23\tab\par
+106\tab Ronie\tab 24\tab\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:19: 101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  29\par
+106  Ronie  30\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:19: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  18\par
+104  HarryPotter  18\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:19: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:19: 3 Records updated\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:19: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  24\par
+105  Harmoine  29\par
+106  Ronie  30\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:19: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+104  HarryPotter  30\par
+105  Harmoine  29\par
+106  Ronie  30\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:19: import java.sql.*;\par
+\par
+public class MysqlCon3 \{\par
+\tab public static void main(String args[]) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab Statement stmt = con.createStatement();\par
+\tab\tab\tab int s = stmt.executeUpdate("Delete from emp where id=104");\par
+\tab\tab\tab System.out.println(s + " Records deleted");\par
+\tab\tab\tab con.close();\par
+\tab\tab\} catch (Exception e) \{\par
+\tab\tab\tab System.out.println(e);\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:19: id   \tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+104\tab HarryPotter\tab 24\tab\par
+105\tab Harmoine\tab 29\tab\par
+106\tab Ronie\tab 30\tab\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:20: 1 Records deleted\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:20: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:20: 1 Records deleted\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:20: 1 Records deleted\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:20: 1 Records deleted\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:20: 1 Records deleted\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:20: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:20: 1 Records deleted\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:20: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:20: \par
+id\tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+105\tab Harmoine\tab 23\tab\par
+106\tab Ronie\tab 24\tab\par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:20: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:20: Id   Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Hermoine  23\par
+106  Ron  24\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:21: 1 Records deleted\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:21: 1 Records deleted\par
+\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 10:21: 1 Records deleted\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:21: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:21: 1 Records deleted\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:21: 1 Records deleted\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:21: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:21: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:22: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:22: id\tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+105\tab Harmoine\tab 23\tab\par
+106\tab Ronie\tab 24\tab\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:22: id   \tab name\tab age\tab\par
+101\tab Emp1\tab 30\tab\par
+102\tab Emp2\tab 35\tab\par
+105\tab Harmoine\tab 29\tab\par
+106\tab Ronie\tab 30\tab\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:22: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  29\par
+106  Ronie  30\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:23: Id  Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  23\par
+106  Ronie  24\par
+\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:23: Id   Name   Age\par
+101  Emp1  30\par
+102  Emp2  35\par
+105  Harmoine  29\par
+106  Ronie  30\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:28: import java.sql.*;\par
+\par
+public class JdbcInsertDemo \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/javadb", "root", "");\par
+\tab\tab\tab String sql = "INSERT INTO Users (username, password, fullname, email) "\par
+\tab\tab\tab\tab\tab + "VALUES (?, ?, ?, ?)";\par
+\tab\tab\tab PreparedStatement statement = conn.prepareStatement(sql);\par
+\tab\tab\tab statement.setString(1, "bill");\par
+\tab\tab\tab statement.setString(2, "secretpass");\par
+\tab\tab\tab statement.setString(3, "Bill Gates");\par
+\tab\tab\tab statement.setString(4, "bill.gates@microsoft.com");\par
+\tab\tab\tab int rowsInserted = statement.executeUpdate();\par
+\tab\tab\tab if (rowsInserted > 0) \{\par
+\tab\tab\tab\tab System.out.println("A new user was inserted successfully!");\par
+\tab\tab\tab\}\par
+\tab\tab\} catch (Exception ex) \{\par
+\tab\tab\tab ex.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:29: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:29: A new user was inserted successfully!\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:29: A new user was inserted successfully!\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:29: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:30: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:30: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:30: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:30: A new user was inserted successfully!\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:31: 1 bill secretpass Bill Gates bill.gates@microsoft.com\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:31: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:31: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:31: A new user was inserted successfully!\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:31: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:31: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Mohit Rai (to Everyone)\b0 : \cf1 10:32: A new user was inserted successfully!\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:32: A new user was inserted\par
+ successfully!\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:32: 1\par
+bill\par
+secretpass\par
+Bill Gates\par
+bill.gates@microsoft.com\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:35: A new user was inserted successfully!\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 10:36: A new user was inserted successfully!\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:40: user_id  username password fullname  email\par
+1  bill  secretpass  Bill Gates  bill.gates@microsoft.com\cf2\par
+\cf3\b Harshit Mimani (to Everyone)\b0 : \cf1 10:40: userId  password fullname    email\par
+1 bill secretpass  Bill Gates\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:40: Id   UserName   Password   Fullname   Email\par
+1    bill    secretpass    Bill Gates    bill.gates@microsoft.com\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:41: Id  Name   Password  fullnames  Emails\par
+1  bill  secretpass Bill Gates bill.gates@microsoft.com\par
+2  bill  secretpass Bill Gates bill.gates@microsoft.com\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:42: import java.sql.*;\par
+public class JdbcInsertDemo \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab String dbURL = "jdbc:mysql://localhost:3306/javadb";\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection conn = DriverManager.getConnection(dbURL, "root", "");\par
+\tab\tab\tab String sql = "DELETE FROM Users WHERE username=?";\par
+        \tab         PreparedStatement statement = conn.prepareStatement(sql);\par
+\tab\tab         statement.setString(1, "bill");\par
+\tab\tab         int rowsDeleted = statement.executeUpdate();\par
+\tab\tab         if (rowsDeleted > 0) \{\par
+\tab\tab\tab        System.out.println("A user was deleted successfully!");\tab\tab\}\par
+\tab\tab\} catch (Exception ex) \{\par
+\tab\tab\tab ex.printStackTrace();\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:44: user_id  username password fullname  email\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:44: A user was deleted successfully!\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:44: A user was deleted successfully!\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:44: A user was deleted successfully!\par
+\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 10:44: A user was deleted successfully!\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:45: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:45: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:45: A user was deleted successfully!\par
+\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 10:46: A user was deleted successfully!\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:46: A user was deleted successfully!\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:49: A new user was inserted successfully!\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:50: import java.sql.*;\par
+public class JdbcInsertDemo \{\par
+\tab public static void main(String[] args) \{\par
+\tab\tab String dbURL = "jdbc:mysql://localhost:3306/javadb";\par
+\tab\tab try \{\par
+\tab\tab\tab Class.forName("com.mysql.jdbc.Driver");\par
+\tab\tab\tab Connection conn = DriverManager.getConnection(dbURL, "root", "");\par
+\tab\tab\tab String sql = "UPDATE Users SET password=?, fullname=?, email=? WHERE username=?";\par
+\tab\tab\tab PreparedStatement statement = conn.prepareStatement(sql);\par
+\tab\tab\tab statement.setString(1, "123456789");\par
+\tab\tab\tab statement.setString(2, "William Henry Bill Gates");\par
+\tab\tab\tab statement.setString(3, "bill@gatesfoundation.org");\par
+\tab\tab\tab statement.setString(4, "bill");\par
+\tab\tab\tab int rowsUpdated = statement.executeUpdate();\par
+\tab\tab\tab if (rowsUpdated > 0) \{\par
+\tab\tab\tab\tab System.out.println("An existing user was updated successfully!");\tab\tab\}\par
+\tab\tab\} catch (Exception ex) \{\par
+\tab\tab\tab ex.printStackTrace();\tab\tab\}\par
+\tab\}\tab\}\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:51: An existing user was updated successfully!\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:51: An existing user was updated successfully!\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:51: An existing user was updated successfully!\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 10:51: bill\par
+123456789\par
+William Henry Bill Gates\par
+bill@gatesfoundation.org\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:51: user_id\tab username password\tab fullname\tab email\par
+1\tab bill\tab  123456789\tab William Henry Bill Gates\tab bill@gatesfoundation.org\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:51: An existing user was updated successfully!\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:51: bill123456789William Henry Bill Gatesbill@gatesfoundation.org\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:52: An existing user was updated successfully!\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:52: Id   UserName   Password   Fullname   Email\par
+2    bill    123456789    William Henry Bill Gates    bill@gatesfoundation.org\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:52: An existing user was updated successfully!\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:52: An existing user was updated successfully!\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 10:52: Id  Name   Password  fullnames  Emails\par
+3  bill  123456789 William Henry Bill Gates bill@gatesfoundation.org\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:52: An existing user was updated successfully!\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:52: user_id  username password fullname  email\par
+4  bill  123456789  William Henry Bill Gates  bill@gatesfoundation.org\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:52: An existing user was updated successfully!\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:53: username  password  fullname  email\par
+3  bill  123456789 William Henry Bill Gates\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:55: Create a database Publisher with Table: Author(author id, name, phone, address, city, state, and zip ) \par
+Enter some data through hypothetical Forms in Java submitted by Authors through SQL insert queries\par
+Create a Menu driven Java Application to Add, Edit, Delete, and Select data from the table\par
+Create another application to retrieve information (author id, name, phone, address, city, state, and zip ) about the authors who are living in the city  where the city name begins with the letter \ldblquote S\rdblquote .\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:30: mam please repeat it\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:32: \endash ea \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:32: \endash enableassertions \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:37: package AssertionExample;\par
+\par
+public class AssertionEg \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab\par
+        int value = 21; \par
+        assert value >= 20 : " Underweight"; \par
+        System.out.println("value is "+value); \par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:37: package AssertionExample;\par
+\par
+public class AssertionEg \{\par
+\par
+\tab public static void main(String[] args) \{\par
+\tab\tab\par
+        int value = 15; \par
+        assert value >= 20 : " Underweight"; \par
+        System.out.println("value is "+value); \par
+\par
+\tab\}\par
+\par
+\}\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:37: Exception in thread "main" java.lang.AssertionError: UnderWeight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:7)\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:37: Exception in thread "main" java.lang.AssertionError: Underweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:5)\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:37: Exception in thread "main" java.lang.AssertionError: Underweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:7)\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:37: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:7)\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:38: Value is 21\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:38: value is 21\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:38: value is 15\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:38: value is 21\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:38: Value is 15\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:38: value is 15\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:38: value is 21\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:38: value is 21\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:38: value is 15\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:38: value is 15\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:38: value is 15\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:38: value is 21\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:38: value is 15\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:38: Value = 10\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:38: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:8)\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:39: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:7)\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:39: value is 15\par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:39: Exception in thread "main" java.lang.AssertionError: Uderweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:7)\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:39: value is 21\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:39: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+\tab at Assertionexample.AssertionEg.main(AssertionEg.java:10)\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:39: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+\tab at AssertionExample.AssertionEg.main(AssertionEg.java:8)\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:39: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+\tab at assertionExample.AssertionEg.main(AssertionEg.java:8)\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:40: Exception in thread "main" java.lang.AssertionError:  Underweight\par
+ at AssertionExample.AssertionEg.main(AssertionEg.java:7)\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:50: package ManualTesting;\par
+\par
+public class Main \{\par
+\tab // @BeforeClass\par
+\tab static \{\par
+\tab\tab System.out.println("Before class Main");\par
+\tab\}\par
+\par
+\tab public static void main(String[] a) \{\par
+\tab\tab testsquare();// manual unit testing\par
+\tab\}\par
+\par
+\tab static int square(int x) \{\par
+\tab\tab return x * x;\par
+\tab\}\par
+\par
+\tab static int cube(int x) \{\par
+\tab\tab return x * x * x;\par
+\tab\}\par
+\par
+\tab // @test\par
+\tab static void testsquare() \{ // unit test functions: test cases\par
+\tab\tab fn();\par
+\tab\tab int aa = 10;\par
+\tab\tab if (square(aa) == 110) \{\par
+\tab\tab\tab System.out.println("Test succedded");\par
+\tab\tab\} else\par
+\tab\tab\tab System.out.println("Test failed");\par
+\tab\tab fna();\par
+\tab\}\par
+\par
+\tab // @test\par
+\tab static void testcube() \{\par
+\tab\tab // unit test functions: test cases\par
+\tab\tab fn();\par
+\tab\tab int aa = 10;\par
+\tab\tab if (cube(aa) == 1000) \{\par
+\tab\tab\tab System.out.println("Test succedded");\par
+\tab\tab\} else\par
+\tab\tab\tab System.out.println("Test failed");\par
+\tab\tab fna();\par
+\tab\}\par
+\par
+\tab // @Before\par
+\tab static void fn() \{\par
+\tab\tab System.out.println("before Test cases ");\par
+\tab\}\par
+\par
+\tab // @after\par
+\tab static void fna() \{\par
+\tab\tab System.out.println("After Test cases ");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:51: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:52: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:52: Before class Main\par
+before Test cases \par
+Test succedded\par
+After Test cases \cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:52: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:52: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:52: package ManualTesting;\par
+\par
+public class Main \{\par
+\tab // @BeforeClass\par
+\tab static \{\par
+\tab\tab System.out.println("Before class Main");\par
+\tab\}\par
+\par
+\tab public static void main(String[] a) \{\par
+\tab\tab testsquare();// manual unit testing\par
+\tab\tab testcube();\par
+\tab\}\par
+\par
+\tab static int square(int x) \{\par
+\tab\tab return x * x;\par
+\tab\}\par
+\par
+\tab static int cube(int x) \{\par
+\tab\tab return x * x * x;\par
+\tab\}\par
+\par
+\tab // @test\par
+\tab static void testsquare() \{ // unit test functions: test cases\par
+\tab\tab fn();\par
+\tab\tab int aa = 10;\par
+\tab\tab if (square(aa) == 110) \{\par
+\tab\tab\tab System.out.println("Test succedded");\par
+\tab\tab\} else\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:52: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:52: package ManualTesting;\par
+\par
+public class Main \{\par
+\tab // @BeforeClass\par
+\tab static \{\par
+\tab\tab System.out.println("Before class Main");\par
+\tab\}\par
+\par
+\tab public static void main(String[] a) \{\par
+\tab\tab testsquare();\par
+\tab\tab testcube();\par
+\tab\}\par
+\par
+\tab static int square(int x) \{\par
+\tab\tab return x * x;\par
+\tab\}\par
+\par
+\tab static int cube(int x) \{\par
+\tab\tab return x * x * x;\par
+\tab\}\par
+\par
+\tab // @test\par
+\tab static void testsquare() \{ // unit test functions: test cases\par
+\tab\tab fn();\par
+\tab\tab int aa = 10;\par
+\tab\tab if (square(aa) == 110) \{\par
+\tab\tab\tab System.out.println("Test succedded");\par
+\tab\tab\} else\par
+\tab\tab\tab System.out.println("Test failed");\par
+\tab\tab fna();\par
+\tab\}\par
+\par
+\tab // @test\par
+\tab static void testcube() \{\par
+\tab\tab // unit test functions: test cases\par
+\tab\tab fn();\par
+\tab\tab int aa = 10;\par
+\tab\tab if (cube(aa) == 1000) \{\par
+\tab\tab\tab System.out.println("Test succedded");\par
+\tab\tab\} else\par
+\tab\tab\tab System.out.println("Test failed");\par
+\tab\tab fna();\par
+\tab\}\par
+\par
+\tab // @Before\par
+\tab static void fn() \{\par
+\tab\tab System.out.println("before Test cases ");\par
+\tab\}\par
+\par
+\tab // @after\par
+\tab static void fna() \{\par
+\tab\tab System.out.println("After Test cases ");\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:52: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b ananya giridhar (to Everyone)\b0 : \cf1 11:53: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:54: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:54: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:54: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:54: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:54: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:54: Before class Main\par
+before Test cases \par
+Test failed\par
+After Test cases \par
+before Test cases \par
+Test succedded\par
+After Test cases \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:56: The Junit 5.x framework is annotation based, so let's see the annotations that can be used while writing the test cases.\par
+@Test\~annotation specifies that method is the test method.\par
+@Test(timeout=1000)\~annotation specifies that method will be failed if it takes longer than 1000 milliseconds (1 second).\par
+@BeforeClass\~annotation specifies that method will be invoked only once, before starting all the tests.\par
+@Before\~annotation specifies that method will be invoked before each test.\par
+@After\~annotation specifies that method will be invoked after each test.\par
+@AfterClass\~annotation specifies that method will be invoked only once, after finishing all the tests\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:57: The org.junit.Assert class provides methods to assert the program logic.\par
+Methods of Assert class\par
+void assertEquals(boolean expected,boolean actual): checks that two primitives/objects are equal. It is overloaded.\par
+void assertTrue(boolean condition): checks that a condition is true.\par
+void assertFalse(boolean condition): checks that a condition is false.\par
+void assertNull(Object obj): checks that object is null.\par
+void assertNotNull(Object obj): checks that object is not null.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:58: Create a Java project : JUnitPrj\par
+Add two packages:\par
+source \par
+tests\par
+Add the class file:\par
+source/MainClass.java\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:00: package source;\par
+public class MainClass \{\par
+\tab public static int findMax(int arr[]) \{\par
+\tab\tab int max = 0;\par
+\tab\tab // int max=arr[0];\par
+\tab\tab for (int i = 1; i < arr.length; i++) \{\par
+\tab\tab\tab if (max < arr[i])\par
+\tab\tab\tab\tab max = arr[i];\par
+\tab\tab\}\par
+\tab\tab return max;\par
+\tab\}\par
+\tab public static int cube(int n) \{\par
+\tab\tab return n * n * n;\par
+\tab\}\par
+\}\par
+\cf0\par
+}
+ 

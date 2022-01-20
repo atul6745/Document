@@ -1,0 +1,788 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;\red255\green255\blue255;\red59\green182\blue60;}
+\viewkind4\uc1\pard\cf1\b\f0\fs24 Chat Log   C:\\Users\\acer\\Documents\\ChatLog Refresher Program _Java Full stack _ C Programming _ Python_ _Batch1_ Virtual Training at NEC 2021_10_09 13_04.rtf\b0\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 09:00: Good Morning Ma'am\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 09:00: good morning mam\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 09:00: Good Morning Ma'am\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 09:01: Good Morning Ma'am\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 09:01: GoodMorning Mam\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:01: good morning ma'am\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 09:01: Good Morning Ma'am\par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 09:01: ma'am recording\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:22: mam if we are importing a package and in that if their is some access specifier which limits the scope then how we will be going to use it?\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 09:43: we can make\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:02: yes mam\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 10:06: thank you mam got all cases.\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:12: WAP in Java to create an array for checking all \{ to \}, ( to ), [ to ] paired in a given string:\par
+\cf0\ldblquote import java.util.*; \par
+ class j3  \{\tab\par
+\tab public static void main(String args[])  \tab\{ \par
+\tab\tab int a; \par
+\tab\tab Scanner buf=new Scanner(System.in); \par
+\tab\tab System.out.print("Enter value of a :"); \par
+\tab\tab a=buf.nextInt(); \par
+\tab\tab System.out.println("Value of a:" +a); \par
+\tab\} \par
+\}\rdblquote\par
+Take the .java file as cmd line args instead of String:\par
+WAP in Java to create a collection for checking all \{ to \}, ( to ), [ to ] paired in a given file passed in cmd line arg.\par
+\par
+Hint: Scan the file char by char. Put all brackets in stack, check the size of matching stack pairwise. Also check if the file has .java ext or not.\par
+\cf2\par
+\cf3\b Abhishek Kaushik (to Everyone)\b0 : \cf1 10:31: present mam \cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:42: import java.io.File;\par
+public class CreateDir \{\par
+\par
+   public static void main(String args[]) \{\par
+      String dirname = "/Monica/tmp/mydirs";\par
+      File d = new File(dirname);\par
+      \par
+      // Create directory now.\par
+      d.mkdirs();\par
+      System.out.println("Dirs Created ..");\par
+   \}\par
+\}\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:51: import java.io.File;\par
+public class ReadDir \{\par
+   public static void main(String[] args) \{\par
+      File file = null;\par
+      String[] paths;\par
+      try \{      \par
+    \tab   String s="/Monica";\par
+          file = new File(s);\par
+         // array of files and directory\par
+         paths = file.list();\par
+         \par
+         // for each name in the path array\par
+         for(String path:paths) \{\par
+        \tab  File f=new File(s+"/"+path);\par
+        \tab  \par
+            // prints filename and directory name\par
+            System.out.println(path+ \par
+            \tab\tab (f.isDirectory()?" Is a directory. ": " Is a file."));\par
+         \}\par
+      \} catch (Exception e) \{\par
+          e.printStackTrace();\par
+      \}\par
+   \}\par
+\}\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 10:53: Hello.txt Is a file.\par
+Name_Collection.txt Is a file.\par
+test.clas Is a file.\par
+test.class Is a file.\par
+test.txt Is a file.\par
+test2.txt Is a file.\par
+test_Exercise.txt Is a file.\par
+tmp Is a directory. \par
+\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 10:54: abc.java.txt Is a file.\par
+Hello.txt Is a file.\par
+test.txt Is a file.\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 10:54: .classpath Is a file.\par
+.project Is a file.\par
+.settings Is a directory. \par
+bin Is a directory. \par
+src Is a directory. \par
+tmp Is a directory. \par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 10:54: abc.txt Is a file.\par
+Hello.txt Is a file.\par
+mydirs Is a directory. \par
+test.txt Is a file.\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 10:54: test.txt Is a file.\par
+test2.txt Is a file.\par
+test3.txt Is a file.\par
+tmp Is a directory. \cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 10:54: check.java Is a file.\par
+demo.txt Is a file.\par
+Excercise.txt Is a file.\par
+Exercise.java Is a file.\par
+ScanFile.txt Is a file.\par
+shikhar Is a directory. \par
+tmp Is a directory. \cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:54: test.txt Is a file.\par
+test2.txt Is a file.\par
+test3.txt Is a file.\par
+tmp Is a directory. \par
+\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 10:54: aa.clas Is a file.\par
+aa.java Is a file.\par
+aab.clas Is a file.\par
+aab.java Is a file.\par
+Hello.txt Is a file.\par
+Hello2.txt Is a file.\par
+Name_Collection.txt Is a file.\par
+Name_Collection2.txt Is a file.\par
+Test.txt Is a file.\par
+tmp Is a directory. \cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 10:54: \par
+test.clas Is a file.\par
+test.class Is a file.\par
+test.txt Is a file.\par
+test2.txt Is a file.\par
+test_Exercise.txt Is a file.\par
+tmp Is a directory. \par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 10:55: test.txt Is a file.\par
+test2.txt Is a file.\par
+test3.txt Is a file.\par
+tmp Is a directory. \par
+\cf2\par
+\cf3\b MAYANK KUMAR (to Everyone)\b0 : \cf1 10:55: Hello.txt Is a file.\par
+HelloCopy.txt Is a file.\par
+New Text Document.txt Is a file.\par
+test.txt Is a file.\par
+tmp Is a directory. \par
+\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 10:55: Hello.txt Is a file.\par
+Name_Collection.txt Is a file.\par
+test.clas Is a file.\par
+test.class Is a file.\par
+test.txt Is a file.\par
+test2.txt Is a file.\par
+test_Exercise.txt Is a file.\par
+tmp Is a directory. \cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 10:55: Hello.txt Is a file.\par
+Name_Collection.txt Is a file.\par
+test.clas Is a file.\par
+test.class Is a file.\par
+test.txt Is a file.\par
+test2.txt Is a file.\par
+test_Exercise.txt Is a file.\par
+tmp Is a directory. \cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 10:56: test.txt Is a file.\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 10:56: test.clas Is a file.\par
+test.class Is a file.\par
+test.txt Is a file.\par
+test2.txt Is a file.\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 10:56: List contents of all directories-subdirectories-file from a folder specified in cmd agrs.\par
+Hint: create a recursive function to call listing of all dirs and subdirs.\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:11: import java.io.File;\par
+public class ReadDir \{\par
+   public static void main(String[] args) \{\par
+       \tab   String s="/Monica"; \par
+          listing(s);\par
+   \}\par
+   static void listing(String s) \{\par
+\tab    String[] paths=new File(s).list();\par
+\tab    System.out.println("\\n\\nListing for : " + s);\par
+\tab    for(String path:paths) \{\par
+      \tab  File f=new File(s+"/"+path);\par
+          // prints filename and directory name\par
+          System.out.println(path+ \par
+          \tab\tab (f.isDirectory()?" Is a directory. ": " Is a file.") +\par
+          " Under " + s);\par
+          if(f.isDirectory())\par
+        \tab   listing(s+"/"+path);\par
+       \}\par
+\tab    \par
+   \}\par
+\}\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:13: \par
+\par
+Listing for : /Saumya\par
+test.txt Is a file. Under /Saumya\par
+tmp Is a directory.  Under /Saumya\par
+\par
+\par
+Listing for : /Saumya/tmp\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:13: \par
+Listing for : C:\\Users\\aliab\\syed\par
+ok.txt Is a directory.  Under C:\\Users\\aliab\\syed\par
+\par
+\par
+Listing for : C:\\Users\\aliab\\syed/ok.txt\par
+ok2.txt Is a file. Under C:\\Users\\aliab\\syed\par
+oky.txt Is a file. Under C:\\Users\\aliab\\syed\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:14: Yes ma'am...got the concept\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 11:14: \par
+\par
+Listing for : /Apurv\par
+test.java Is a file. Under /Apurv\par
+test3.txt Is a file. Under /Apurv\par
+tmp Is a directory.  Under /Apurv\par
+\par
+\par
+Listing for : /Apurv/tmp\par
+mydirs Is a directory.  Under /Apurv/tmp\par
+\par
+\par
+Listing for : /Apurv/tmp/mydirs\par
+test.txt Is a file. Under /Apurv/tmp/mydirs\par
+test1.txt Is a file. Under /Apurv/tmp\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:14: Tea break 20 min\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:14: \par
+\par
+Listing for : /Monica\par
+Hello.txt Is a file. Under /Monica\par
+Name_Collection.txt Is a file. Under /Monica\par
+test.clas Is a file. Under /Monica\par
+test.class Is a file. Under /Monica\par
+test.txt Is a file. Under /Monica\par
+test2.txt Is a file. Under /Monica\par
+test_Exercise.txt Is a file. Under /Monica\par
+tmp Is a directory.  Under /Monica\par
+\par
+\par
+Listing for : /Monica/tmp\par
+mydirs Is a directory.  Under /Monica/tmp\par
+\par
+\par
+Listing for : /Monica/tmp/mydirs\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:14: \par
+\par
+Listing for: D:\\\\APPSjava\\\\eclipse\\\\JavaIOPrj\par
+.classpath Is a file. under D:\\\\APPSjava\\\\eclipse\\\\JavaIOPrj\par
+.project Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj\par
+.settings Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/.settings\par
+org.eclipse.jdt.core.prefs Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/.settings\par
+bin Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+CreateDir.class Is a file. under D:\\PPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+FileCopy.class Is a file. under D:\\\\APPS\\\\javalipse\\\\JavaIOPrj/bin\par
+FileDemo.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+FileInputStreamExample.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+FileOutputStreamExample.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+FileReadWrite.class Is a file. under D:APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+Oct8 Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin/Oct8\par
+FileOutputStreamExample.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin/Oct8\par
+Test1.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin/Oct8\par
+prgrm1.class Is a file. under D:\\\\APPS\\\\java\\clipse\\\\JavaIOPrj/bin\par
+prgrm2.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+prgrm3.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+prgrm4.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+prgrm5.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/bin\par
+ReadDir.class Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\avaIOPrj/bin\par
+ScannerExample.class Is a file. under D:\\\\APPS\\ava\\clipse\\\\JavaIOPrj/bin\par
+src Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+CreateDir.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+FileCopy.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+FileDemo.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+FileInputStreamExample.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+FileOutputStreamExample.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+FileOutputStreamExample1.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+FileReadWrite.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+Oct8 Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src/Oct8\par
+ConsoleInput.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src/Oct8\par
+FileOutputStreamExample.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src/Oct8\par
+Test1.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src/Oct8\par
+prgrm1.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+prgrm2.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+prgrm3.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+prgrm4.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+prgrm5.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+ReadDir.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+ScannerExample.java Is a file. under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/src\par
+tmp Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/tmp\par
+mydirs Is a directory.  under D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/tmp\par
+\par
+\par
+Listing for: D:\\\\APPS\\\\java\\\\eclipse\\\\JavaIOPrj/tmp/mydirs\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:15: \par
+\par
+Listing for : /Piyush\par
+abc.txt Is a file. Under /Piyush\par
+Hello.txt Is a file. Under /Piyush\par
+mydirs Is a directory.  Under /Piyush\par
+\par
+\par
+Listing for : /Piyush/mydirs\par
+test.txt Is a file. Under /Piyush\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:15: \par
+\par
+Listing for : E:/aman_java\par
+test.txt Is a file. Under E:/aman_java\par
+test2.txt Is a file. Under E:/aman_java\par
+test3.txt Is a file. Under E:/aman_java\par
+tmp Is a directory.  Under E:/aman_java\par
+\par
+\par
+Listing for : E:/aman_java/tmp\par
+a.txt Is a file. Under E:/aman_java/tmp\par
+b.txt Is a file. Under E:/aman_java/tmp\par
+c.txt Is a file. Under E:/aman_java/tmp\par
+mydirs Is a directory.  Under E:/aman_java/tmp\par
+\par
+\par
+Listing for : E:/aman_java/tmp/mydirs\par
+ab.txt Is a file. Under E:/aman_java/tmp/mydirs\par
+bc.txt Is a file. Under E:/aman_java/tmp/mydirs\par
+cd.txt Is a file. Under E:/aman_java/tmp/mydirs\par
+directories Is a directory.  Under E:/aman_java/tmp/mydirs\par
+\par
+\par
+Listing for : E:/aman_java/tmp/mydirs/directories\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:17: Listing for : /Atul\par
+surname.txt Is a file. Under /Atul\par
+name.txt Is a file. Under /Atul\par
+mydirs Is a directory.  Under /Atul\par
+\par
+\par
+Listing for : /Atul/mydirs\par
+test.txt Is a file. Under /Atul\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:17: Listing for : E:/NEC_Training/Send\par
+a Is a directory.  Under E:/NEC_Training/Send\par
+\par
+\par
+Listing for : E:/NEC_Training/Send/a\par
+A.class Is a file. Under E:/NEC_Training/Send/a\par
+A.java Is a file. Under E:/NEC_Training/Send/a\par
+Ex Is a directory.  Under E:/NEC_Training/Send/a\par
+\par
+\par
+Listing for : E:/NEC_Training/Send/a/Ex\par
+allclasses-index.html Is a file. Under E:/NEC_Training/Send/a/Ex\par
+allpackages-index.html Is a file. Under E:/NEC_Training/Send/a/Ex\par
+constant-values.html Is a file. Under E:/NEC_Training/Send/a/Ex\par
+deprecated-list.html Is a file. Under E:/NEC_Training/Send/a/Ex\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:17: Listing for : /deep\par
+abcd.txt Is a file. Under /deep\par
+Exercise.txt Is a file. Under /deep\par
+mydirs Is a directory.  Under /deep\par
+\par
+\par
+Listing for : /deep/mydirs\par
+test.txt Is a file. Under /deep\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:17: \par
+\par
+Listing for : E:\\family man\par
+The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly Is a directory.  Under E:\\family man\par
+\par
+\par
+Listing for : E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E01 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E03 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E04 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E05 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E06 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:amily man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E07 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E08 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The Family Man S02E09 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly.mkv Is a file. Under E:\\family man/The Family Man S02 1080p AMZN WEBRip DD 5.1 MSubs x264 - LOKiHD - Telly\par
+The_Family_Man_S01E01_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E02_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E03_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E04_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E05_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E06_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E07_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E08_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E09_720p.mkv Is a file. Under E:\\family man\par
+The_Family_Man_S01E10_720p.mkv Is a file. Under E:\\family man\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:18: Listing for : /Shivendra\par
+text1.txt Is a file. Under /Shivendra\par
+text2.txt Is a file. Under /Shivendra\par
+mydirs Is a directory.  Under /Shivendra\par
+\par
+\par
+Listing for : /Shivendra/mydirs\par
+test.txt Is a file. Under /Shivendra\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 11:19: tea break 20 min\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 11:40: Back\cf2\par
+\cf3\b Naveen Kumar Mittal (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b ananya giridhar (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Chirag Yadav (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Challa Bhavya (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 11:40: Back\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 11:40: back\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 11:41: Back\cf2\par
+\cf3\b Nagareddy Deepthi (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 11:41: Back\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 11:41: Back\cf2\par
+\cf3\b Abhishek Rana (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 11:41: back\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:01: import java.nio.file.FileSystems;\par
+import java.nio.file.Path;\par
+import java.nio.file.Paths;\par
+\par
+public class PathFileNIO \{\par
+\tab public static void main(String[] strings) \{// instantiate a relative path\par
+\tab\tab // Path p1 = FileSystems.getDefault().getPath("Examples1", "aaa.txt");\par
+\tab\tab // instantiate a absolute path - windows OS\par
+\tab\tab Path p2 = Paths.get("C:\\\\Monica");\par
+\tab\tab Path currentDirectory = Paths.get("").toAbsolutePath(); // get current dir\par
+\tab\tab System.out.println(currentDirectory.toAbsolutePath());\par
+\tab\tab System.out.println(p2.resolve("hello.txt")); // resolve path in Win OS\par
+\tab\tab Path path4 = Paths.get("C:\\\\Monica\\\\tmp");\par
+\tab\tab Path p2_to_path4 = p2.relativize(path4); // relativize\par
+\tab\tab System.out.println(p2_to_path4);\par
+\tab\tab Path path4_to_p2 = path4.relativize(p2);\par
+\tab\tab System.out.println(path4_to_p2); // outcome is ..\par
+\tab\tab System.out.println(path4.normalize()); // normalize\par
+\tab\tab // output C:\\Monica\\tmp\par
+\tab\tab Path path6 = Paths.get("C:\\\\Monica\\\\..\\\\..\\\\tmp");\par
+\tab\tab System.out.println(path6.normalize());\par
+\tab\}\par
+\}\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:02: D:\\IO_IN_JAVA\par
+C:onica\\hello.txt\par
+tmp\par
+..\par
+C:\\Monica\\tmp\par
+C:\\tmp\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:02: C:\\Users\\aliab\\eclipse-workspace\\HelloPrj\par
+C:\\Users\\aliab\\syed\\hello.txt\par
+\par
+\par
+C:\\Users\\aliab\\syed\par
+C:\\Users\\aliab\\syed\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:02: C:\\Users\\piyush shukla\\eclipse-workspace\\JavaIO\par
+C:\\Piyush\\hello.txt\par
+tmp\par
+..\par
+C:\\Piyush\\tmp\par
+C:\\tmp\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:03: Ma'am could you please explain normalize again?\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:03: C:\\Users\\AMAN\\eclipse-workspace\\JAVA NIO\par
+E:\\aman\\hello.txt\par
+tmp\par
+..\par
+E:\\aman\\tmp\par
+E:\\tmp\cf2\par
+\cf3\b APURV AGNIHOTRI (to Everyone)\b0 : \cf1 12:03: D:\\NEC Training\\Day 14\par
+D:\\Apurvello.txt\par
+tmp\par
+..\par
+D:\\Apurv\\tmp\par
+D:\\tmp\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:04: C:\\Users\\deep shikhar\\eclipse-workspace\\JavaIO\par
+C:\\deep\\hello.txt\par
+tmp\par
+..\par
+C:\\deep\\tmp\par
+C:\\tmp\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:05: C:\\Users\\ravip\\eclipse-workspace\\Directories\par
+C:\\Monica\\hello.txt\par
+tmp\par
+..\par
+C:\\Monica\\tmp\par
+C:\\tmp\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:05: /home\par
+C:\\Atul/hello.txt\par
+../C:\\Atul\\tmp\par
+../C:\\Atul\par
+C:\\Atul\\tmp\par
+C:\\Atul\\..\\..\\tmp\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:06: D:\\APPS\\java\\eclipse\\JavaIOPrj\par
+D:\\APPS\\java\\eclipse\\JavaIOPrj\\hello.txt\par
+tmp\par
+..\par
+D:\\APPS\\java\\eclipse\\JavaIOPrj\\tmp\par
+D:\\APPSava\\tmp\par
+\cf2\par
+\cf3\b Vijeta Vinod Savant (to Everyone)\b0 : \cf1 12:06: E:\\Ecs\\NEC_Training\par
+E:\\NEC_Training\\Sendello.txt\par
+a\par
+..\par
+E:\\NEC_Training\\Send\\a\par
+E:\\NEC_Training\\Send.....\\a\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:06: Ma'am means we can give any no of root directiories through ..\\\\\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:07: Ok ma'am\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:09: import java.io.IOException;\par
+import java.nio.file.*;\par
+public class PathFileNIO \{\par
+\tab  public static void main(String[] args) \{\par
+    \tab String dirPath ="/Monica/subDir";\par
+        // Check If Directory Already Exists Or Not?\par
+        Path dirPathObj = Paths.get(dirPath);\par
+        boolean dirExists = Files.exists(dirPathObj);\par
+        if(dirExists) \{\par
+            System.out.println("! Directory Already Exists !");\par
+        \} else \{\par
+            try \{\par
+                // Creating The New Directory Structure\par
+                Files.createDirectories(dirPathObj);\par
+                System.out.println("! New Directory Successfully Created !");\par
+            \} catch (IOException ioExceptionObj) \{\par
+                System.out.println("Problem While Creating The Directory Structure: " + ioExceptionObj.getMessage());\par
+            \}\par
+        \}\par
+    \}\tab\}\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:09: C:\\Users\\hp\\eclipse-workspaceay14\par
+C:aumya\\test.txt\par
+tmp\par
+..\par
+C:\\Saumya\\tmp\par
+C:\\tmp\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:10: C:\\Users\\hp\\eclipse-workspaceay14\par
+C:shipra\\test.txt\par
+tmp\par
+..\par
+C:\\Shipra\\tmp\par
+C:\\tmp\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Syed Ali Abbas (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully Created !\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:11: NIO Files class provides copy(..) method to copy directory. When a directory is copied, files inside that directory will not be copied. Unlike directories, when copying a symbolic link the target is also copied. However, there are options available to not copy the target files.\par
+\par
+import java.io.IOException;\par
+import java.nio.file.*;\par
+public class PathFileNIO \{\par
+\tab  public static void main(String[] args) \{\par
+\tab\tab  Path sourcePath = Paths.get("/Monica/test.txt");\par
+\tab\tab  Path destinationPath = Paths.get("/Monica/test-copy.txt");\par
+\tab\tab  try \{\par
+\tab\tab      Files.copy(sourcePath, destinationPath);\par
+\tab\tab      System.out.println("Done");\par
+\tab\tab  \} catch(FileAlreadyExistsException e) \{\par
+\tab\tab      //file already exists and unable to copy\par
+\tab\tab  \} catch (IOException e) \{\par
+\tab\tab      //permission issue\par
+\tab\tab      e.printStackTrace();\par
+\tab\tab  \}\par
+    \}\tab\}\par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully\par
+ Created !\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:11: ! Directory Already Exists !\par
+\cf2\par
+\cf3\b Ravi Pratap (to Everyone)\b0 : \cf1 12:11: ! New Directory Successfully\par
+ Created !\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:12: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:12: import java.io.IOException;\par
+import java.nio.file.*;\par
+public class PathFileNIO \{\par
+\tab  public static void main(String[] args) \{\par
+\tab\tab  Path sourcePath = Paths.get("/Monica/test.txt");\par
+\tab\tab  Path destinationPath = Paths.get("/Monica/test-copy.txt");\par
+\tab\tab  try \{\par
+\tab\tab      Files.copy(sourcePath, destinationPath);\par
+\tab\tab      System.out.println("Done");\par
+\tab\tab  \} catch(FileAlreadyExistsException e) \{\par
+\tab\tab      //file already exists and unable to copy\par
+\tab\tab  \} catch (IOException e) \{\par
+\tab\tab      //permission issue\par
+\tab\tab      e.printStackTrace();\par
+\tab\tab  \}\par
+    \}\tab\}\par
+\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:12: ! New Directory Successfully Created !\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:12: ! New Directory Successfully Created !\par
+\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:12: Done\par
+\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:13: Done\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:14: Done\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:14: Done\cf2\par
+\cf3\b  K Prasanna Kumar (to Everyone)\b0 : \cf1 12:14: Done\cf2\par
+\cf3\b Atul Gupta (to Everyone)\b0 : \cf1 12:14: Done\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:15: import java.io.IOException;\par
+import java.nio.file.*;\par
+public class PathFileNIO \{\par
+\tab  public static void main(String[] args) \{\par
+\tab\tab  Path sourcePath = Paths.get("/Monica/test.txt");\par
+\tab\tab  Path destinationPath = Paths.get("/Monica/test-copy12.txt");\par
+\tab\tab  try \{\par
+\tab\tab      Files.copy(sourcePath, destinationPath,StandardCopyOption.REPLACE_EXISTING);\par
+\tab\tab      System.out.println("Done");\par
+\tab\tab  \} catch(FileAlreadyExistsException e) \{\par
+\tab\tab\tab  System.out.println("File already exists");\par
+\tab\tab      //file already exists and unable to copy\par
+\tab\tab  \} catch (IOException e) \{\par
+\tab\tab      //permission issue\par
+\tab\tab      e.printStackTrace();\par
+\tab\tab  \}\par
+    \}\tab\}\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:15: Done\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:15: Done\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:16: Done\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 12:16: Done\par
+\cf2\par
+\cf3\b Shipra Yadav (to Everyone)\b0 : \cf1 12:16: Done\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 12:17: Done\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 12:17: Done\par
+\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 12:17: Done\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:17: import java.io.IOException;\par
+import java.nio.file.*;\par
+public class PathFileNIO \{\par
+\tab  public static void main(String[] args) \{\par
+\tab\tab  Path sourcePath = Paths.get("/Monica/test-copy12.txt");\par
+\tab\tab  Path destinationPath = Paths.get("./src/test-move12.txt");\par
+\tab\tab  try \{\par
+\tab\tab      Files.move(sourcePath, destinationPath,StandardCopyOption.REPLACE_EXISTING);\par
+\tab\tab      System.out.println("Done");\par
+\tab\tab  \} catch(FileAlreadyExistsException e) \{\par
+\tab\tab\tab  System.out.println("File already exists");\par
+\tab\tab      //file already exists and unable to copy\par
+\tab\tab  \} catch (IOException e) \{\par
+\tab\tab      //permission issue\par
+\tab\tab      e.printStackTrace();\par
+\tab\tab  \}\par
+    \}\tab\}\par
+\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 12:18: Done\par
+\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:18: Googleable :\par
+WAP in NIO to find the file attributes of a file.\par
+Files.isReadable(filePath)\par
+\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 12:19: Done\par
+\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 12:19: Done\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:27: import java.nio.file.Files;\par
+import java.nio.file.Path;\par
+import java.nio.file.Paths;\par
+ \par
+public class prgrm6 \{\par
+  public static void main(String args[]) \{\par
+ \par
+    Path filePath = Paths.get("/Monica/Hello.txt");\par
+    boolean isReadable = Files.isReadable(filePath);\par
+    System.out.println("Is file readable: " + isReadable);\par
+\par
+    boolean isWritable = Files.isWritable(filePath);\par
+    System.out.println("Is file writable: " + isWritable);\par
+\par
+    boolean isExecutable = Files.isExecutable(filePath);\par
+    System.out.println("Is file executable: " + isExecutable);\par
+    \par
+    boolean isDiectory = Files.isDirectory(filePath);\par
+    System.out.println("Is file a directory: " + isDiectory);\par
+    \par
+    boolean isFile = Files.isRegularFile(filePath);\par
+    System.out.println("Is file a regular file: " + isFile);\par
+  \}\par
+\}\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 12:28: import java.nio.file.*;\par
+import java.nio.file.attribute.*;\par
+import java.util.Scanner;\par
+public class Exercise_Attribute \{\par
+    public static void main(String[] args) throws Exception\par
+    \{  \par
+        Scanner sc = new Scanner(System.in);\par
+        System.out.println("Enter the file path");\par
+        String s = sc.next();\par
+\par
+        Path path = FileSystems.getDefault().getPath(s);\par
+  \par
+        BasicFileAttributeView view\par
+            = Files.getFileAttributeView(\par
+                path, BasicFileAttributeView.class);\par
+ \par
+        BasicFileAttributes attribute\par
+            = view.readAttributes();\par
+        System.out.print("Creation Time of the file: ");\par
+        System.out.println(attribute.creationTime());\par
+        System.out.print(\par
+            "Last Accessed Time of the file: ");\par
+        System.out.println(attribute.lastAccessTime());\par
+        System.out.print(\par
+            "Last Modified Time for the file: ");\par
+        System.out.println(attribute.lastModifiedTime());\par
+ \par
+        System.out.println("Directory or not: "\par
+                           + attribute.isDirectory());\par
+ \par
+        System.out.println("Size of the file: "\par
+                           + attribute.size());\par
+    \}\par
+\}\par
+\cf2\par
+\cf3\b Shivaksh Ahalawat (to Everyone)\b0 : \cf1 12:29: import java.nio.file.Files;\par
+import java.nio.file.Path;\par
+import java.nio.file.Paths;\par
+ \par
+public class CheckFileAttributes \{\par
+  public static void main(String args[]) \{\par
+ \par
+    Path filePath = Paths.get("S:\\\\ShivakshIO\\\\test4.txt");\par
+ \par
+    \par
+    boolean isReadable = Files.isReadable(filePath);\par
+    System.out.println("Is file readable: " + isReadable);\par
+ \par
+    \par
+    boolean isWritable = Files.isWritable(filePath);\par
+    System.out.println("Is file writable: " + isWritable);\par
+ \par
+    \par
+    boolean isExecutable = Files.isExecutable(filePath);\par
+    System.out.println("Is file executable: " + isExecutable);\par
+    \par
+    boolean isDirectory = Files.isDirectory(filePath);\par
+    System.out.println("Is file Directory: " + isDirectory);\par
+    boolean isFile = Files.isRegularFile(filePath);\par
+    System.out.println("Is file : " + isFile);\par
+  \}\par
+\}\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 12:29: 2 min\cf2\par
+\cf3\b Monica (to Everyone)\b0 : \cf1 13:01: In a multithreaded application, there are several points of execution within the same memory space.  \par
+\cf2\par
+\cf3\b shivendra gupta (to Everyone)\b0 : \cf1 13:04: thankyou mam\cf2\par
+\cf3\b Kushagra Gupta (to Everyone)\b0 : \cf1 13:04: Thank you Ma'am\cf2\par
+\cf3\b AMAN SAXENA (to Everyone)\b0 : \cf1 13:04: thank you ma'am\cf2\par
+\cf3\b Deep Shikhar Singh (to Everyone)\b0 : \cf1 13:04: thank you ma'am\cf2\par
+\cf3\b Piyush Shukla (to Everyone)\b0 : \cf1 13:04: Thank You Ma'am\cf2\par
+\cf3\b Akshay Singh (to Everyone)\b0 : \cf1 13:04: thank you ma'am\par
+\cf2\par
+\cf3\b Unnati (to Everyone)\b0 : \cf1 13:04: thanku mam\cf2\par
+\cf3\b Shikhar Shukla (to Everyone)\b0 : \cf1 13:04: thankyou ma'am\cf2\par
+\cf3\b Harthik Ps (to Everyone)\b0 : \cf1 13:04: thank you ma'am\cf2\par
+\cf3\b Saumya Vishwakarma (to Everyone)\b0 : \cf1 13:04: Thank you Ma'am\par
+\cf0\par
+}
+ 
